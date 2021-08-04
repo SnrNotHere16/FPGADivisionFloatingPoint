@@ -20,9 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module DivisionTop(clk, reset, quotient);
+module DivisionTop(clk, reset,dividend, divisor, quotient);
 
 input clk, reset; 
+input [3:0] dividend, divisor;  
 output reg [15:0] quotient; 
 
 always @(clk or reset) begin 
@@ -32,7 +33,7 @@ always @(clk or reset) begin
     
     else begin 
         
-    quotient <= 10/2; 
+    quotient <= dividend/divisor; 
     
     end
 end 
