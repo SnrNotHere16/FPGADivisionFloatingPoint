@@ -20,20 +20,19 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module DivisionTop(clk, reset,dividend, divisor, quotient);
+module DivisionTop(clk, reset,LED);
 
 input clk, reset; 
-input [3:0] dividend, divisor;  
-output reg [15:0] quotient; 
+output reg [15:0] LED; 
 
 always @(clk or reset) begin 
     if (reset) begin 
-        quotient <= 16'b0;
+        LED <= 3'b000;
     end
     
     else begin 
         
-    quotient <= dividend/divisor; 
+        LED <= 3'b111;
     
     end
 end 

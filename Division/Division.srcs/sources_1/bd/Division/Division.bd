@@ -2,10 +2,204 @@
   "design": {
     "design_info": {
       "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
       "name": "Division",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2019.1"
     },
-    "design_tree": {}
+    "design_tree": {
+      "floating_point_0": "",
+      "axi_gpio_0": "",
+      "axi_gpio_1": "",
+      "axi_gpio_2": "",
+      "axi_uartlite_0": "",
+      "microblaze_0": "",
+      "DivisionTop_0": ""
+    },
+    "interface_ports": {
+      "usb_uart": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+      }
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "LED": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "floating_point_0": {
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "xci_name": "Division_floating_point_0_0",
+        "parameters": {
+          "C_Accum_Input_Msb": {
+            "value": "32"
+          },
+          "C_Accum_Lsb": {
+            "value": "-31"
+          },
+          "C_Accum_Msb": {
+            "value": "32"
+          },
+          "C_Latency": {
+            "value": "29"
+          },
+          "C_Mult_Usage": {
+            "value": "No_Usage"
+          },
+          "C_Rate": {
+            "value": "1"
+          },
+          "C_Result_Exponent_Width": {
+            "value": "8"
+          },
+          "C_Result_Fraction_Width": {
+            "value": "24"
+          },
+          "Operation_Type": {
+            "value": "Divide"
+          },
+          "Result_Precision_Type": {
+            "value": "Single"
+          }
+        }
+      },
+      "axi_gpio_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "Division_axi_gpio_0_0",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_1": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "Division_axi_gpio_1_0",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_gpio_2": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "Division_axi_gpio_2_0",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "1"
+          }
+        }
+      },
+      "axi_uartlite_0": {
+        "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
+        "xci_name": "Division_axi_uartlite_0_0",
+        "parameters": {
+          "UARTLITE_BOARD_INTERFACE": {
+            "value": "usb_uart"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "microblaze_0": {
+        "vlnv": "xilinx.com:ip:microblaze:11.0",
+        "xci_name": "Division_microblaze_0_0"
+      },
+      "DivisionTop_0": {
+        "vlnv": "xilinx.com:module_ref:DivisionTop:1.0",
+        "xci_name": "Division_DivisionTop_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DivisionTop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "LED": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "axi_uartlite_0_UART": {
+        "interface_ports": [
+          "usb_uart",
+          "axi_uartlite_0/UART"
+        ]
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "floating_point_0/aclk",
+          "DivisionTop_0/clk"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "DivisionTop_0/reset"
+        ]
+      },
+      "DivisionTop_0_LED": {
+        "ports": [
+          "DivisionTop_0/LED",
+          "LED"
+        ]
+      },
+      "axi_gpio_0_gpio_io_o": {
+        "ports": [
+          "axi_gpio_0/gpio_io_o",
+          "floating_point_0/s_axis_a_tdata"
+        ]
+      },
+      "axi_gpio_1_gpio_io_o": {
+        "ports": [
+          "axi_gpio_1/gpio_io_o",
+          "floating_point_0/s_axis_b_tdata"
+        ]
+      },
+      "floating_point_0_m_axis_result_tdata": {
+        "ports": [
+          "floating_point_0/m_axis_result_tdata",
+          "axi_gpio_2/gpio_io_i"
+        ]
+      }
+    },
+    "addressing": {
+      "/microblaze_0": {
+        "address_spaces": {
+          "Data": {
+            "range": "4G",
+            "width": "32"
+          },
+          "Instruction": {
+            "range": "4G",
+            "width": "32"
+          }
+        }
+      }
+    }
   }
 }

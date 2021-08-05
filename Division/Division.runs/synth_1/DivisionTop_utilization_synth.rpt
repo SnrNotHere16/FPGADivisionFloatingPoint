@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Aug  4 15:32:18 2021
+| Date         : Wed Aug  4 16:46:14 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file DivisionTop_utilization_synth.rpt -pb DivisionTop_utilization_synth.pb
 | Design       : DivisionTop
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |   10 |     0 |     63400 |  0.02 |
-|   LUT as Logic          |   10 |     0 |     63400 |  0.02 |
+| Slice LUTs*             |    1 |     0 |     63400 | <0.01 |
+|   LUT as Logic          |    1 |     0 |     63400 | <0.01 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         |    0 |     0 |    126800 |  0.00 |
 |   Register as Flip Flop |    0 |     0 |    126800 |  0.00 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |    1 |     0 |     31700 | <0.01 |
+| F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   25 |     0 |       210 | 11.90 |
+| Bonded IOB                  |   17 |     0 |       210 |  8.10 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -147,11 +147,8 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |   16 |                  IO |
-| IBUF     |    9 |                  IO |
-| LUT6     |    8 |                 LUT |
-| MUXF7    |    1 |               MuxFx |
-| LUT3     |    1 |                 LUT |
-| LUT2     |    1 |                 LUT |
+| LUT1     |    1 |                 LUT |
+| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
