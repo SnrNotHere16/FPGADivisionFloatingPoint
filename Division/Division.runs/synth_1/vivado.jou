@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Aug  4 16:45:30 2021
-# Process ID: 3852
+# Start of session at: Fri Aug  6 00:56:39 2021
+# Process ID: 6796
 # Current directory: C:/Users/OAkun/Division/Division.runs/synth_1
-# Command line: vivado.exe -log DivisionTop.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DivisionTop.tcl
-# Log file: C:/Users/OAkun/Division/Division.runs/synth_1/DivisionTop.vds
+# Command line: vivado.exe -log Division_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Division_wrapper.tcl
+# Log file: C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.vds
 # Journal file: C:/Users/OAkun/Division/Division.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source DivisionTop.tcl -notrace
+source Division_wrapper.tcl -notrace
