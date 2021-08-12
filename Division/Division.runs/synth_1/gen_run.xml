@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1628235946">
   <File Type="PA-TCL" Name="Division_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Division_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Division_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="Division_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="Division_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Division_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Division_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Division_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Division_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/DivisionTop.v">
@@ -64,19 +61,19 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Division_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Division_DivisionTop_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_DivisionTop_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Division_dlmb_bram_if_cntlr_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="Division_ilmb_v10_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_floating_point_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_ilmb_v10_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_dlmb_bram_if_cntlr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_ilmb_bram_if_cntlr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_dlmb_v10_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_lmb_bram_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="Division_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_rst_clk_wiz_1_100M_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_mdm_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="Division_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Division_clk_wiz_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_xbar_0"/>
 </GenRun>
