@@ -18,8 +18,8 @@
 XGpio gpio0, gpio1, gpio2;
 
 main(){
-	float a = 5;
-	float b = 2;
+	float a = 4.1;
+	float b = 2.6;
 	xil_printf("Begin: \n");
 	//initialize AXI GPIO
 	XGpio_Initialize(&gpio0, Gpio0ID);
@@ -35,13 +35,13 @@ main(){
 	XGpio_DiscreteWrite(&gpio1, 1, b);
 
 	float c = XGpio_DiscreteRead(&gpio0,1);
-	if (4 < c)
+	if (4 < a)
 		xil_printf(" c == a == 4.4\n");
 	else
 		xil_printf("c != a\n");
 
 	xil_printf("c = %f\n",c);
-	xil_printf("b = %d\n",XGpio_DiscreteRead(&gpio2,1));
-
+	xil_printf("b = %d\n",XGpio_DiscreteRead(&gpio0,1));
+    //printf("d");
 
 }

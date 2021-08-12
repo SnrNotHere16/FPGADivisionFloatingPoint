@@ -18,8 +18,8 @@
 XGpio gpio0, gpio1, gpio2;
 
 main(){
-	float a = 5;
-	float b = 2;
+	float a = 5.9;
+	float b = 2.6;
 	xil_printf("Begin: \n");
 	//initialize AXI GPIO
 	XGpio_Initialize(&gpio0, Gpio0ID);

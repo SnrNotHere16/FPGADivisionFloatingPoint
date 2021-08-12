@@ -221,6 +221,18 @@ u32 XGpio_DiscreteRead(XGpio * InstancePtr, unsigned Channel)
 			      XGPIO_DATA_OFFSET);
 }
 
+float XGpio_DiscreteReadF(XGpio * InstancePtr, unsigned Channel)
+{
+	Xil_AssertNonvoid(InstancePtr != NULL);
+	Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+	Xil_AssertNonvoid((Channel == 1) ||
+			((Channel == 2) && (InstancePtr->IsDual == TRUE)));
+
+	return XGpio_ReadReg(InstancePtr->BaseAddress,
+			      ((Channel - 1) * XGPIO_CHAN_OFFSET) +
+			      XGPIO_DATA_OFFSET);
+}
+
 /****************************************************************************/
 /**
 * Write to discretes register for the specified GPIO channel.
@@ -249,5 +261,15 @@ void XGpio_DiscreteWrite(XGpio * InstancePtr, unsigned Channel, u32 Data)
 			Data);
 }
 
+void XGpio_DiscreteWriteF(XGpio * InstancePtr, unsigned Channel, float Data)
+{
+	Xil_AssertVoid(InstancePtr != NULL);
+	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+	Xil_AssertVoid((Channel == 1) ||
+		     ((Channel == 2) && (InstancePtr->IsDual == TRUE)));
 
+	XGpio_WriteReg(InstancePtr->BaseAddress,
+			((Channel - 1) * XGPIO_CHAN_OFFSET) + XGPIO_DATA_OFFSET,
+			Data);
+}
 /** @} */

@@ -1,14 +1,6 @@
-'Finished building target: Division.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size Division.elf  |tee "Division.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  14776	    684	   3164	  18624	   48c0	Division.elf
-'Finished building: Division.elf.size'
-' '
-17:20:22 **** Incremental Build of configuration Debug for project Division ****
+17:50:52 **** Incremental Build of configuration Debug for project Division ****
 make all 
 make: Nothing to be done for 'all'.
-17:20:26 **** Incremental Build of configuration Debug for project Division ****
+17:50:57 **** Incremental Build of configuration Debug for project Division ****
 make all 
 make: Nothing to be done for 'all'.
