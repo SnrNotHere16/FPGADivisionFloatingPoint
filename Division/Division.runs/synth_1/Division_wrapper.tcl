@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -25,7 +28,6 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/OAkun/Division/Division.cache/wt [current_project]
 set_property parent.project_path C:/Users/OAkun/Division/Division.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store} [current_project]
@@ -34,40 +36,8 @@ set_property ip_output_repo c:/Users/OAkun/Division/Division.cache/ip [current_p
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
 add_files C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division.bd
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_0/Division_floating_point_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_0_0/Division_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_0_0/Division_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_0_0/Division_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_1_0/Division_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_1_0/Division_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_1_0/Division_axi_gpio_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_2_0/Division_axi_gpio_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_2_0/Division_axi_gpio_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_2_0/Division_axi_gpio_2_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_uartlite_0_0/Division_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_uartlite_0_0/Division_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_uartlite_0_0/Division_axi_uartlite_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_microblaze_0_0/Division_microblaze_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_microblaze_0_0/Division_microblaze_0_0_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_microblaze_0_0/Division_microblaze_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_dlmb_v10_2/Division_dlmb_v10_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_dlmb_v10_2/Division_dlmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_ilmb_v10_2/Division_ilmb_v10_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_ilmb_v10_2/Division_ilmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_dlmb_bram_if_cntlr_2/Division_dlmb_bram_if_cntlr_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_ilmb_bram_if_cntlr_2/Division_ilmb_bram_if_cntlr_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_lmb_bram_2/Division_lmb_bram_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_mdm_1_2/Division_mdm_1_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_mdm_1_2/Division_mdm_1_2_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_clk_wiz_1_2/Division_clk_wiz_1_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_clk_wiz_1_2/Division_clk_wiz_1_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_clk_wiz_1_2/Division_clk_wiz_1_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_rst_clk_wiz_1_100M_2/Division_rst_clk_wiz_1_100M_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_rst_clk_wiz_1_100M_2/Division_rst_clk_wiz_1_100M_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_rst_clk_wiz_1_100M_2/Division_rst_clk_wiz_1_100M_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_xbar_0/Division_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_microblaze_0_0/data/mb_bootloop_le.elf]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
