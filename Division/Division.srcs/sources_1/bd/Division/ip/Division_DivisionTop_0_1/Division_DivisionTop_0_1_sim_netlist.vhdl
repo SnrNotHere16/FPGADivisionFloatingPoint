@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 13 00:32:22 2021
+-- Date        : Fri Aug 13 00:58:16 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -46,7 +46,7 @@ architecture STRUCTURE of Division_DivisionTop_0_1_DivisionTop is
   attribute XILINX_LEGACY_PRIM of \LED_reg[9]\ : label is "LD";
 begin
   F1(0) <= \^f1\(0);
-\F1[1]_INST_0\: unisim.vcomponents.LUT1
+\F1[2]_INST_0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -257,7 +257,7 @@ end Division_DivisionTop_0_1;
 
 architecture STRUCTURE of Division_DivisionTop_0_1 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^f1\ : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal \^f1\ : STD_LOGIC_VECTOR ( 2 to 2 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -265,37 +265,37 @@ architecture STRUCTURE of Division_DivisionTop_0_1 is
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-  F1(31) <= \<const0>\;
-  F1(30) <= \<const0>\;
-  F1(29) <= \<const0>\;
-  F1(28) <= \<const0>\;
-  F1(27) <= \<const0>\;
-  F1(26) <= \<const0>\;
-  F1(25) <= \<const0>\;
-  F1(24) <= \<const0>\;
-  F1(23) <= \<const0>\;
-  F1(22) <= \<const0>\;
-  F1(21) <= \<const0>\;
-  F1(20) <= \<const0>\;
-  F1(19) <= \<const0>\;
-  F1(18) <= \<const0>\;
-  F1(17) <= \<const0>\;
-  F1(16) <= \<const0>\;
-  F1(15) <= \<const0>\;
-  F1(14) <= \<const0>\;
-  F1(13) <= \<const0>\;
-  F1(12) <= \^f1\(1);
-  F1(11) <= \<const0>\;
-  F1(10) <= \^f1\(1);
-  F1(9) <= \^f1\(1);
-  F1(8) <= \<const0>\;
-  F1(7) <= \^f1\(1);
-  F1(6) <= \^f1\(1);
-  F1(5) <= \^f1\(1);
-  F1(4) <= \^f1\(1);
-  F1(3) <= \^f1\(1);
-  F1(2) <= \<const0>\;
-  F1(1) <= \^f1\(1);
+  F1(31) <= \^f1\(2);
+  F1(30) <= \^f1\(2);
+  F1(29) <= \^f1\(2);
+  F1(28) <= \^f1\(2);
+  F1(27) <= \^f1\(2);
+  F1(26) <= \^f1\(2);
+  F1(25) <= \^f1\(2);
+  F1(24) <= \^f1\(2);
+  F1(23) <= \^f1\(2);
+  F1(22) <= \^f1\(2);
+  F1(21) <= \^f1\(2);
+  F1(20) <= \^f1\(2);
+  F1(19) <= \^f1\(2);
+  F1(18) <= \^f1\(2);
+  F1(17) <= \^f1\(2);
+  F1(16) <= \^f1\(2);
+  F1(15) <= \^f1\(2);
+  F1(14) <= \^f1\(2);
+  F1(13) <= \^f1\(2);
+  F1(12) <= \^f1\(2);
+  F1(11) <= \^f1\(2);
+  F1(10) <= \^f1\(2);
+  F1(9) <= \^f1\(2);
+  F1(8) <= \^f1\(2);
+  F1(7) <= \^f1\(2);
+  F1(6) <= \^f1\(2);
+  F1(5) <= \^f1\(2);
+  F1(4) <= \^f1\(2);
+  F1(3) <= \^f1\(2);
+  F1(2) <= \^f1\(2);
+  F1(1) <= \<const0>\;
   F1(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
@@ -303,8 +303,8 @@ GND: unisim.vcomponents.GND
     );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (
-      F1(0) => \^f1\(1),
-      F3(15 downto 0) => F3(15 downto 0),
+      F1(0) => \^f1\(2),
+      F3(15 downto 0) => F3(31 downto 16),
       LED(15 downto 0) => LED(15 downto 0),
       reset => reset
     );

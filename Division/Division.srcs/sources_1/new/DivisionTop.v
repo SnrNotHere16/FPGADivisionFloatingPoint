@@ -31,8 +31,8 @@ always @(clk or reset) begin
         F1 <= 32'b0;
     end
     else begin 
-         F1 <= 32'h16FA; 
-         LED <= F3;
+         F1 <= -4; 
+         LED <= F3[31:16];
     end
 end 
 endmodule

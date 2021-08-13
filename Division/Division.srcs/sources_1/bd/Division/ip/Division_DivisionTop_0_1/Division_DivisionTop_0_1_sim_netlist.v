@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug 13 00:32:22 2021
+// Date        : Fri Aug 13 00:58:16 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -28,48 +28,48 @@ module Division_DivisionTop_0_1
   output [15:0]LED;
 
   wire \<const0> ;
-  wire [1:1]\^F1 ;
+  wire [2:2]\^F1 ;
   wire [31:0]F3;
   wire [15:0]LED;
   wire reset;
 
-  assign F1[31] = \<const0> ;
-  assign F1[30] = \<const0> ;
-  assign F1[29] = \<const0> ;
-  assign F1[28] = \<const0> ;
-  assign F1[27] = \<const0> ;
-  assign F1[26] = \<const0> ;
-  assign F1[25] = \<const0> ;
-  assign F1[24] = \<const0> ;
-  assign F1[23] = \<const0> ;
-  assign F1[22] = \<const0> ;
-  assign F1[21] = \<const0> ;
-  assign F1[20] = \<const0> ;
-  assign F1[19] = \<const0> ;
-  assign F1[18] = \<const0> ;
-  assign F1[17] = \<const0> ;
-  assign F1[16] = \<const0> ;
-  assign F1[15] = \<const0> ;
-  assign F1[14] = \<const0> ;
-  assign F1[13] = \<const0> ;
-  assign F1[12] = \^F1 [1];
-  assign F1[11] = \<const0> ;
-  assign F1[10] = \^F1 [1];
-  assign F1[9] = \^F1 [1];
-  assign F1[8] = \<const0> ;
-  assign F1[7] = \^F1 [1];
-  assign F1[6] = \^F1 [1];
-  assign F1[5] = \^F1 [1];
-  assign F1[4] = \^F1 [1];
-  assign F1[3] = \^F1 [1];
-  assign F1[2] = \<const0> ;
-  assign F1[1] = \^F1 [1];
+  assign F1[31] = \^F1 [2];
+  assign F1[30] = \^F1 [2];
+  assign F1[29] = \^F1 [2];
+  assign F1[28] = \^F1 [2];
+  assign F1[27] = \^F1 [2];
+  assign F1[26] = \^F1 [2];
+  assign F1[25] = \^F1 [2];
+  assign F1[24] = \^F1 [2];
+  assign F1[23] = \^F1 [2];
+  assign F1[22] = \^F1 [2];
+  assign F1[21] = \^F1 [2];
+  assign F1[20] = \^F1 [2];
+  assign F1[19] = \^F1 [2];
+  assign F1[18] = \^F1 [2];
+  assign F1[17] = \^F1 [2];
+  assign F1[16] = \^F1 [2];
+  assign F1[15] = \^F1 [2];
+  assign F1[14] = \^F1 [2];
+  assign F1[13] = \^F1 [2];
+  assign F1[12] = \^F1 [2];
+  assign F1[11] = \^F1 [2];
+  assign F1[10] = \^F1 [2];
+  assign F1[9] = \^F1 [2];
+  assign F1[8] = \^F1 [2];
+  assign F1[7] = \^F1 [2];
+  assign F1[6] = \^F1 [2];
+  assign F1[5] = \^F1 [2];
+  assign F1[4] = \^F1 [2];
+  assign F1[3] = \^F1 [2];
+  assign F1[2] = \^F1 [2];
+  assign F1[1] = \<const0> ;
   assign F1[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   Division_DivisionTop_0_1_DivisionTop inst
        (.F1(\^F1 ),
-        .F3(F3[15:0]),
+        .F3(F3[31:16]),
         .LED(LED),
         .reset(reset));
 endmodule
@@ -92,7 +92,7 @@ module Division_DivisionTop_0_1_DivisionTop
 
   LUT1 #(
     .INIT(2'h1)) 
-    \F1[1]_INST_0 
+    \F1[2]_INST_0 
        (.I0(reset),
         .O(F1));
   (* XILINX_LEGACY_PRIM = "LD" *) 
