@@ -5,7 +5,8 @@
       "device": "xc7a100tcsg324-1",
       "name": "Division",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "floating_point_0": "",
@@ -29,8 +30,17 @@
         "vlnv": "xilinx.com:ip:floating_point:7.1",
         "xci_name": "Division_floating_point_0_1",
         "parameters": {
+          "C_Accum_Input_Msb": {
+            "value": "32"
+          },
+          "C_Accum_Lsb": {
+            "value": "-31"
+          },
+          "C_Accum_Msb": {
+            "value": "32"
+          },
           "C_Latency": {
-            "value": "29"
+            "value": "7"
           },
           "C_Mult_Usage": {
             "value": "No_Usage"
@@ -45,7 +55,7 @@
             "value": "24"
           },
           "Operation_Type": {
-            "value": "Divide"
+            "value": "Fixed_to_float"
           },
           "Result_Precision_Type": {
             "value": "Single"
@@ -63,18 +73,19 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
           },
           "reset": {
             "type": "rst",
             "direction": "I"
           },
           "F1": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "F2": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -96,6 +107,7 @@
       "clk_1": {
         "ports": [
           "clk",
+          "floating_point_0/aclk",
           "DivisionTop_0/clk"
         ]
       },
@@ -109,12 +121,6 @@
         "ports": [
           "DivisionTop_0/F1",
           "floating_point_0/s_axis_a_tdata"
-        ]
-      },
-      "DivisionTop_0_F2": {
-        "ports": [
-          "DivisionTop_0/F2",
-          "floating_point_0/s_axis_b_tdata"
         ]
       },
       "floating_point_0_m_axis_result_tdata": {

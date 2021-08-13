@@ -183,18 +183,20 @@ proc create_root_design { parentCell } {
   # Create instance: floating_point_0, and set properties
   set floating_point_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_0 ]
   set_property -dict [ list \
-   CONFIG.C_Latency {29} \
+   CONFIG.C_Accum_Input_Msb {32} \
+   CONFIG.C_Accum_Lsb {-31} \
+   CONFIG.C_Accum_Msb {32} \
+   CONFIG.C_Latency {7} \
    CONFIG.C_Mult_Usage {No_Usage} \
    CONFIG.C_Rate {1} \
    CONFIG.C_Result_Exponent_Width {8} \
    CONFIG.C_Result_Fraction_Width {24} \
-   CONFIG.Operation_Type {Divide} \
+   CONFIG.Operation_Type {Fixed_to_float} \
    CONFIG.Result_Precision_Type {Single} \
  ] $floating_point_0
 
   # Create port connections
   connect_bd_net -net DivisionTop_0_F1 [get_bd_pins DivisionTop_0/F1] [get_bd_pins floating_point_0/s_axis_a_tdata]
-  connect_bd_net -net DivisionTop_0_F2 [get_bd_pins DivisionTop_0/F2] [get_bd_pins floating_point_0/s_axis_b_tdata]
   connect_bd_net -net DivisionTop_0_LED [get_bd_ports LED] [get_bd_pins DivisionTop_0/LED]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins DivisionTop_0/clk] [get_bd_pins floating_point_0/aclk]
   connect_bd_net -net floating_point_0_m_axis_result_tdata [get_bd_pins DivisionTop_0/F3] [get_bd_pins floating_point_0/m_axis_result_tdata]

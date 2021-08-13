@@ -19,21 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module DivisionTop(clk, reset, F1, F2, F3, LED);
+module DivisionTop(clk, reset, F1, F3, LED);
 
 input clk, reset; 
 input [31:0] F3; 
-output reg [31:0] F1, F2;
+output reg [31:0] F1;
 output reg [15:0] LED; 
 
 always @(clk or reset) begin 
     if (reset) begin 
         F1 <= 32'b0;
-        F2 <= 32'b0; 
     end
     else begin 
-         F1 <= 32'hF0F0; 
-         F2 <=32'hE01F; 
+         F1 <= 32'h16FA; 
          LED <= F3;
     end
 end 

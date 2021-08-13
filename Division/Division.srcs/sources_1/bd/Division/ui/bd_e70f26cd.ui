@@ -9,10 +9,9 @@ preplace inst floating_point_0 -pg 1 -lvl 1 -x 230 -y 150 -defaultsOSRD
 preplace inst DivisionTop_0 -pg 1 -lvl 2 -x 530 -y 390 -defaultsOSRD
 preplace netloc clk_1 1 0 2 20 370 NJ
 preplace netloc reset_1 1 0 2 NJ 390 NJ
-preplace netloc DivisionTop_0_F1 1 0 3 30 290 NJ 290 650
-preplace netloc DivisionTop_0_F2 1 0 3 40 300 NJ 300 640
+preplace netloc DivisionTop_0_F1 1 0 3 20 50 NJ 50 640
 preplace netloc floating_point_0_m_axis_result_tdata 1 1 1 420 140n
-preplace netloc DivisionTop_0_LED 1 2 1 N 410
+preplace netloc DivisionTop_0_LED 1 2 1 640 400n
 levelinfo -pg 1 0 230 530 670
 pagesize -pg 1 -db -bbox -sgen -80 0 780 470
 "

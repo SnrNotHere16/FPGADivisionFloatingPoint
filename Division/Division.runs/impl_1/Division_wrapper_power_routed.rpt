@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Thu Aug 12 22:57:07 2021
+| Date             : Fri Aug 13 00:35:22 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Division_wrapper_power_routed.rpt -pb Division_wrapper_power_summary_routed.pb -rpx Division_wrapper_power_routed.rpx
 | Design           : Division_wrapper
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.833 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 14.513                           |
-| Device Static (W)        | 0.320                            |
-| Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 17.3                             |
-| Junction Temperature (C) | 92.7                             |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 3.193        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.082        |
+| Device Static (W)        | 0.110        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 70.4         |
+| Junction Temperature (C) | 39.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     8.462 |     2105 |       --- |             --- |
-|   LUT as Logic          |     6.232 |      676 |     63400 |            1.07 |
-|   CARRY4                |     1.320 |      187 |     15850 |            1.18 |
-|   Register              |     0.775 |      928 |    126800 |            0.73 |
-|   LUT as Shift Register |     0.129 |       19 |     19000 |            0.10 |
+| Slice Logic             |     0.083 |      371 |       --- |             --- |
+|   LUT as Logic          |     0.065 |      103 |     63400 |            0.16 |
+|   Register              |     0.008 |      186 |    126800 |            0.15 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |      290 |       --- |             --- |
-| Signals                 |     6.043 |     1095 |       --- |             --- |
-| I/O                     |     0.008 |       18 |       210 |            8.57 |
-| Static Power            |     0.320 |          |           |                 |
-| Total                   |    14.833 |          |           |                 |
+|   CARRY4                |     0.003 |       18 |     15850 |            0.11 |
+|   LUT as Shift Register |    <0.001 |        1 |     19000 |           <0.01 |
+|   Others                |     0.000 |       54 |       --- |             --- |
+| Signals                 |     0.126 |      213 |       --- |             --- |
+| I/O                     |     2.874 |       18 |       210 |            8.57 |
+| Static Power            |     0.110 |          |           |                 |
+| Total                   |     3.193 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    14.715 |      14.513 |      0.202 |
-| Vccaux    |       1.800 |     0.043 |       0.000 |      0.043 |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vccint    |       1.000 |     0.242 |       0.216 |      0.026 |
+| Vccaux    |       1.800 |     0.124 |       0.105 |      0.019 |
+| Vcco33    |       3.300 |     0.815 |       0.811 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -139,10 +139,12 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Division_wrapper     |    14.513 |
-|   Division_i         |    14.445 |
-|     floating_point_0 |    14.445 |
-|       U0             |    14.445 |
+| Division_wrapper     |     3.082 |
+|   Division_i         |     0.175 |
+|     DivisionTop_0    |     0.019 |
+|       inst           |     0.019 |
+|     floating_point_0 |     0.155 |
+|       U0             |     0.155 |
 +----------------------+-----------+
 
 

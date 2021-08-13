@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Aug 12 22:53:33 2021
+-- Date        : Fri Aug 13 00:32:22 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Division_DivisionTop_0_1_stub.vhdl
@@ -17,7 +17,6 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
     F1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    F2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     F3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
@@ -28,7 +27,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,reset,F1[31:0],F2[31:0],F3[31:0],LED[15:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,reset,F1[31:0],F3[31:0],LED[15:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "DivisionTop,Vivado 2019.1";
 begin
