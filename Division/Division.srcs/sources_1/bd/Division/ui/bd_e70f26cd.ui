@@ -2,19 +2,19 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port clk -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
-preplace port reset -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
-preplace portBus LED -pg 1 -lvl 3 -x 700 -y 410 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x -10 -y 390 -defaultsOSRD
+preplace portBus LED -pg 1 -lvl 3 -x 710 -y 410 -defaultsOSRD
 preplace inst floating_point_0 -pg 1 -lvl 1 -x 230 -y 180 -defaultsOSRD
 preplace inst DivisionTop_0 -pg 1 -lvl 2 -x 560 -y 390 -defaultsOSRD
-preplace netloc clk_1 1 0 2 20 370 NJ
+preplace netloc clk_1 1 0 2 10 370 NJ
 preplace netloc reset_1 1 0 2 NJ 390 NJ
-preplace netloc DivisionTop_0_F1 1 0 3 20 50 NJ 50 680
+preplace netloc DivisionTop_0_F1 1 0 3 10 70 NJ 70 680
 preplace netloc floating_point_0_m_axis_result_tdata 1 1 1 420 190n
 preplace netloc DivisionTop_0_LED 1 2 1 N 410
-preplace netloc DivisionTop_0_F2 1 0 3 30 60 NJ 60 670
-levelinfo -pg 1 0 230 560 700
-pagesize -pg 1 -db -bbox -sgen -80 0 810 470
+preplace netloc DivisionTop_0_F2 1 0 3 20 80 NJ 80 670
+levelinfo -pg 1 -10 230 560 710
+pagesize -pg 1 -db -bbox -sgen -90 0 820 470
 "
 }
 {
