@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Aug 18 16:09:51 2021
+// Date        : Wed Aug 18 16:20:11 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -30,7 +30,6 @@ module Division_DivisionTop_0_1
   output [15:0]LED;
 
   wire \<const0> ;
-  wire \<const1> ;
   wire [2:2]\^F1 ;
   wire [31:0]F3;
   wire [15:0]LED;
@@ -97,13 +96,11 @@ module Division_DivisionTop_0_1
   assign F2[5] = \<const0> ;
   assign F2[4] = \<const0> ;
   assign F2[3] = \<const0> ;
-  assign F2[2] = \<const1> ;
+  assign F2[2] = \<const0> ;
   assign F2[1] = \<const0> ;
   assign F2[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  VCC VCC
-       (.P(\<const1> ));
   Division_DivisionTop_0_1_DivisionTop inst
        (.F1(\^F1 ),
         .F3(F3[31:16]),
