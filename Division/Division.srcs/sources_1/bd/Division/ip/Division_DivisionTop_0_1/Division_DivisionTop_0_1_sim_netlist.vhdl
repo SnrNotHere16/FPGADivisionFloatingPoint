@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 13 00:58:16 2021
+-- Date        : Wed Aug 18 15:45:14 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
+--               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
 -- Design      : Division_DivisionTop_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -240,6 +240,7 @@ entity Division_DivisionTop_0_1 is
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
     F1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    F2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     F3 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LED : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
@@ -257,6 +258,7 @@ end Division_DivisionTop_0_1;
 
 architecture STRUCTURE of Division_DivisionTop_0_1 is
   signal \<const0>\ : STD_LOGIC;
+  signal \<const1>\ : STD_LOGIC;
   signal \^f1\ : STD_LOGIC_VECTOR ( 2 to 2 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
@@ -297,9 +299,45 @@ begin
   F1(2) <= \^f1\(2);
   F1(1) <= \<const0>\;
   F1(0) <= \<const0>\;
+  F2(31) <= \<const0>\;
+  F2(30) <= \<const0>\;
+  F2(29) <= \<const0>\;
+  F2(28) <= \<const0>\;
+  F2(27) <= \<const0>\;
+  F2(26) <= \<const0>\;
+  F2(25) <= \<const0>\;
+  F2(24) <= \<const0>\;
+  F2(23) <= \<const0>\;
+  F2(22) <= \<const0>\;
+  F2(21) <= \<const0>\;
+  F2(20) <= \<const0>\;
+  F2(19) <= \<const0>\;
+  F2(18) <= \<const0>\;
+  F2(17) <= \<const0>\;
+  F2(16) <= \<const0>\;
+  F2(15) <= \<const0>\;
+  F2(14) <= \<const0>\;
+  F2(13) <= \<const0>\;
+  F2(12) <= \<const0>\;
+  F2(11) <= \<const0>\;
+  F2(10) <= \<const0>\;
+  F2(9) <= \<const0>\;
+  F2(8) <= \<const0>\;
+  F2(7) <= \<const0>\;
+  F2(6) <= \<const0>\;
+  F2(5) <= \<const0>\;
+  F2(4) <= \<const0>\;
+  F2(3) <= \<const0>\;
+  F2(2) <= \<const1>\;
+  F2(1) <= \<const0>\;
+  F2(0) <= \<const0>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
+    );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
     );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (

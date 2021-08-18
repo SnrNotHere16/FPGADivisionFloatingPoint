@@ -30,6 +30,15 @@
         "vlnv": "xilinx.com:ip:floating_point:7.1",
         "xci_name": "Division_floating_point_0_1",
         "parameters": {
+          "A_Precision_Type": {
+            "value": "Single"
+          },
+          "C_A_Exponent_Width": {
+            "value": "8"
+          },
+          "C_A_Fraction_Width": {
+            "value": "24"
+          },
           "C_Accum_Input_Msb": {
             "value": "32"
           },
@@ -40,7 +49,7 @@
             "value": "32"
           },
           "C_Latency": {
-            "value": "7"
+            "value": "29"
           },
           "C_Mult_Usage": {
             "value": "No_Usage"
@@ -55,7 +64,7 @@
             "value": "24"
           },
           "Operation_Type": {
-            "value": "Fixed_to_float"
+            "value": "Divide"
           },
           "Result_Precision_Type": {
             "value": "Single"
@@ -86,6 +95,11 @@
             "direction": "I"
           },
           "F1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "F2": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -133,6 +147,12 @@
         "ports": [
           "DivisionTop_0/LED",
           "LED"
+        ]
+      },
+      "DivisionTop_0_F2": {
+        "ports": [
+          "DivisionTop_0/F2",
+          "floating_point_0/s_axis_b_tdata"
         ]
       }
     }

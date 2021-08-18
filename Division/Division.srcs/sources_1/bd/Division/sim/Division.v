@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Aug 13 00:57:28 2021
+//Date        : Wed Aug 18 15:44:18 2021
 //Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 //Command     : generate_target Division.bd
 //Design      : Division
@@ -19,6 +19,7 @@ module Division
   input reset;
 
   wire [31:0]DivisionTop_0_F1;
+  wire [31:0]DivisionTop_0_F2;
   wire [15:0]DivisionTop_0_LED;
   wire clk_1;
   wire [31:0]floating_point_0_m_axis_result_tdata;
@@ -29,6 +30,7 @@ module Division
   assign reset_1 = reset;
   Division_DivisionTop_0_1 DivisionTop_0
        (.F1(DivisionTop_0_F1),
+        .F2(DivisionTop_0_F2),
         .F3(floating_point_0_m_axis_result_tdata),
         .LED(DivisionTop_0_LED),
         .clk(clk_1),
@@ -38,5 +40,7 @@ module Division
         .m_axis_result_tdata(floating_point_0_m_axis_result_tdata),
         .m_axis_result_tready(1'b1),
         .s_axis_a_tdata(DivisionTop_0_F1),
-        .s_axis_a_tvalid(1'b0));
+        .s_axis_a_tvalid(1'b0),
+        .s_axis_b_tdata(DivisionTop_0_F2),
+        .s_axis_b_tvalid(1'b0));
 endmodule

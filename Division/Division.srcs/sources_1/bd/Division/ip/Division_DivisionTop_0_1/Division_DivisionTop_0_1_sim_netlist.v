@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug 13 00:58:16 2021
+// Date        : Wed Aug 18 15:45:14 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
+//               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
 // Design      : Division_DivisionTop_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,15 +19,18 @@ module Division_DivisionTop_0_1
    (clk,
     reset,
     F1,
+    F2,
     F3,
     LED);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
   output [31:0]F1;
+  output [31:0]F2;
   input [31:0]F3;
   output [15:0]LED;
 
   wire \<const0> ;
+  wire \<const1> ;
   wire [2:2]\^F1 ;
   wire [31:0]F3;
   wire [15:0]LED;
@@ -65,8 +68,42 @@ module Division_DivisionTop_0_1
   assign F1[2] = \^F1 [2];
   assign F1[1] = \<const0> ;
   assign F1[0] = \<const0> ;
+  assign F2[31] = \<const0> ;
+  assign F2[30] = \<const0> ;
+  assign F2[29] = \<const0> ;
+  assign F2[28] = \<const0> ;
+  assign F2[27] = \<const0> ;
+  assign F2[26] = \<const0> ;
+  assign F2[25] = \<const0> ;
+  assign F2[24] = \<const0> ;
+  assign F2[23] = \<const0> ;
+  assign F2[22] = \<const0> ;
+  assign F2[21] = \<const0> ;
+  assign F2[20] = \<const0> ;
+  assign F2[19] = \<const0> ;
+  assign F2[18] = \<const0> ;
+  assign F2[17] = \<const0> ;
+  assign F2[16] = \<const0> ;
+  assign F2[15] = \<const0> ;
+  assign F2[14] = \<const0> ;
+  assign F2[13] = \<const0> ;
+  assign F2[12] = \<const0> ;
+  assign F2[11] = \<const0> ;
+  assign F2[10] = \<const0> ;
+  assign F2[9] = \<const0> ;
+  assign F2[8] = \<const0> ;
+  assign F2[7] = \<const0> ;
+  assign F2[6] = \<const0> ;
+  assign F2[5] = \<const0> ;
+  assign F2[4] = \<const0> ;
+  assign F2[3] = \<const0> ;
+  assign F2[2] = \<const1> ;
+  assign F2[1] = \<const0> ;
+  assign F2[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
   Division_DivisionTop_0_1_DivisionTop inst
        (.F1(\^F1 ),
         .F3(F3[31:16]),

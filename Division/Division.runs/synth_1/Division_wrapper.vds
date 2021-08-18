@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Aug 13 00:58:20 2021
-# Process ID: 17168
+# Start of session at: Wed Aug 18 15:45:23 2021
+# Process ID: 3848
 # Current directory: C:/Users/OAkun/Division/Division.runs/synth_1
 # Command line: vivado.exe -log Division_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Division_wrapper.tcl
 # Log file: C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.vds
@@ -13,27 +13,28 @@ source Division_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 424.793 ; gain = 28.836
 Command: synth_design -top Division_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8024 
+INFO: Helper process launched with PID 4932 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 857.258 ; gain = 177.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 855.707 ; gain = 177.609
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Division_wrapper' [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Division' [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Division_DivisionTop_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-17168-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Division_DivisionTop_0_1' (1#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-17168-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Division_floating_point_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-17168-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Division_floating_point_0_1' (2#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-17168-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
-WARNING: [Synth 8-7023] instance 'floating_point_0' of module 'Division_floating_point_0_1' has 7 connections declared, but only 5 given [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Division_DivisionTop_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-3848-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Division_DivisionTop_0_1' (1#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-3848-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Division_floating_point_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-3848-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Division_floating_point_0_1' (2#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-3848-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
+WARNING: [Synth 8-7023] instance 'floating_point_0' of module 'Division_floating_point_0_1' has 10 connections declared, but only 7 given [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'Division' (3#1) [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'Division_wrapper' (4#1) [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.184 ; gain = 241.395
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 920.004 ; gain = 241.906
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -46,17 +47,17 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.184 ; gain = 241.395
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 920.004 ; gain = 241.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 921.184 ; gain = 241.395
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 920.004 ; gain = 241.906
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1/Division_floating_point_0_1_in_context.xdc] for cell 'Division_i/floating_point_0'
-Finished Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1/Division_floating_point_0_1_in_context.xdc] for cell 'Division_i/floating_point_0'
+Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1/Division_floating_point_0_0_in_context.xdc] for cell 'Division_i/floating_point_0'
+Finished Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1/Division_floating_point_0_0_in_context.xdc] for cell 'Division_i/floating_point_0'
 Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1/Division_DivisionTop_0_1_in_context.xdc] for cell 'Division_i/DivisionTop_0'
 Finished Parsing XDC File [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1/Division_DivisionTop_0_1_in_context.xdc] for cell 'Division_i/DivisionTop_0'
 Parsing XDC File [C:/Users/OAkun/Division/Division.srcs/constrs_1/imports/sources_1/Nexys4DDRMaster.xdc]
@@ -67,20 +68,20 @@ Parsing XDC File [C:/Users/OAkun/Division/Division.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/OAkun/Division/Division.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 957.543 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 954.832 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 957.543 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 954.832 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 957.543 ; gain = 277.754
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 954.832 ; gain = 276.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 957.543 ; gain = 277.754
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 954.832 ; gain = 276.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -89,10 +90,10 @@ Applied set_property DONT_TOUCH = true for Division_i. (constraint file  auto ge
 Applied set_property DONT_TOUCH = true for Division_i/floating_point_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Division_i/DivisionTop_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 957.543 ; gain = 277.754
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 954.832 ; gain = 276.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 957.543 ; gain = 277.754
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 954.832 ; gain = 276.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,7 +129,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 957.543 ; gain = 277.754
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 954.832 ; gain = 276.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,13 +141,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1003.398 ; gain = 323.609
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1004.121 ; gain = 326.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1003.398 ; gain = 323.609
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1004.121 ; gain = 326.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,7 +159,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1012.992 ; gain = 333.203
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1013.715 ; gain = 335.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +183,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +196,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,25 +208,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -253,29 +254,29 @@ Report Instance Areas:
 +------+-------------+---------+------+
 |      |Instance     |Module   |Cells |
 +------+-------------+---------+------+
-|1     |top          |         |   100|
-|2     |  Division_i |Division |    82|
+|1     |top          |         |   133|
+|2     |  Division_i |Division |   115|
 +------+-------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1028.777 ; gain = 312.629
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1028.777 ; gain = 348.988
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1029.504 ; gain = 316.578
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1029.504 ; gain = 351.406
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1046.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.469 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1046.328 ; gain = 620.227
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1046.328 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1052.469 ; gain = 627.676
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.469 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Division_wrapper_utilization_synth.rpt -pb Division_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 13 00:59:04 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 18 15:46:20 2021...

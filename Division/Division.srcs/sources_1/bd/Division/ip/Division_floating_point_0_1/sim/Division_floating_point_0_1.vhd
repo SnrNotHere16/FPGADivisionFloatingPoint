@@ -62,6 +62,9 @@ ENTITY Division_floating_point_0_1 IS
     s_axis_a_tvalid : IN STD_LOGIC;
     s_axis_a_tready : OUT STD_LOGIC;
     s_axis_a_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    s_axis_b_tvalid : IN STD_LOGIC;
+    s_axis_b_tready : OUT STD_LOGIC;
+    s_axis_b_tdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axis_result_tvalid : OUT STD_LOGIC;
     m_axis_result_tready : IN STD_LOGIC;
     m_axis_result_tdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
@@ -200,6 +203,10 @@ ARCHITECTURE Division_floating_point_0_1_arch OF Division_floating_point_0_1 IS
 "atype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency c_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency c_tuser_bitoffset format long minimum {} maximum {}} value 0}}} field_operation_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value operation_tuser} enabled {attribs {resolve_t" & 
 "ype generated dependency operation_tuser_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency operation_tuser_bitwidth format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency operation_tuser_bitoffset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axis_result_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 M_AXIS_RESULT TVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TREADY";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 10000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF s_axis_b_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_B TVALID";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axis_a_tready: SIGNAL IS "xilinx.com:interface:axis:1.0 S_AXIS_A TREADY";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_a_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_A, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 10000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
@@ -213,10 +220,10 @@ BEGIN
       C_HAS_ADD => 0,
       C_HAS_SUBTRACT => 0,
       C_HAS_MULTIPLY => 0,
-      C_HAS_DIVIDE => 0,
+      C_HAS_DIVIDE => 1,
       C_HAS_SQRT => 0,
       C_HAS_COMPARE => 0,
-      C_HAS_FIX_TO_FLT => 1,
+      C_HAS_FIX_TO_FLT => 0,
       C_HAS_FLT_TO_FIX => 0,
       C_HAS_FLT_TO_FLT => 0,
       C_HAS_RECIP => 0,
@@ -235,15 +242,15 @@ BEGIN
       C_HAS_ACCUMULATOR_PRIMITIVE_A => 0,
       C_HAS_ACCUMULATOR_PRIMITIVE_S => 0,
       C_A_WIDTH => 32,
-      C_A_FRACTION_WIDTH => 0,
+      C_A_FRACTION_WIDTH => 24,
       C_B_WIDTH => 32,
-      C_B_FRACTION_WIDTH => 0,
+      C_B_FRACTION_WIDTH => 24,
       C_C_WIDTH => 32,
-      C_C_FRACTION_WIDTH => 0,
+      C_C_FRACTION_WIDTH => 24,
       C_RESULT_WIDTH => 32,
       C_RESULT_FRACTION_WIDTH => 24,
       C_COMPARE_OPERATION => 8,
-      C_LATENCY => 7,
+      C_LATENCY => 29,
       C_OPTIMIZATION => 1,
       C_MULT_USAGE => 0,
       C_BRAM_USAGE => 0,
@@ -262,7 +269,7 @@ BEGIN
       C_THROTTLE_SCHEME => 1,
       C_HAS_A_TUSER => 0,
       C_HAS_A_TLAST => 0,
-      C_HAS_B => 0,
+      C_HAS_B => 1,
       C_HAS_B_TUSER => 0,
       C_HAS_B_TLAST => 0,
       C_HAS_C => 0,
@@ -295,8 +302,9 @@ BEGIN
       s_axis_a_tdata => s_axis_a_tdata,
       s_axis_a_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_a_tlast => '0',
-      s_axis_b_tvalid => '0',
-      s_axis_b_tdata => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
+      s_axis_b_tvalid => s_axis_b_tvalid,
+      s_axis_b_tready => s_axis_b_tready,
+      s_axis_b_tdata => s_axis_b_tdata,
       s_axis_b_tuser => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1)),
       s_axis_b_tlast => '0',
       s_axis_c_tvalid => '0',
