@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Aug 18 15:47:29 2021
+| Date         : Wed Aug 18 15:58:27 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Division_wrapper_control_sets_placed.rpt
 | Design       : Division_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     7 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    24 |
+| Unused register locations in slices containing registers |    21 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -40,14 +40,14 @@ Table of Contents
 |       Fanout       | Count |
 +--------------------+-------+
 | Total control sets |     7 |
-| >= 0 to < 4        |     2 |
+| >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             748 |          227 |
+| No           | No                    | No                     |            1250 |          271 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              13 |            3 |
-| Yes          | No                    | No                     |              31 |            9 |
+| Yes          | No                    | No                     |              60 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,12 +74,12 @@ Table of Contents
 |  Clock Signal  |                                        Enable Signal                                       |                                       Set/Reset Signal                                      | Slice Load Count | Bel Load Count |
 +----------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+----------------+
 |  clk_IBUF_BUFG |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DELAY/i_pipe/Q[0]            |                1 |              1 |
-|  clk_IBUF_BUFG | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_16_in |                                                                                             |                1 |              1 |
-|  clk_IBUF_BUFG |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/state_op[5] |                1 |              6 |
 |  clk_IBUF_BUFG |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/state_op[1] |                1 |              6 |
-| ~reset_IBUF    |                                                                                            |                                                                                             |               10 |             16 |
-|  clk_IBUF_BUFG | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                             |                8 |             30 |
-|  clk_IBUF_BUFG |                                                                                            |                                                                                             |              217 |            767 |
+|  clk_IBUF_BUFG |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/state_op[5] |                1 |              6 |
+| ~reset_IBUF    |                                                                                            |                                                                                             |                9 |             16 |
+|  clk_IBUF_BUFG | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_16_in |                                                                                             |                7 |             30 |
+|  clk_IBUF_BUFG | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                             |                6 |             30 |
+|  clk_IBUF_BUFG |                                                                                            |                                                                                             |              262 |           1269 |
 +----------------+--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+----------------+
 
 

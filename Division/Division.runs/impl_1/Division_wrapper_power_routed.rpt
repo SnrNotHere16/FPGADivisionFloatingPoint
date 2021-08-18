@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Aug 18 15:48:12 2021
+| Date             : Wed Aug 18 15:59:10 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Division_wrapper_power_routed.rpt -pb Division_wrapper_power_summary_routed.pb -rpx Division_wrapper_power_routed.rpx
 | Design           : Division_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.146 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 14.485 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 13.839                           |
-| Device Static (W)        | 0.306                            |
+| Dynamic (W)              | 14.166                           |
+| Device Static (W)        | 0.319                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 20.5                             |
-| Junction Temperature (C) | 89.5                             |
+| Max Ambient (C)          | 18.9                             |
+| Junction Temperature (C) | 91.1                             |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     7.635 |     2071 |       --- |             --- |
-|   LUT as Logic          |     5.511 |      689 |     63400 |            1.09 |
-|   CARRY4                |     1.251 |      194 |     15850 |            1.22 |
-|   Register              |     0.684 |      792 |    126800 |            0.62 |
-|   LUT as Shift Register |     0.183 |       35 |     19000 |            0.18 |
+| Slice Logic             |     7.714 |     2643 |       --- |             --- |
+|   LUT as Logic          |     5.603 |      713 |     63400 |            1.12 |
+|   CARRY4                |     1.244 |      194 |     15850 |            1.22 |
+|   Register              |     0.680 |     1323 |    126800 |            1.04 |
+|   LUT as Shift Register |     0.181 |       35 |     19000 |            0.18 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |      340 |       --- |             --- |
-| Signals                 |     6.047 |      983 |       --- |             --- |
-| I/O                     |     0.157 |       18 |       210 |            8.57 |
-| Static Power            |     0.306 |          |           |                 |
-| Total                   |    14.146 |          |           |                 |
+|   Others                |     0.000 |      342 |       --- |             --- |
+| Signals                 |     4.988 |     1520 |       --- |             --- |
+| I/O                     |     1.464 |       18 |       210 |            8.57 |
+| Static Power            |     0.319 |          |           |                 |
+| Total                   |    14.485 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    13.871 |      13.690 |      0.181 |
-| Vccaux    |       1.800 |     0.045 |       0.005 |      0.040 |
-| Vcco33    |       3.300 |     0.046 |       0.042 |      0.004 |
+| Vccint    |       1.000 |    12.901 |      12.710 |      0.191 |
+| Vccaux    |       1.800 |     0.094 |       0.053 |      0.041 |
+| Vcco33    |       3.300 |     0.416 |       0.412 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,10 +139,12 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Division_wrapper     |    13.839 |
-|   Division_i         |    13.613 |
-|     floating_point_0 |    13.613 |
-|       U0             |    13.613 |
+| Division_wrapper     |    14.166 |
+|   Division_i         |    12.629 |
+|     DivisionTop_0    |     0.009 |
+|       inst           |     0.009 |
+|     floating_point_0 |    12.620 |
+|       U0             |    12.620 |
 +----------------------+-----------+
 
 
