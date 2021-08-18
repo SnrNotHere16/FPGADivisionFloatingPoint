@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Aug 18 16:20:14 2021
-# Process ID: 7052
+# Start of session at: Wed Aug 18 16:29:19 2021
+# Process ID: 18032
 # Current directory: C:/Users/OAkun/Division/Division.runs/synth_1
 # Command line: vivado.exe -log Division_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Division_wrapper.tcl
 # Log file: C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.vds
@@ -13,27 +13,28 @@ source Division_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 427.602 ; gain = 28.855
 Command: synth_design -top Division_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11956 
+INFO: Helper process launched with PID 5024 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 855.750 ; gain = 177.750
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 856.734 ; gain = 177.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Division_wrapper' [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Division' [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Division_DivisionTop_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-7052-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Division_DivisionTop_0_1' (1#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-7052-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Division_floating_point_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-7052-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Division_floating_point_0_1' (2#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-7052-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Division_DivisionTop_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-18032-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Division_DivisionTop_0_1' (1#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-18032-DESKTOP-NDOLUA7/realtime/Division_DivisionTop_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Division_floating_point_0_1' [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-18032-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Division_floating_point_0_1' (2#1) [C:/Users/OAkun/Division/Division.runs/synth_1/.Xil/Vivado-18032-DESKTOP-NDOLUA7/realtime/Division_floating_point_0_1_stub.v:6]
 WARNING: [Synth 8-7023] instance 'floating_point_0' of module 'Division_floating_point_0_1' has 10 connections declared, but only 7 given [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:38]
 INFO: [Synth 8-6155] done synthesizing module 'Division' (3#1) [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/synth/Division.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'Division_wrapper' (4#1) [C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 919.484 ; gain = 241.484
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 920.516 ; gain = 241.188
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -46,10 +47,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 919.484 ; gain = 241.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 920.516 ; gain = 241.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 919.484 ; gain = 241.484
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 920.516 ; gain = 241.188
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -67,20 +68,20 @@ Parsing XDC File [C:/Users/OAkun/Division/Division.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/OAkun/Division/Division.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 956.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 955.773 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 956.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 955.773 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 956.359 ; gain = 278.359
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 955.773 ; gain = 276.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 956.359 ; gain = 278.359
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 955.773 ; gain = 276.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -89,10 +90,10 @@ Applied set_property DONT_TOUCH = true for Division_i. (constraint file  auto ge
 Applied set_property DONT_TOUCH = true for Division_i/floating_point_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for Division_i/DivisionTop_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 956.359 ; gain = 278.359
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 955.773 ; gain = 276.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 956.359 ; gain = 278.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 955.773 ; gain = 276.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,7 +129,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 956.359 ; gain = 278.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 955.773 ; gain = 276.445
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,13 +141,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1002.355 ; gain = 324.355
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1006.957 ; gain = 327.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1002.355 ; gain = 324.355
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1007.031 ; gain = 327.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,7 +159,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1011.934 ; gain = 333.934
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1016.621 ; gain = 337.293
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +183,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +196,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,25 +208,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -257,25 +258,25 @@ Report Instance Areas:
 |2     |  Division_i |Division |   115|
 +------+-------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1031.391 ; gain = 352.062
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 1027.754 ; gain = 312.879
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 1027.754 ; gain = 349.754
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1031.391 ; gain = 316.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1031.391 ; gain = 352.062
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1051.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1050.883 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 1051.121 ; gain = 626.426
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1051.121 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1050.883 ; gain = 623.281
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1050.883 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Division_wrapper_utilization_synth.rpt -pb Division_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 18 16:21:11 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 18 16:30:08 2021...
