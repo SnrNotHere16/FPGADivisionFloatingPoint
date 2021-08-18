@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Aug 18 16:29:16 2021
+// Date        : Wed Aug 18 16:42:39 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -31,6 +31,7 @@ module Division_DivisionTop_0_1
 
   wire \<const0> ;
   wire \<const1> ;
+  wire [1:1]\^F1 ;
   wire [31:0]F3;
   wire [15:0]LED;
   wire reset;
@@ -65,38 +66,38 @@ module Division_DivisionTop_0_1
   assign F1[4] = \<const0> ;
   assign F1[3] = \<const0> ;
   assign F1[2] = \<const0> ;
-  assign F1[1] = \<const0> ;
+  assign F1[1] = \^F1 [1];
   assign F1[0] = \<const0> ;
-  assign F2[31] = \<const0> ;
-  assign F2[30] = \<const0> ;
-  assign F2[29] = \<const0> ;
-  assign F2[28] = \<const0> ;
-  assign F2[27] = \<const0> ;
-  assign F2[26] = \<const0> ;
-  assign F2[25] = \<const0> ;
-  assign F2[24] = \<const0> ;
-  assign F2[23] = \<const0> ;
-  assign F2[22] = \<const0> ;
-  assign F2[21] = \<const0> ;
-  assign F2[20] = \<const0> ;
-  assign F2[19] = \<const0> ;
-  assign F2[18] = \<const0> ;
-  assign F2[17] = \<const0> ;
-  assign F2[16] = \<const0> ;
+  assign F2[31] = \<const1> ;
+  assign F2[30] = \<const1> ;
+  assign F2[29] = \<const1> ;
+  assign F2[28] = \<const1> ;
+  assign F2[27] = \<const1> ;
+  assign F2[26] = \<const1> ;
+  assign F2[25] = \<const1> ;
+  assign F2[24] = \<const1> ;
+  assign F2[23] = \<const1> ;
+  assign F2[22] = \<const1> ;
+  assign F2[21] = \<const1> ;
+  assign F2[20] = \<const1> ;
+  assign F2[19] = \<const1> ;
+  assign F2[18] = \<const1> ;
+  assign F2[17] = \<const1> ;
+  assign F2[16] = \<const1> ;
   assign F2[15] = \<const1> ;
   assign F2[14] = \<const1> ;
   assign F2[13] = \<const1> ;
   assign F2[12] = \<const1> ;
-  assign F2[11] = \<const0> ;
-  assign F2[10] = \<const0> ;
-  assign F2[9] = \<const0> ;
-  assign F2[8] = \<const0> ;
-  assign F2[7] = \<const0> ;
-  assign F2[6] = \<const0> ;
-  assign F2[5] = \<const0> ;
-  assign F2[4] = \<const0> ;
-  assign F2[3] = \<const0> ;
-  assign F2[2] = \<const0> ;
+  assign F2[11] = \<const1> ;
+  assign F2[10] = \<const1> ;
+  assign F2[9] = \<const1> ;
+  assign F2[8] = \<const1> ;
+  assign F2[7] = \<const1> ;
+  assign F2[6] = \<const1> ;
+  assign F2[5] = \<const1> ;
+  assign F2[4] = \<const1> ;
+  assign F2[3] = \<const1> ;
+  assign F2[2] = \<const1> ;
   assign F2[1] = \<const0> ;
   assign F2[0] = \<const0> ;
   GND GND
@@ -104,7 +105,8 @@ module Division_DivisionTop_0_1
   VCC VCC
        (.P(\<const1> ));
   Division_DivisionTop_0_1_DivisionTop inst
-       (.F3(F3[31:16]),
+       (.F1(\^F1 ),
+        .F3(F3[31:16]),
         .LED(LED),
         .reset(reset));
 endmodule
@@ -112,190 +114,166 @@ endmodule
 (* ORIG_REF_NAME = "DivisionTop" *) 
 module Division_DivisionTop_0_1_DivisionTop
    (LED,
+    F1,
     F3,
     reset);
   output [15:0]LED;
+  output [0:0]F1;
   input [15:0]F3;
   input reset;
 
+  wire [0:0]F1;
   wire [15:0]F3;
   wire [15:0]LED;
   wire reset;
 
-  (* OPT_MODIFIED = "MLO" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \F1[1]_INST_0 
+       (.I0(reset),
+        .O(F1));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[0] 
        (.CLR(1'b0),
         .D(F3[0]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[0]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[10] 
        (.CLR(1'b0),
         .D(F3[10]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[10]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[11] 
        (.CLR(1'b0),
         .D(F3[11]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[11]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[12] 
        (.CLR(1'b0),
         .D(F3[12]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[12]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[13] 
        (.CLR(1'b0),
         .D(F3[13]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[13]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[14] 
        (.CLR(1'b0),
         .D(F3[14]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[14]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[15] 
        (.CLR(1'b0),
         .D(F3[15]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[15]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[1] 
        (.CLR(1'b0),
         .D(F3[1]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[1]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[2] 
        (.CLR(1'b0),
         .D(F3[2]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[2]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[3] 
        (.CLR(1'b0),
         .D(F3[3]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[3]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[4] 
        (.CLR(1'b0),
         .D(F3[4]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[4]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[5] 
        (.CLR(1'b0),
         .D(F3[5]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[5]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[6] 
        (.CLR(1'b0),
         .D(F3[6]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[6]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[7] 
        (.CLR(1'b0),
         .D(F3[7]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[7]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[8] 
        (.CLR(1'b0),
         .D(F3[8]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[8]));
-  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "LD" *) 
   LDCE #(
-    .INIT(1'b0),
-    .IS_G_INVERTED(1'b1)) 
+    .INIT(1'b0)) 
     \LED_reg[9] 
        (.CLR(1'b0),
         .D(F3[9]),
-        .G(reset),
+        .G(F1),
         .GE(1'b1),
         .Q(LED[9]));
 endmodule

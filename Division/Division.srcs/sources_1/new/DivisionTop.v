@@ -31,8 +31,8 @@ always @(clk or reset) begin
         F1 <= 32'b0;
     end
     else begin 
-         F1 <= 32'h0000;
-         F2 <= 32'hF000;
+         F1 <= 2;
+         F2 <= -4;
          LED <= F3[31:16];
     end
 end 

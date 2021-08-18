@@ -37,6 +37,8 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
 add_files C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division.bd
 set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_0_1/Division_floating_point_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_1_0/Division_floating_point_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_2_0/Division_floating_point_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
