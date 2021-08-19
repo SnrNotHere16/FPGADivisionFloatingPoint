@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Aug 18 16:42:39 2021
+// Date        : Wed Aug 18 16:53:33 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -68,35 +68,35 @@ module Division_DivisionTop_0_1
   assign F1[2] = \<const0> ;
   assign F1[1] = \^F1 [1];
   assign F1[0] = \<const0> ;
-  assign F2[31] = \<const1> ;
-  assign F2[30] = \<const1> ;
-  assign F2[29] = \<const1> ;
-  assign F2[28] = \<const1> ;
-  assign F2[27] = \<const1> ;
-  assign F2[26] = \<const1> ;
-  assign F2[25] = \<const1> ;
-  assign F2[24] = \<const1> ;
-  assign F2[23] = \<const1> ;
-  assign F2[22] = \<const1> ;
-  assign F2[21] = \<const1> ;
-  assign F2[20] = \<const1> ;
-  assign F2[19] = \<const1> ;
-  assign F2[18] = \<const1> ;
-  assign F2[17] = \<const1> ;
-  assign F2[16] = \<const1> ;
-  assign F2[15] = \<const1> ;
-  assign F2[14] = \<const1> ;
-  assign F2[13] = \<const1> ;
-  assign F2[12] = \<const1> ;
-  assign F2[11] = \<const1> ;
-  assign F2[10] = \<const1> ;
-  assign F2[9] = \<const1> ;
-  assign F2[8] = \<const1> ;
-  assign F2[7] = \<const1> ;
+  assign F2[31] = \<const0> ;
+  assign F2[30] = \<const0> ;
+  assign F2[29] = \<const0> ;
+  assign F2[28] = \<const0> ;
+  assign F2[27] = \<const0> ;
+  assign F2[26] = \<const0> ;
+  assign F2[25] = \<const0> ;
+  assign F2[24] = \<const0> ;
+  assign F2[23] = \<const0> ;
+  assign F2[22] = \<const0> ;
+  assign F2[21] = \<const0> ;
+  assign F2[20] = \<const0> ;
+  assign F2[19] = \<const0> ;
+  assign F2[18] = \<const0> ;
+  assign F2[17] = \<const0> ;
+  assign F2[16] = \<const0> ;
+  assign F2[15] = \<const0> ;
+  assign F2[14] = \<const0> ;
+  assign F2[13] = \<const0> ;
+  assign F2[12] = \<const0> ;
+  assign F2[11] = \<const0> ;
+  assign F2[10] = \<const0> ;
+  assign F2[9] = \<const0> ;
+  assign F2[8] = \<const0> ;
+  assign F2[7] = \<const0> ;
   assign F2[6] = \<const1> ;
   assign F2[5] = \<const1> ;
-  assign F2[4] = \<const1> ;
-  assign F2[3] = \<const1> ;
+  assign F2[4] = \<const0> ;
+  assign F2[3] = \<const0> ;
   assign F2[2] = \<const1> ;
   assign F2[1] = \<const0> ;
   assign F2[0] = \<const0> ;

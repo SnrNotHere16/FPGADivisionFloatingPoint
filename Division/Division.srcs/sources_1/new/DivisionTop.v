@@ -32,7 +32,7 @@ always @(clk or reset) begin
     end
     else begin 
          F1 <= 2;
-         F2 <= -4;
+         F2 <= 100;
          LED <= F3[31:16];
     end
 end 

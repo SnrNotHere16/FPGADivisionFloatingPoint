@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Aug 18 16:45:08 2021
+| Date             : Wed Aug 18 16:55:58 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Division_wrapper_power_routed.rpt -pb Division_wrapper_power_summary_routed.pb -rpx Division_wrapper_power_routed.rpx
 | Design           : Division_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 14.898 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 16.854 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 14.562                           |
-| Device Static (W)        | 0.336                            |
+| Dynamic (W)              | 16.427                           |
+| Device Static (W)        | 0.427                            |
 | Effective TJA (C/W)      | 4.6                              |
-| Max Ambient (C)          | 17.0                             |
-| Junction Temperature (C) | 93.0                             |
+| Max Ambient (C)          | 8.1                              |
+| Junction Temperature (C) | 101.9                            |
 | Confidence Level         | Low                              |
 | Setting File             | ---                              |
 | Simulation Activity File | ---                              |
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     6.887 |     3691 |       --- |             --- |
-|   LUT as Logic          |     5.051 |     1061 |     63400 |            1.67 |
-|   CARRY4                |     1.087 |      233 |     15850 |            1.47 |
-|   Register              |     0.599 |     1849 |    126800 |            1.46 |
-|   LUT as Shift Register |     0.145 |       38 |     19000 |            0.20 |
+| Slice Logic             |     7.802 |     3555 |       --- |             --- |
+|   LUT as Logic          |     5.735 |     1010 |     63400 |            1.59 |
+|   CARRY4                |     1.217 |      233 |     15850 |            1.47 |
+|   Register              |     0.674 |     1783 |    126800 |            1.41 |
+|   LUT as Shift Register |     0.170 |       36 |     19000 |            0.19 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |      436 |       --- |             --- |
-| Signals                 |     4.521 |     2112 |       --- |             --- |
-| I/O                     |     3.154 |       18 |       210 |            8.57 |
-| Static Power            |     0.336 |          |           |                 |
-| Total                   |    14.898 |          |           |                 |
+|   Others                |     0.000 |      434 |       --- |             --- |
+| Signals                 |     4.541 |     2036 |       --- |             --- |
+| I/O                     |     4.084 |       18 |       210 |            8.57 |
+| Static Power            |     0.427 |          |           |                 |
+| Total                   |    16.854 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    11.620 |      11.417 |      0.204 |
-| Vccaux    |       1.800 |     0.158 |       0.115 |      0.043 |
-| Vcco33    |       3.300 |     0.894 |       0.890 |      0.004 |
+| Vccint    |       1.000 |    12.626 |      12.351 |      0.275 |
+| Vccaux    |       1.800 |     0.202 |       0.149 |      0.053 |
+| Vcco33    |       3.300 |     1.158 |       1.154 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
+| Vccbram   |       1.000 |     0.008 |       0.000 |      0.008 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -139,16 +139,16 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Division_wrapper     |    14.562 |
-|   Division_i         |    11.332 |
-|     DivisionTop_0    |     0.018 |
-|       inst           |     0.018 |
-|     floating_point_0 |    11.250 |
-|       U0             |    11.250 |
-|     floating_point_1 |     0.047 |
-|       U0             |     0.047 |
-|     floating_point_2 |     0.018 |
-|       U0             |     0.018 |
+| Division_wrapper     |    16.427 |
+|   Division_i         |    12.265 |
+|     DivisionTop_0    |     0.023 |
+|       inst           |     0.023 |
+|     floating_point_0 |    12.150 |
+|       U0             |    12.150 |
+|     floating_point_1 |     0.073 |
+|       U0             |     0.073 |
+|     floating_point_2 |     0.019 |
+|       U0             |     0.019 |
 +----------------------+-----------+
 
 
