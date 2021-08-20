@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug 20 13:05:16 2021
+// Date        : Fri Aug 20 13:25:52 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Division_DivisionTop_0_1_sim_netlist.v
@@ -14,24 +14,56 @@
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop
    (anode,
+    c,
+    b,
+    d,
+    e,
+    g,
+    a,
+    f,
     reset,
     clk);
   output [7:0]anode;
+  output c;
+  output b;
+  output d;
+  output e;
+  output g;
+  output a;
+  output f;
   input reset;
   input clk;
 
+  wire a;
   wire [7:0]anode;
+  wire b;
+  wire c;
   wire clk;
+  wire d;
+  wire e;
+  wire f;
+  wire g;
   wire pxl_clck_out;
   wire reset;
+  wire [2:0]seg_sel;
 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_HexToSevenSeg four
+       (.Q(seg_sel),
+        .b(b),
+        .d(d),
+        .e(e),
+        .g(g));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock one
        (.CLK(pxl_clck_out),
         .clk(clk),
         .reset(reset));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController two
        (.CLK(pxl_clck_out),
+        .Q(seg_sel),
+        .a(a),
         .anode(anode),
+        .c(c),
+        .f(f),
         .reset(reset));
 endmodule
 
@@ -71,8 +103,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire \<const0> ;
   wire \<const1> ;
   wire [31:0]F3;
+  wire a;
   wire [7:0]anode;
+  wire b;
+  wire c;
   wire clk;
+  wire d;
+  wire e;
+  wire f;
+  wire g;
   wire reset;
 
   assign F1[31] = \<const1> ;
@@ -140,21 +179,73 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign F2[1] = \<const1> ;
   assign F2[0] = \<const0> ;
   assign LED[15:0] = F3[15:0];
-  assign a = \<const0> ;
-  assign b = \<const0> ;
-  assign c = \<const0> ;
-  assign d = \<const1> ;
-  assign e = \<const1> ;
-  assign f = \<const1> ;
-  assign g = \<const1> ;
   GND GND
        (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop inst
-       (.anode(anode),
+       (.a(a),
+        .anode(anode),
+        .b(b),
+        .c(c),
         .clk(clk),
+        .d(d),
+        .e(e),
+        .f(f),
+        .g(g),
         .reset(reset));
+endmodule
+
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_HexToSevenSeg
+   (b,
+    d,
+    e,
+    g,
+    Q);
+  output b;
+  output d;
+  output e;
+  output g;
+  input [2:0]Q;
+
+  wire [2:0]Q;
+  wire b;
+  wire d;
+  wire e;
+  wire g;
+
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h48)) 
+    b__0
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .O(b));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h86)) 
+    d__0
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .O(d));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hCE)) 
+    e__0
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .O(e));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h83)) 
+    g__0
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .O(g));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
@@ -1084,37 +1175,49 @@ endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
    (anode,
+    Q,
+    c,
+    a,
+    f,
     CLK,
     reset);
   output [7:0]anode;
+  output [2:0]Q;
+  output c;
+  output a;
+  output f;
   input CLK;
   input reset;
 
   wire CLK;
   wire [3:1]NextState;
+  wire [2:0]Q;
+  wire a;
   wire [7:0]anode;
+  wire c;
+  wire f;
   wire reset;
-  wire [2:0]seg_sel;
 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \FSM_sequential_PresentState[0]_i_1 
-       (.I0(seg_sel[0]),
+       (.I0(Q[0]),
         .O(NextState[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \FSM_sequential_PresentState[1]_i_1 
-       (.I0(seg_sel[0]),
-        .I1(seg_sel[1]),
+       (.I0(Q[0]),
+        .I1(Q[1]),
         .O(NextState[2]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \FSM_sequential_PresentState[2]_i_1 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[2]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .O(NextState[3]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[0] 
@@ -1122,85 +1225,109 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[1]),
-        .Q(seg_sel[0]));
+        .Q(Q[0]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[1] 
        (.C(CLK),
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[2]),
-        .Q(seg_sel[1]));
+        .Q(Q[1]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[2] 
        (.C(CLK),
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[3]),
-        .Q(seg_sel[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+        .Q(Q[2]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h06)) 
+    a_INST_0
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .O(a));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \anode[0]_INST_0 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[2]),
-        .I2(seg_sel[0]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[0]),
         .O(anode[0]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[1]_INST_0 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[2]),
-        .I2(seg_sel[0]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[0]),
         .O(anode[1]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
-    .INIT(8'hEF)) 
+    .INIT(8'hFB)) 
     \anode[2]_INST_0 
-       (.I0(seg_sel[2]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[1]),
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
         .O(anode[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     \anode[3]_INST_0 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[2]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .O(anode[3]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[4]_INST_0 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[2]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .O(anode[4]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
-    .INIT(8'hF7)) 
+    .INIT(8'hBF)) 
     \anode[5]_INST_0 
-       (.I0(seg_sel[2]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[1]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[0]),
         .O(anode[5]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
-    .INIT(8'hF7)) 
+    .INIT(8'hBF)) 
     \anode[6]_INST_0 
-       (.I0(seg_sel[1]),
-        .I1(seg_sel[2]),
-        .I2(seg_sel[0]),
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
         .O(anode[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \anode[7]_INST_0 
-       (.I0(seg_sel[2]),
-        .I1(seg_sel[0]),
-        .I2(seg_sel[1]),
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
         .O(anode[7]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    c_INST_0
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
+        .O(c));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h8E)) 
+    f_INST_0
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .O(f));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,8 +1,5 @@
 /*********************************************************************************
 *File Name: PixelController.v
-*Project: Lab Project 4: Memort and Display Controllers
-*Designer: Omar Aquino Pineda
-*Email: omar.aquinopineda@student.csulb.edu
 *Rev Date: Oct. 13, 2018
 *
 *Purpose: The Pixel Controller module selects the signals for the annodes of the   

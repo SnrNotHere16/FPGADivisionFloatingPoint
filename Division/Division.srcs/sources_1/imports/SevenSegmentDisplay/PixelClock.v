@@ -1,8 +1,5 @@
 /*********************************************************************************
 *File Name: PixelClock.v
-*Project: Lab Project 8: 16-bit RISC Processor 
-*Designer: R.W. Allison 
-*Email: omar.aquinopineda@student.csulb.edu
 *Rev Date: Oct. 12, 2018
 *
 *Purpose: The following behavorial module provides a 480 hertz clock. The 

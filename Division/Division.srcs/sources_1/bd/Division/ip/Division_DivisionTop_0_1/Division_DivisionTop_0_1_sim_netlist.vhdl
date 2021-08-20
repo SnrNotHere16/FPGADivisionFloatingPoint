@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 20 13:05:17 2021
+-- Date        : Fri Aug 20 13:25:52 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -10,6 +10,70 @@
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tcsg324-1
 -- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity Division_DivisionTop_0_1_HexToSevenSeg is
+  port (
+    b : out STD_LOGIC;
+    d : out STD_LOGIC;
+    e : out STD_LOGIC;
+    g : out STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Division_DivisionTop_0_1_HexToSevenSeg : entity is "HexToSevenSeg";
+end Division_DivisionTop_0_1_HexToSevenSeg;
+
+architecture STRUCTURE of Division_DivisionTop_0_1_HexToSevenSeg is
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \b__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \d__0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \e__0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \g__0\ : label is "soft_lutpair1";
+begin
+\b__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"48"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(1),
+      O => b
+    );
+\d__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"86"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(1),
+      O => d
+    );
+\e__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"CE"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(0),
+      I2 => Q(1),
+      O => e
+    );
+\g__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"83"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(1),
+      O => g
+    );
+end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
@@ -1382,6 +1446,10 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Division_DivisionTop_0_1_PixelController is
   port (
     anode : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    c : out STD_LOGIC;
+    a : out STD_LOGIC;
+    f : out STD_LOGIC;
     CLK : in STD_LOGIC;
     reset : in STD_LOGIC
   );
@@ -1391,29 +1459,34 @@ end Division_DivisionTop_0_1_PixelController;
 
 architecture STRUCTURE of Division_DivisionTop_0_1_PixelController is
   signal NextState : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal seg_sel : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \^q\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_PresentState[1]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \FSM_sequential_PresentState[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \FSM_sequential_PresentState[0]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \FSM_sequential_PresentState[1]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \FSM_sequential_PresentState[2]_i_1\ : label is "soft_lutpair5";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_PresentState_reg[0]\ : label is "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111";
   attribute FSM_ENCODED_STATES of \FSM_sequential_PresentState_reg[1]\ : label is "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111";
   attribute FSM_ENCODED_STATES of \FSM_sequential_PresentState_reg[2]\ : label is "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111";
-  attribute SOFT_HLUTNM of \anode[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \anode[1]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \anode[2]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \anode[3]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \anode[4]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \anode[5]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \anode[6]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \anode[7]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of a_INST_0 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \anode[0]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \anode[1]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \anode[2]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \anode[3]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \anode[4]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \anode[5]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \anode[6]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \anode[7]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of c_INST_0 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of f_INST_0 : label is "soft_lutpair5";
 begin
+  Q(2 downto 0) <= \^q\(2 downto 0);
 \FSM_sequential_PresentState[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => seg_sel(0),
+      I0 => \^q\(0),
       O => NextState(1)
     );
 \FSM_sequential_PresentState[1]_i_1\: unisim.vcomponents.LUT2
@@ -1421,8 +1494,8 @@ begin
       INIT => X"6"
     )
         port map (
-      I0 => seg_sel(0),
-      I1 => seg_sel(1),
+      I0 => \^q\(0),
+      I1 => \^q\(1),
       O => NextState(2)
     );
 \FSM_sequential_PresentState[2]_i_1\: unisim.vcomponents.LUT3
@@ -1430,9 +1503,9 @@ begin
       INIT => X"78"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(0),
-      I2 => seg_sel(2),
+      I0 => \^q\(1),
+      I1 => \^q\(0),
+      I2 => \^q\(2),
       O => NextState(3)
     );
 \FSM_sequential_PresentState_reg[0]\: unisim.vcomponents.FDCE
@@ -1441,7 +1514,7 @@ begin
       CE => '1',
       CLR => reset,
       D => NextState(1),
-      Q => seg_sel(0)
+      Q => \^q\(0)
     );
 \FSM_sequential_PresentState_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -1449,7 +1522,7 @@ begin
       CE => '1',
       CLR => reset,
       D => NextState(2),
-      Q => seg_sel(1)
+      Q => \^q\(1)
     );
 \FSM_sequential_PresentState_reg[2]\: unisim.vcomponents.FDCE
      port map (
@@ -1457,16 +1530,26 @@ begin
       CE => '1',
       CLR => reset,
       D => NextState(3),
-      Q => seg_sel(2)
+      Q => \^q\(2)
+    );
+a_INST_0: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"06"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \^q\(2),
+      I2 => \^q\(1),
+      O => a
     );
 \anode[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"FE"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(2),
-      I2 => seg_sel(0),
+      I0 => \^q\(1),
+      I1 => \^q\(2),
+      I2 => \^q\(0),
       O => anode(0)
     );
 \anode[1]_INST_0\: unisim.vcomponents.LUT3
@@ -1474,19 +1557,19 @@ begin
       INIT => X"EF"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(2),
-      I2 => seg_sel(0),
+      I0 => \^q\(1),
+      I1 => \^q\(2),
+      I2 => \^q\(0),
       O => anode(1)
     );
 \anode[2]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"EF"
+      INIT => X"FB"
     )
         port map (
-      I0 => seg_sel(2),
-      I1 => seg_sel(0),
-      I2 => seg_sel(1),
+      I0 => \^q\(2),
+      I1 => \^q\(1),
+      I2 => \^q\(0),
       O => anode(2)
     );
 \anode[3]_INST_0\: unisim.vcomponents.LUT3
@@ -1494,9 +1577,9 @@ begin
       INIT => X"F7"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(0),
-      I2 => seg_sel(2),
+      I0 => \^q\(1),
+      I1 => \^q\(0),
+      I2 => \^q\(2),
       O => anode(3)
     );
 \anode[4]_INST_0\: unisim.vcomponents.LUT3
@@ -1504,29 +1587,29 @@ begin
       INIT => X"EF"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(0),
-      I2 => seg_sel(2),
+      I0 => \^q\(1),
+      I1 => \^q\(0),
+      I2 => \^q\(2),
       O => anode(4)
     );
 \anode[5]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F7"
+      INIT => X"BF"
     )
         port map (
-      I0 => seg_sel(2),
-      I1 => seg_sel(0),
-      I2 => seg_sel(1),
+      I0 => \^q\(1),
+      I1 => \^q\(2),
+      I2 => \^q\(0),
       O => anode(5)
     );
 \anode[6]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"F7"
+      INIT => X"BF"
     )
         port map (
-      I0 => seg_sel(1),
-      I1 => seg_sel(2),
-      I2 => seg_sel(0),
+      I0 => \^q\(0),
+      I1 => \^q\(1),
+      I2 => \^q\(2),
       O => anode(6)
     );
 \anode[7]_INST_0\: unisim.vcomponents.LUT3
@@ -1534,10 +1617,30 @@ begin
       INIT => X"7F"
     )
         port map (
-      I0 => seg_sel(2),
-      I1 => seg_sel(0),
-      I2 => seg_sel(1),
+      I0 => \^q\(2),
+      I1 => \^q\(0),
+      I2 => \^q\(1),
       O => anode(7)
+    );
+c_INST_0: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"04"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => \^q\(1),
+      I2 => \^q\(2),
+      O => c
+    );
+f_INST_0: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8E"
+    )
+        port map (
+      I0 => \^q\(1),
+      I1 => \^q\(0),
+      I2 => \^q\(2),
+      O => f
     );
 end STRUCTURE;
 library IEEE;
@@ -1547,6 +1650,13 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Division_DivisionTop_0_1_DivisionTop is
   port (
     anode : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    c : out STD_LOGIC;
+    b : out STD_LOGIC;
+    d : out STD_LOGIC;
+    e : out STD_LOGIC;
+    g : out STD_LOGIC;
+    a : out STD_LOGIC;
+    f : out STD_LOGIC;
     reset : in STD_LOGIC;
     clk : in STD_LOGIC
   );
@@ -1556,7 +1666,16 @@ end Division_DivisionTop_0_1_DivisionTop;
 
 architecture STRUCTURE of Division_DivisionTop_0_1_DivisionTop is
   signal pxl_clck_out : STD_LOGIC;
+  signal seg_sel : STD_LOGIC_VECTOR ( 2 downto 0 );
 begin
+four: entity work.Division_DivisionTop_0_1_HexToSevenSeg
+     port map (
+      Q(2 downto 0) => seg_sel(2 downto 0),
+      b => b,
+      d => d,
+      e => e,
+      g => g
+    );
 one: entity work.Division_DivisionTop_0_1_PixelClock
      port map (
       CLK => pxl_clck_out,
@@ -1566,7 +1685,11 @@ one: entity work.Division_DivisionTop_0_1_PixelClock
 two: entity work.Division_DivisionTop_0_1_PixelController
      port map (
       CLK => pxl_clck_out,
+      Q(2 downto 0) => seg_sel(2 downto 0),
+      a => a,
       anode(7 downto 0) => anode(7 downto 0),
+      c => c,
+      f => f,
       reset => reset
     );
 end STRUCTURE;
@@ -1680,13 +1803,6 @@ begin
   F2(0) <= \<const0>\;
   LED(15 downto 0) <= \^f3\(15 downto 0);
   \^f3\(15 downto 0) <= F3(15 downto 0);
-  a <= \<const0>\;
-  b <= \<const0>\;
-  c <= \<const0>\;
-  d <= \<const1>\;
-  e <= \<const1>\;
-  f <= \<const1>\;
-  g <= \<const1>\;
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
@@ -1697,8 +1813,15 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (
+      a => a,
       anode(7 downto 0) => anode(7 downto 0),
+      b => b,
+      c => c,
       clk => clk,
+      d => d,
+      e => e,
+      f => f,
+      g => g,
       reset => reset
     );
 end STRUCTURE;
