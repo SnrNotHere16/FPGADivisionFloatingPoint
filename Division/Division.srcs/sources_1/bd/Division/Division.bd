@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9B62CB30D03CFCFA",
+      "boundary_crc": "0x8DEA36656EA87B87",
       "device": "xc7a100tcsg324-1",
       "name": "Division",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "floating_point_0": "",
@@ -181,7 +182,13 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              }
+            }
           },
           "reset": {
             "type": "rst",
