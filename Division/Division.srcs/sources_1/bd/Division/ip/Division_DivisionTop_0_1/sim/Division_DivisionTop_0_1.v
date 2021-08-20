@@ -60,6 +60,14 @@ module Division_DivisionTop_0_1 (
   F1,
   F2,
   F3,
+  a,
+  b,
+  c,
+  d,
+  e,
+  f,
+  g,
+  anode,
   LED
 );
 
@@ -72,6 +80,14 @@ input wire reset;
 output wire [31 : 0] F1;
 output wire [31 : 0] F2;
 input wire [31 : 0] F3;
+output wire a;
+output wire b;
+output wire c;
+output wire d;
+output wire e;
+output wire f;
+output wire g;
+output wire [7 : 0] anode;
 output wire [15 : 0] LED;
 
   DivisionTop inst (
@@ -80,6 +96,14 @@ output wire [15 : 0] LED;
     .F1(F1),
     .F2(F2),
     .F3(F3),
+    .a(a),
+    .b(b),
+    .c(c),
+    .d(d),
+    .e(e),
+    .f(f),
+    .g(g),
+    .anode(anode),
     .LED(LED)
   );
 endmodule

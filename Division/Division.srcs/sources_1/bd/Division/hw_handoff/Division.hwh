@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 18 17:16:39 2021" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug 20 12:53:40 2021" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="Division" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -20,6 +20,46 @@
     <PORT DIR="O" LEFT="15" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="DivisionTop_0_LED">
       <CONNECTIONS>
         <CONNECTION INSTANCE="DivisionTop_0" PORT="LED"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="a" SIGIS="undef" SIGNAME="DivisionTop_0_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="DivisionTop_0_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="DivisionTop_0_c">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="c"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="d" SIGIS="undef" SIGNAME="DivisionTop_0_d">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="d"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="e" SIGIS="undef" SIGNAME="DivisionTop_0_e">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="e"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="f" SIGIS="undef" SIGNAME="DivisionTop_0_f">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="f"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="g" SIGIS="undef" SIGNAME="DivisionTop_0_g">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="g"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="DivisionTop_0_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="DivisionTop_0" PORT="anode"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -57,6 +97,46 @@
         <PORT DIR="I" LEFT="31" NAME="F3" RIGHT="0" SIGIS="undef" SIGNAME="floating_point_0_m_axis_result_tdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="floating_point_0" PORT="m_axis_result_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="a" SIGIS="undef" SIGNAME="DivisionTop_0_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="DivisionTop_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="DivisionTop_0_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="d" SIGIS="undef" SIGNAME="DivisionTop_0_d">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="d"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="e" SIGIS="undef" SIGNAME="DivisionTop_0_e">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="e"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="f" SIGIS="undef" SIGNAME="DivisionTop_0_f">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="f"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="g" SIGIS="undef" SIGNAME="DivisionTop_0_g">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="g"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="DivisionTop_0_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="anode"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="LED" RIGHT="0" SIGIS="undef" SIGNAME="DivisionTop_0_LED">

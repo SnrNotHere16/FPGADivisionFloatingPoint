@@ -166,7 +166,15 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set LED [ create_bd_port -dir O -from 15 -to 0 LED ]
+  set a [ create_bd_port -dir O a ]
+  set anode [ create_bd_port -dir O -from 7 -to 0 anode ]
+  set b [ create_bd_port -dir O b ]
+  set c [ create_bd_port -dir O c ]
   set clk [ create_bd_port -dir I clk ]
+  set d [ create_bd_port -dir O d ]
+  set e [ create_bd_port -dir O e ]
+  set f [ create_bd_port -dir O f ]
+  set g [ create_bd_port -dir O g ]
   set reset [ create_bd_port -dir I reset ]
 
   # Create instance: DivisionTop_0, and set properties
@@ -232,6 +240,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DivisionTop_0_F1 [get_bd_pins DivisionTop_0/F1] [get_bd_pins floating_point_1/s_axis_a_tdata]
   connect_bd_net -net DivisionTop_0_F2 [get_bd_pins DivisionTop_0/F2] [get_bd_pins floating_point_2/s_axis_a_tdata]
   connect_bd_net -net DivisionTop_0_LED [get_bd_ports LED] [get_bd_pins DivisionTop_0/LED]
+  connect_bd_net -net DivisionTop_0_a [get_bd_ports a] [get_bd_pins DivisionTop_0/a]
+  connect_bd_net -net DivisionTop_0_anode [get_bd_ports anode] [get_bd_pins DivisionTop_0/anode]
+  connect_bd_net -net DivisionTop_0_b [get_bd_ports b] [get_bd_pins DivisionTop_0/b]
+  connect_bd_net -net DivisionTop_0_c [get_bd_ports c] [get_bd_pins DivisionTop_0/c]
+  connect_bd_net -net DivisionTop_0_d [get_bd_ports d] [get_bd_pins DivisionTop_0/d]
+  connect_bd_net -net DivisionTop_0_e [get_bd_ports e] [get_bd_pins DivisionTop_0/e]
+  connect_bd_net -net DivisionTop_0_f [get_bd_ports f] [get_bd_pins DivisionTop_0/f]
+  connect_bd_net -net DivisionTop_0_g [get_bd_ports g] [get_bd_pins DivisionTop_0/g]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins DivisionTop_0/clk] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk]
   connect_bd_net -net floating_point_0_m_axis_result_tdata [get_bd_pins DivisionTop_0/F3] [get_bd_pins floating_point_0/m_axis_result_tdata]
   connect_bd_net -net floating_point_1_m_axis_result_tdata [get_bd_pins floating_point_0/s_axis_a_tdata] [get_bd_pins floating_point_1/m_axis_result_tdata]

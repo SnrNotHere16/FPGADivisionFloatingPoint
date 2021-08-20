@@ -35,7 +35,13 @@ set_property board_part_repo_paths {C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 set_property ip_output_repo c:/Users/OAkun/Division/Division.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/OAkun/Division/Division.srcs/sources_1/new/DivisionTop.v
+read_verilog -library xil_defaultlib {
+  C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/AdMux.v
+  C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/HexToSevenSeg.v
+  C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/PixelClock.v
+  C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/PixelController.v
+  C:/Users/OAkun/Division/Division.srcs/sources_1/new/DivisionTop.v
+}
 read_ip -quiet C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
