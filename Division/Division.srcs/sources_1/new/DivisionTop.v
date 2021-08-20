@@ -38,7 +38,7 @@ wire [3:0] Y;
     PixelClock one(clk, reset, pxl_clck_out); 
     PixelController two (pxl_clck_out, reset, anode, seg_sel);
     AdMux three (seg_sel, 4'hF, 4'hE, 4'hD, 4'hC, Y); 
-    HexToSevenSeg four (Y, a, b, c, d, e, f, g); 
+    HexToSevenSeg four (4'h7, a, b, c, d, e, f, g); 
     assign F1 = -4; 
     assign F2 = 2; 
     assign LED = F3; 

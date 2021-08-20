@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 20 12:54:31 2021
+-- Date        : Fri Aug 20 13:05:17 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -1683,8 +1683,8 @@ begin
   a <= \<const0>\;
   b <= \<const0>\;
   c <= \<const0>\;
-  d <= \<const0>\;
-  e <= \<const0>\;
+  d <= \<const1>\;
+  e <= \<const1>\;
   f <= \<const1>\;
   g <= \<const1>\;
 GND: unisim.vcomponents.GND
