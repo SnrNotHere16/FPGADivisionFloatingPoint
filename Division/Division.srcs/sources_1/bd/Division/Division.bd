@@ -5,8 +5,7 @@
       "device": "xc7a100tcsg324-1",
       "name": "Division",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1",
-      "validated": "true"
+      "tool_version": "2019.1"
     },
     "design_tree": {
       "floating_point_0": "",
@@ -24,6 +23,32 @@
       "LED": {
         "direction": "O",
         "left": "15",
+        "right": "0"
+      },
+      "a": {
+        "direction": "O"
+      },
+      "b": {
+        "direction": "O"
+      },
+      "c": {
+        "direction": "O"
+      },
+      "d": {
+        "direction": "O"
+      },
+      "e": {
+        "direction": "O"
+      },
+      "f": {
+        "direction": "O"
+      },
+      "g": {
+        "direction": "O"
+      },
+      "anode": {
+        "direction": "O",
+        "left": "7",
         "right": "0"
       }
     },
@@ -156,13 +181,7 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              }
-            }
+            "direction": "I"
           },
           "reset": {
             "type": "rst",
@@ -181,6 +200,32 @@
           "F3": {
             "direction": "I",
             "left": "31",
+            "right": "0"
+          },
+          "a": {
+            "direction": "O"
+          },
+          "b": {
+            "direction": "O"
+          },
+          "c": {
+            "direction": "O"
+          },
+          "d": {
+            "direction": "O"
+          },
+          "e": {
+            "direction": "O"
+          },
+          "f": {
+            "direction": "O"
+          },
+          "g": {
+            "direction": "O"
+          },
+          "anode": {
+            "direction": "O",
+            "left": "7",
             "right": "0"
           },
           "LED": {
@@ -241,6 +286,54 @@
         "ports": [
           "DivisionTop_0/F2",
           "floating_point_2/s_axis_a_tdata"
+        ]
+      },
+      "DivisionTop_0_a": {
+        "ports": [
+          "DivisionTop_0/a",
+          "a"
+        ]
+      },
+      "DivisionTop_0_b": {
+        "ports": [
+          "DivisionTop_0/b",
+          "b"
+        ]
+      },
+      "DivisionTop_0_c": {
+        "ports": [
+          "DivisionTop_0/c",
+          "c"
+        ]
+      },
+      "DivisionTop_0_d": {
+        "ports": [
+          "DivisionTop_0/d",
+          "d"
+        ]
+      },
+      "DivisionTop_0_e": {
+        "ports": [
+          "DivisionTop_0/e",
+          "e"
+        ]
+      },
+      "DivisionTop_0_f": {
+        "ports": [
+          "DivisionTop_0/f",
+          "f"
+        ]
+      },
+      "DivisionTop_0_g": {
+        "ports": [
+          "DivisionTop_0/g",
+          "g"
+        ]
+      },
+      "DivisionTop_0_anode": {
+        "ports": [
+          "DivisionTop_0/anode",
+          "anode"
         ]
       }
     }

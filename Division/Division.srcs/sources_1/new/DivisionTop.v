@@ -19,21 +19,27 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module DivisionTop(clk, reset, F1,F2, F3, LED);
+module DivisionTop(clk, reset, F1,F2, F3, 
+                    a, b, c, d, e, f, g, anode, 
+                    LED);
 
 input clk, reset; 
 input [31:0] F3; 
-output reg [31:0] F1, F2;
-output reg [15:0] LED; 
+output [31:0] F1, F2;
+output a, b, c, d, e, f, g;
+output [7:0] anode; 
+output [15:0] LED; 
 
-always @(clk or reset) begin 
-    if (reset) begin 
-        F1 <= 32'b0;
-    end
-    else begin 
-         F1 <= -2;
-         F2 <= 5000;
-         LED <= F3[31:16];
-    end
-end 
+//wires 
+wire pxl_clck_out;
+wire [2:0] seg_sel;
+wire [3:0] Y; 
+
+    PixelClock one(clk, reset, pxl_clck_out); 
+    PixelController two (pxl_clck_out, reset, anode, seg_sel);
+    AdMux three (seg_sel, 4'hF, 4'hE, 4'hD, 4'hC, Y); 
+    HexToSevenSeg four (Y, a, b, c, d, e, f, g); 
+    assign F1 = -4; 
+    assign F2 = 2; 
+    assign LED = F3; 
 endmodule
