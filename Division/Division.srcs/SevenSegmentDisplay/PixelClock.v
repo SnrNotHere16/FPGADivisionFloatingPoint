@@ -1,10 +1,4 @@
 /*********************************************************************************
-*File Name: PixelClock.v
-*Project: Lab Project 8: 16-bit RISC Processor 
-*Designer: R.W. Allison 
-*Email: omar.aquinopineda@student.csulb.edu
-*Rev Date: Oct. 12, 2018
-*
 *Purpose: The following behavorial module provides a 480 hertz clock. The 
 * incoming frequency is 100 megahertz and the outgoing frequency is 480 hertz.
 * The value of i is obtained by dividing the incoming frequency by the outgoing

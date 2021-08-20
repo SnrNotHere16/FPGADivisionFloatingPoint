@@ -1,10 +1,5 @@
 /*********************************************************************************
 *File Name: HexTo7Segment.v
-*Project: Lab Project 8: 16-bit RISC Processor 
-*Designer: Omar Aquino Pineda
-*Email: omar.aquinopineda@student.csulb.edu
-*Rev Date: Oct. 12, 2018
-*
 *Purpose: This is a hex to seven decoder, where Hex is the input and a-g
 * are the registers that are assigned based on the value of Hex (input). 
 *

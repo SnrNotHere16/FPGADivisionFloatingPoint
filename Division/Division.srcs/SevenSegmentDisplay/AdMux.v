@@ -1,14 +1,5 @@
 /*********************************************************************************
-*File Name: AdMux.v
-*Project: Lab Project 5: Register Files
-*Designer: Omar Aquino Pineda
-*Email: omar.aquinopineda@student.csulb.edu
-*Rev Date: Oct. 12, 2018
-*
-*Purpose: This 8x1 Mux selects which 4 bit value to send to the hex to seven
-* segement module.
-*
-*Notes: 
+
 *********************************************************************************/
 
 `timescale 1ns / 1ps
