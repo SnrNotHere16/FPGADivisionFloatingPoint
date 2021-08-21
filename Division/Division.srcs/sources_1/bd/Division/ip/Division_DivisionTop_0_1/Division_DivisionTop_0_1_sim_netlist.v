@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sat Aug 21 16:26:56 2021
+// Date        : Sat Aug 21 16:42:21 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -120,8 +120,8 @@ module Division_DivisionTop_0_1
   assign F2[5] = \<const0> ;
   assign F2[4] = \<const0> ;
   assign F2[3] = \<const0> ;
-  assign F2[2] = \<const0> ;
-  assign F2[1] = \<const1> ;
+  assign F2[2] = \<const1> ;
+  assign F2[1] = \<const0> ;
   assign F2[0] = \<const0> ;
   assign LED[15:0] = F3[15:0];
   GND GND
@@ -129,7 +129,8 @@ module Division_DivisionTop_0_1
   VCC VCC
        (.P(\<const1> ));
   Division_DivisionTop_0_1_DivisionTop inst
-       (.a(a),
+       (.F3(F3),
+        .a(a),
         .anode(anode),
         .b(b),
         .c(c),
@@ -144,26 +145,29 @@ endmodule
 (* ORIG_REF_NAME = "DivisionTop" *) 
 module Division_DivisionTop_0_1_DivisionTop
    (anode,
-    a,
-    b,
     c,
-    d,
     e,
     f,
     g,
+    d,
+    b,
+    a,
     reset,
+    F3,
     clk);
   output [7:0]anode;
-  output a;
-  output b;
   output c;
-  output d;
   output e;
   output f;
   output g;
+  output d;
+  output b;
+  output a;
   input reset;
+  input [31:0]F3;
   input clk;
 
+  wire [31:0]F3;
   wire a;
   wire [7:0]anode;
   wire b;
@@ -176,7 +180,8 @@ module Division_DivisionTop_0_1_DivisionTop
   wire reset;
 
   Division_DivisionTop_0_1_SevenSegmentDisplayController zero
-       (.a(a),
+       (.F3(F3),
+        .a(a),
         .anode(anode),
         .b(b),
         .c(c),
@@ -186,90 +191,6 @@ module Division_DivisionTop_0_1_DivisionTop
         .f(f),
         .g(g),
         .reset(reset));
-endmodule
-
-(* ORIG_REF_NAME = "HexToSevenSeg" *) 
-module Division_DivisionTop_0_1_HexToSevenSeg
-   (a,
-    b,
-    c,
-    d,
-    e,
-    f,
-    g,
-    Q);
-  output a;
-  output b;
-  output c;
-  output d;
-  output e;
-  output f;
-  output g;
-  input [2:0]Q;
-
-  wire [2:0]Q;
-  wire a;
-  wire b;
-  wire c;
-  wire d;
-  wire e;
-  wire f;
-  wire g;
-
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h0B)) 
-    a__0
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .O(a));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    b__0
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .O(b));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h4C)) 
-    c__0
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .O(c));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hD1)) 
-    d__0
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .O(d));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    e__0
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .O(e));
-  LUT2 #(
-    .INIT(4'h1)) 
-    f__0
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .O(f));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h19)) 
-    g__0
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .O(g));
 endmodule
 
 (* ORIG_REF_NAME = "PixelClock" *) 
@@ -1201,39 +1122,70 @@ endmodule
 (* ORIG_REF_NAME = "PixelController" *) 
 module Division_DivisionTop_0_1_PixelController
    (anode,
-    Q,
+    c,
+    e,
+    f,
+    g,
+    d,
+    b,
+    a,
     CLK,
-    reset);
+    reset,
+    F3);
   output [7:0]anode;
-  output [2:0]Q;
+  output c;
+  output e;
+  output f;
+  output g;
+  output d;
+  output b;
+  output a;
   input CLK;
   input reset;
+  input [31:0]F3;
 
   wire CLK;
+  wire [31:0]F3;
   wire [3:1]NextState;
-  wire [2:0]Q;
+  wire [3:0]Y;
+  wire a;
+  wire a_INST_0_i_10_n_0;
+  wire a_INST_0_i_11_n_0;
+  wire a_INST_0_i_12_n_0;
+  wire a_INST_0_i_5_n_0;
+  wire a_INST_0_i_6_n_0;
+  wire a_INST_0_i_7_n_0;
+  wire a_INST_0_i_8_n_0;
+  wire a_INST_0_i_9_n_0;
   wire [7:0]anode;
+  wire b;
+  wire c;
+  wire d;
+  wire e;
+  wire f;
+  wire g;
   wire reset;
+  wire [2:0]seg_sel;
 
   LUT1 #(
     .INIT(2'h1)) 
     \FSM_sequential_PresentState[0]_i_1 
-       (.I0(Q[0]),
+       (.I0(seg_sel[0]),
         .O(NextState[1]));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \FSM_sequential_PresentState[1]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
+       (.I0(seg_sel[0]),
+        .I1(seg_sel[1]),
         .O(NextState[2]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \FSM_sequential_PresentState[2]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[2]),
         .O(NextState[3]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[0] 
@@ -1241,110 +1193,275 @@ module Division_DivisionTop_0_1_PixelController
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[1]),
-        .Q(Q[0]));
+        .Q(seg_sel[0]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[1] 
        (.C(CLK),
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[2]),
-        .Q(Q[1]));
+        .Q(seg_sel[1]));
   (* FSM_ENCODED_STATES = "iSTATE:000,iSTATE0:001,iSTATE1:010,iSTATE2:011,iSTATE3:100,iSTATE4:101,iSTATE5:110,iSTATE6:111" *) 
   FDCE \FSM_sequential_PresentState_reg[2] 
        (.C(CLK),
         .CE(1'b1),
         .CLR(reset),
         .D(NextState[3]),
-        .Q(Q[2]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+        .Q(seg_sel[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h2086)) 
+    a_INST_0
+       (.I0(Y[0]),
+        .I1(Y[2]),
+        .I2(Y[3]),
+        .I3(Y[1]),
+        .O(a));
+  MUXF7 a_INST_0_i_1
+       (.I0(a_INST_0_i_5_n_0),
+        .I1(a_INST_0_i_6_n_0),
+        .O(Y[0]),
+        .S(seg_sel[2]));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_10
+       (.I0(F3[31]),
+        .I1(F3[27]),
+        .I2(seg_sel[1]),
+        .I3(F3[23]),
+        .I4(seg_sel[0]),
+        .I5(F3[19]),
+        .O(a_INST_0_i_10_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_11
+       (.I0(F3[13]),
+        .I1(F3[9]),
+        .I2(seg_sel[1]),
+        .I3(F3[5]),
+        .I4(seg_sel[0]),
+        .I5(F3[1]),
+        .O(a_INST_0_i_11_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_12
+       (.I0(F3[29]),
+        .I1(F3[25]),
+        .I2(seg_sel[1]),
+        .I3(F3[21]),
+        .I4(seg_sel[0]),
+        .I5(F3[17]),
+        .O(a_INST_0_i_12_n_0));
+  MUXF7 a_INST_0_i_2
+       (.I0(a_INST_0_i_7_n_0),
+        .I1(a_INST_0_i_8_n_0),
+        .O(Y[2]),
+        .S(seg_sel[2]));
+  MUXF7 a_INST_0_i_3
+       (.I0(a_INST_0_i_9_n_0),
+        .I1(a_INST_0_i_10_n_0),
+        .O(Y[3]),
+        .S(seg_sel[2]));
+  MUXF7 a_INST_0_i_4
+       (.I0(a_INST_0_i_11_n_0),
+        .I1(a_INST_0_i_12_n_0),
+        .O(Y[1]),
+        .S(seg_sel[2]));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_5
+       (.I0(F3[12]),
+        .I1(F3[8]),
+        .I2(seg_sel[1]),
+        .I3(F3[4]),
+        .I4(seg_sel[0]),
+        .I5(F3[0]),
+        .O(a_INST_0_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_6
+       (.I0(F3[28]),
+        .I1(F3[24]),
+        .I2(seg_sel[1]),
+        .I3(F3[20]),
+        .I4(seg_sel[0]),
+        .I5(F3[16]),
+        .O(a_INST_0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_7
+       (.I0(F3[14]),
+        .I1(F3[10]),
+        .I2(seg_sel[1]),
+        .I3(F3[6]),
+        .I4(seg_sel[0]),
+        .I5(F3[2]),
+        .O(a_INST_0_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_8
+       (.I0(F3[30]),
+        .I1(F3[26]),
+        .I2(seg_sel[1]),
+        .I3(F3[22]),
+        .I4(seg_sel[0]),
+        .I5(F3[18]),
+        .O(a_INST_0_i_8_n_0));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    a_INST_0_i_9
+       (.I0(F3[15]),
+        .I1(F3[11]),
+        .I2(seg_sel[1]),
+        .I3(F3[7]),
+        .I4(seg_sel[0]),
+        .I5(F3[3]),
+        .O(a_INST_0_i_9_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \anode[0]_INST_0 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[2]),
+        .I2(seg_sel[0]),
         .O(anode[0]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
-    .INIT(8'hFB)) 
+    .INIT(8'hEF)) 
     \anode[1]_INST_0 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[2]),
+        .I2(seg_sel[0]),
         .O(anode[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[2]_INST_0 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+       (.I0(seg_sel[2]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[1]),
         .O(anode[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     \anode[3]_INST_0 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[2]),
         .O(anode[3]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[4]_INST_0 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[2]),
         .O(anode[4]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     \anode[5]_INST_0 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+       (.I0(seg_sel[2]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[1]),
         .O(anode[5]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     \anode[6]_INST_0 
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[0]),
+       (.I0(seg_sel[1]),
+        .I1(seg_sel[2]),
+        .I2(seg_sel[0]),
         .O(anode[6]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \anode[7]_INST_0 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
+       (.I0(seg_sel[2]),
+        .I1(seg_sel[0]),
+        .I2(seg_sel[1]),
         .O(anode[7]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hE448)) 
+    b_INST_0
+       (.I0(Y[0]),
+        .I1(Y[2]),
+        .I2(Y[3]),
+        .I3(Y[1]),
+        .O(b));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h80A4)) 
+    c_INST_0
+       (.I0(Y[2]),
+        .I1(Y[1]),
+        .I2(Y[3]),
+        .I3(Y[0]),
+        .O(c));
+  LUT4 #(
+    .INIT(16'h8692)) 
+    d_INST_0
+       (.I0(Y[0]),
+        .I1(Y[1]),
+        .I2(Y[2]),
+        .I3(Y[3]),
+        .O(d));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h5074)) 
+    e_INST_0
+       (.I0(Y[3]),
+        .I1(Y[2]),
+        .I2(Y[0]),
+        .I3(Y[1]),
+        .O(e));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h480E)) 
+    f_INST_0
+       (.I0(Y[1]),
+        .I1(Y[0]),
+        .I2(Y[3]),
+        .I3(Y[2]),
+        .O(f));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h0483)) 
+    g_INST_0
+       (.I0(Y[0]),
+        .I1(Y[2]),
+        .I2(Y[1]),
+        .I3(Y[3]),
+        .O(g));
 endmodule
 
 (* ORIG_REF_NAME = "SevenSegmentDisplayController" *) 
 module Division_DivisionTop_0_1_SevenSegmentDisplayController
    (anode,
-    a,
-    b,
     c,
-    d,
     e,
     f,
     g,
+    d,
+    b,
+    a,
     reset,
+    F3,
     clk);
   output [7:0]anode;
-  output a;
-  output b;
   output c;
-  output d;
   output e;
   output f;
   output g;
+  output d;
+  output b;
+  output a;
   input reset;
+  input [31:0]F3;
   input clk;
 
+  wire [31:0]F3;
   wire a;
   wire [7:0]anode;
   wire b;
@@ -1356,25 +1473,22 @@ module Division_DivisionTop_0_1_SevenSegmentDisplayController
   wire g;
   wire pxl_clck_out;
   wire reset;
-  wire [2:0]seg_sel;
 
-  Division_DivisionTop_0_1_HexToSevenSeg four
-       (.Q(seg_sel),
-        .a(a),
-        .b(b),
-        .c(c),
-        .d(d),
-        .e(e),
-        .f(f),
-        .g(g));
   Division_DivisionTop_0_1_PixelClock one
        (.CLK(pxl_clck_out),
         .clk(clk),
         .reset(reset));
   Division_DivisionTop_0_1_PixelController two
        (.CLK(pxl_clck_out),
-        .Q(seg_sel),
+        .F3(F3),
+        .a(a),
         .anode(anode),
+        .b(b),
+        .c(c),
+        .d(d),
+        .e(e),
+        .f(f),
+        .g(g),
         .reset(reset));
 endmodule
 `ifndef GLBL
