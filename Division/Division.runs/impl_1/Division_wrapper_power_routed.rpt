@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sat Aug 21 16:20:54 2021
+| Date             : Sat Aug 21 16:29:26 2021
 | Host             : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command          : report_power -file Division_wrapper_power_routed.rpt -pb Division_wrapper_power_summary_routed.pb -rpx Division_wrapper_power_routed.rpx
 | Design           : Division_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 28.651 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 37.490 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 27.854                           |
+| Dynamic (W)              | 36.693                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.381 |     3717 |       --- |             --- |
-|   LUT as Logic          |     0.339 |     1095 |     63400 |            1.73 |
+| Slice Logic             |     0.393 |     3718 |       --- |             --- |
+|   LUT as Logic          |     0.352 |     1094 |     63400 |            1.73 |
 |   CARRY4                |     0.023 |      249 |     15850 |            1.57 |
 |   Register              |     0.013 |     1843 |    126800 |            1.45 |
 |   BUFG                  |     0.006 |        1 |        32 |            3.13 |
 |   Others                |     0.000 |      416 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |       21 |     19000 |            0.11 |
-| Signals                 |     0.508 |     2158 |       --- |             --- |
-| I/O                     |    26.965 |       33 |       210 |           15.71 |
+| Signals                 |     0.590 |     2160 |       --- |             --- |
+| I/O                     |    35.710 |       33 |       210 |           15.71 |
 | Static Power            |     0.797 |          |           |                 |
-| Total                   |    28.651 |          |           |                 |
+| Total                   |    37.490 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.455 |       0.893 |      0.563 |
-| Vccaux    |       1.800 |     1.081 |       0.988 |      0.093 |
-| Vcco33    |       3.300 |     7.635 |       7.631 |      0.004 |
+| Vccint    |       1.000 |     1.550 |       0.987 |      0.563 |
+| Vccaux    |       1.800 |     1.401 |       1.308 |      0.093 |
+| Vcco33    |       3.300 |    10.110 |      10.106 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,14 +139,14 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| Division_wrapper     |    27.854 |
-|   Division_i         |     0.820 |
-|     DivisionTop_0    |     0.793 |
-|       inst           |     0.793 |
-|     floating_point_1 |     0.015 |
+| Division_wrapper     |    36.693 |
+|   Division_i         |     0.914 |
+|     DivisionTop_0    |     0.884 |
+|       inst           |     0.884 |
+|     floating_point_1 |     0.016 |
+|       U0             |     0.016 |
+|     floating_point_2 |     0.015 |
 |       U0             |     0.015 |
-|     floating_point_2 |     0.012 |
-|       U0             |     0.012 |
 +----------------------+-----------+
 
 

@@ -31,7 +31,7 @@ output [7:0] anode;
 output [15:0] LED; 
 
 
-SevenSegmentDisplayController zero(clk, reset, 32'hF0F1, 
+SevenSegmentDisplayController zero(clk, reset, 32'hABCDF0F1, 
                                       a, b, c, d, e, f, g,
                                       anode);
 
