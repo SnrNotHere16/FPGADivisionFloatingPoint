@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sat Aug 21 16:06:36 2021
+// Date        : Sat Aug 21 16:18:18 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Division_DivisionTop_0_1_sim_netlist.v
@@ -12,25 +12,41 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_AdMux
+   (d,
+    Q);
+  output d;
+  input [2:0]Q;
+
+  wire [2:0]Q;
+  wire d;
+
+  LUT3 #(
+    .INIT(8'h0D)) 
+    Y
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .O(d));
+endmodule
+
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop
-   (anode,
-    c,
-    b,
-    d,
-    e,
+   (a,
+    anode,
     g,
-    a,
+    d,
+    c,
     f,
+    b,
     reset,
     clk);
-  output [7:0]anode;
-  output c;
-  output b;
-  output d;
-  output e;
-  output g;
   output a;
+  output [7:0]anode;
+  output g;
+  output d;
+  output c;
   output f;
+  output b;
   input reset;
   input clk;
 
@@ -40,7 +56,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop
   wire c;
   wire clk;
   wire d;
-  wire e;
   wire f;
   wire g;
   wire reset;
@@ -52,7 +67,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop
         .c(c),
         .clk(clk),
         .d(d),
-        .e(e),
         .f(f),
         .g(g),
         .reset(reset));
@@ -100,7 +114,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire c;
   wire clk;
   wire d;
-  wire e;
   wire f;
   wire g;
   wire reset;
@@ -170,6 +183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign F2[1] = \<const1> ;
   assign F2[0] = \<const0> ;
   assign LED[15:0] = F3[15:0];
+  assign e = f;
   GND GND
        (.G(\<const0> ));
   VCC VCC
@@ -181,62 +195,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .c(c),
         .clk(clk),
         .d(d),
-        .e(e),
         .f(f),
         .g(g),
         .reset(reset));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_HexToSevenSeg
-   (b,
-    d,
-    e,
-    g,
+   (c,
     Q);
-  output b;
-  output d;
-  output e;
-  output g;
-  input [2:0]Q;
+  output c;
+  input [1:0]Q;
 
-  wire [2:0]Q;
-  wire b;
-  wire d;
-  wire e;
-  wire g;
+  wire [1:0]Q;
+  wire c;
 
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h48)) 
-    b__0
+  LUT2 #(
+    .INIT(4'h2)) 
+    c__0
        (.I0(Q[0]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .O(b));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h86)) 
-    d__0
-       (.I0(Q[0]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .O(d));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hCE)) 
-    e__0
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .O(e));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h83)) 
-    g__0
-       (.I0(Q[0]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .O(g));
+        .I1(Q[1]),
+        .O(c));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
@@ -250,48 +228,48 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
   wire CLK;
   wire clk;
   wire clk_out_i_1_n_0;
+  wire i1_carry__0_i_1_n_0;
+  wire i1_carry__0_i_2_n_0;
+  wire i1_carry__0_i_3_n_0;
+  wire i1_carry__0_i_4_n_0;
+  wire i1_carry__0_i_5_n_0;
+  wire i1_carry__0_i_6_n_0;
+  wire i1_carry__0_i_7_n_0;
+  wire i1_carry__0_i_8_n_0;
   wire i1_carry__0_n_0;
   wire i1_carry__0_n_1;
   wire i1_carry__0_n_2;
   wire i1_carry__0_n_3;
+  wire i1_carry__1_i_1_n_0;
+  wire i1_carry__1_i_2_n_0;
+  wire i1_carry__1_i_3_n_0;
+  wire i1_carry__1_i_4_n_0;
+  wire i1_carry__1_i_5_n_0;
+  wire i1_carry__1_i_6_n_0;
+  wire i1_carry__1_i_7_n_0;
+  wire i1_carry__1_i_8_n_0;
   wire i1_carry__1_n_0;
   wire i1_carry__1_n_1;
   wire i1_carry__1_n_2;
   wire i1_carry__1_n_3;
+  wire i1_carry__2_i_1_n_0;
+  wire i1_carry__2_i_2_n_0;
+  wire i1_carry__2_i_3_n_0;
+  wire i1_carry__2_i_4_n_0;
+  wire i1_carry__2_i_5_n_0;
+  wire i1_carry__2_i_6_n_0;
+  wire i1_carry__2_i_7_n_0;
+  wire i1_carry__2_i_8_n_0;
   wire i1_carry__2_n_1;
   wire i1_carry__2_n_2;
   wire i1_carry__2_n_3;
-  wire i1_carry_i_1__0_n_0;
-  wire i1_carry_i_1__1_n_0;
-  wire i1_carry_i_1__2_n_0;
   wire i1_carry_i_1_n_0;
-  wire i1_carry_i_2__0_n_0;
-  wire i1_carry_i_2__1_n_0;
-  wire i1_carry_i_2__2_n_0;
   wire i1_carry_i_2_n_0;
-  wire i1_carry_i_3__0_n_0;
-  wire i1_carry_i_3__1_n_0;
-  wire i1_carry_i_3__2_n_0;
   wire i1_carry_i_3_n_0;
-  wire i1_carry_i_4__0_n_0;
-  wire i1_carry_i_4__1_n_0;
-  wire i1_carry_i_4__2_n_0;
   wire i1_carry_i_4_n_0;
-  wire i1_carry_i_5__0_n_0;
-  wire i1_carry_i_5__1_n_0;
-  wire i1_carry_i_5__2_n_0;
   wire i1_carry_i_5_n_0;
-  wire i1_carry_i_6__0_n_0;
-  wire i1_carry_i_6__1_n_0;
-  wire i1_carry_i_6__2_n_0;
   wire i1_carry_i_6_n_0;
-  wire i1_carry_i_7__0_n_0;
-  wire i1_carry_i_7__1_n_0;
-  wire i1_carry_i_7__2_n_0;
   wire i1_carry_i_7_n_0;
-  wire i1_carry_i_8__0_n_0;
-  wire i1_carry_i_8__1_n_0;
-  wire i1_carry_i_8_n_0;
   wire i1_carry_n_0;
   wire i1_carry_n_1;
   wire i1_carry_n_2;
@@ -452,28 +430,172 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
         .CYINIT(1'b1),
         .DI({i1_carry_i_1_n_0,1'b0,i1_carry_i_2_n_0,i1_carry_i_3_n_0}),
         .O(NLW_i1_carry_O_UNCONNECTED[3:0]),
-        .S({i1_carry_i_4__2_n_0,i1_carry_i_5_n_0,i1_carry_i_6__2_n_0,i1_carry_i_7__2_n_0}));
+        .S({i1_carry_i_4_n_0,i1_carry_i_5_n_0,i1_carry_i_6_n_0,i1_carry_i_7_n_0}));
   CARRY4 i1_carry__0
        (.CI(i1_carry_n_0),
         .CO({i1_carry__0_n_0,i1_carry__0_n_1,i1_carry__0_n_2,i1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({i1_carry_i_1__0_n_0,i1_carry_i_2__0_n_0,i1_carry_i_3__0_n_0,i1_carry_i_4_n_0}),
+        .DI({i1_carry__0_i_1_n_0,i1_carry__0_i_2_n_0,i1_carry__0_i_3_n_0,i1_carry__0_i_4_n_0}),
         .O(NLW_i1_carry__0_O_UNCONNECTED[3:0]),
-        .S({i1_carry_i_5__2_n_0,i1_carry_i_6__1_n_0,i1_carry_i_7__1_n_0,i1_carry_i_8__1_n_0}));
+        .S({i1_carry__0_i_5_n_0,i1_carry__0_i_6_n_0,i1_carry__0_i_7_n_0,i1_carry__0_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__0_i_1
+       (.I0(i2[14]),
+        .I1(i2[15]),
+        .O(i1_carry__0_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    i1_carry__0_i_2
+       (.I0(i2[12]),
+        .I1(i2[13]),
+        .O(i1_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    i1_carry__0_i_3
+       (.I0(i2[10]),
+        .I1(i2[11]),
+        .O(i1_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__0_i_4
+       (.I0(i2[8]),
+        .I1(i2[9]),
+        .O(i1_carry__0_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__0_i_5
+       (.I0(i2[14]),
+        .I1(i2[15]),
+        .O(i1_carry__0_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    i1_carry__0_i_6
+       (.I0(i2[13]),
+        .I1(i2[12]),
+        .O(i1_carry__0_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    i1_carry__0_i_7
+       (.I0(i2[11]),
+        .I1(i2[10]),
+        .O(i1_carry__0_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__0_i_8
+       (.I0(i2[8]),
+        .I1(i2[9]),
+        .O(i1_carry__0_i_8_n_0));
   CARRY4 i1_carry__1
        (.CI(i1_carry__0_n_0),
         .CO({i1_carry__1_n_0,i1_carry__1_n_1,i1_carry__1_n_2,i1_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI({i1_carry_i_1__1_n_0,i1_carry_i_2__1_n_0,i1_carry_i_3__1_n_0,i1_carry_i_4__0_n_0}),
+        .DI({i1_carry__1_i_1_n_0,i1_carry__1_i_2_n_0,i1_carry__1_i_3_n_0,i1_carry__1_i_4_n_0}),
         .O(NLW_i1_carry__1_O_UNCONNECTED[3:0]),
-        .S({i1_carry_i_5__1_n_0,i1_carry_i_6__0_n_0,i1_carry_i_7__0_n_0,i1_carry_i_8__0_n_0}));
+        .S({i1_carry__1_i_5_n_0,i1_carry__1_i_6_n_0,i1_carry__1_i_7_n_0,i1_carry__1_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__1_i_1
+       (.I0(i2[22]),
+        .I1(i2[23]),
+        .O(i1_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__1_i_2
+       (.I0(i2[20]),
+        .I1(i2[21]),
+        .O(i1_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__1_i_3
+       (.I0(i2[18]),
+        .I1(i2[19]),
+        .O(i1_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__1_i_4
+       (.I0(i2[16]),
+        .I1(i2[17]),
+        .O(i1_carry__1_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__1_i_5
+       (.I0(i2[22]),
+        .I1(i2[23]),
+        .O(i1_carry__1_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__1_i_6
+       (.I0(i2[20]),
+        .I1(i2[21]),
+        .O(i1_carry__1_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__1_i_7
+       (.I0(i2[18]),
+        .I1(i2[19]),
+        .O(i1_carry__1_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__1_i_8
+       (.I0(i2[16]),
+        .I1(i2[17]),
+        .O(i1_carry__1_i_8_n_0));
   CARRY4 i1_carry__2
        (.CI(i1_carry__1_n_0),
         .CO({load,i1_carry__2_n_1,i1_carry__2_n_2,i1_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({i1_carry_i_1__2_n_0,i1_carry_i_2__2_n_0,i1_carry_i_3__2_n_0,i1_carry_i_4__1_n_0}),
+        .DI({i1_carry__2_i_1_n_0,i1_carry__2_i_2_n_0,i1_carry__2_i_3_n_0,i1_carry__2_i_4_n_0}),
         .O(NLW_i1_carry__2_O_UNCONNECTED[3:0]),
-        .S({i1_carry_i_5__0_n_0,i1_carry_i_6_n_0,i1_carry_i_7_n_0,i1_carry_i_8_n_0}));
+        .S({i1_carry__2_i_5_n_0,i1_carry__2_i_6_n_0,i1_carry__2_i_7_n_0,i1_carry__2_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    i1_carry__2_i_1
+       (.I0(i2[30]),
+        .I1(i2[31]),
+        .O(i1_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__2_i_2
+       (.I0(i2[28]),
+        .I1(i2[29]),
+        .O(i1_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__2_i_3
+       (.I0(i2[26]),
+        .I1(i2[27]),
+        .O(i1_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    i1_carry__2_i_4
+       (.I0(i2[24]),
+        .I1(i2[25]),
+        .O(i1_carry__2_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__2_i_5
+       (.I0(i2[30]),
+        .I1(i2[31]),
+        .O(i1_carry__2_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__2_i_6
+       (.I0(i2[28]),
+        .I1(i2[29]),
+        .O(i1_carry__2_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__2_i_7
+       (.I0(i2[26]),
+        .I1(i2[27]),
+        .O(i1_carry__2_i_7_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    i1_carry__2_i_8
+       (.I0(i2[24]),
+        .I1(i2[25]),
+        .O(i1_carry__2_i_8_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i1_carry_i_1
@@ -482,46 +604,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
         .O(i1_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
-    i1_carry_i_1__0
-       (.I0(i2[14]),
-        .I1(i2[15]),
-        .O(i1_carry_i_1__0_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_1__1
-       (.I0(i2[22]),
-        .I1(i2[23]),
-        .O(i1_carry_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    i1_carry_i_1__2
-       (.I0(i2[30]),
-        .I1(i2[31]),
-        .O(i1_carry_i_1__2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
     i1_carry_i_2
        (.I0(i2[2]),
         .I1(i2[3]),
         .O(i1_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    i1_carry_i_2__0
-       (.I0(i2[12]),
-        .I1(i2[13]),
-        .O(i1_carry_i_2__0_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_2__1
-       (.I0(i2[20]),
-        .I1(i2[21]),
-        .O(i1_carry_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_2__2
-       (.I0(i2[28]),
-        .I1(i2[29]),
-        .O(i1_carry_i_2__2_n_0));
   LUT2 #(
     .INIT(4'hD)) 
     i1_carry_i_3
@@ -529,47 +615,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
         .I1(i2[1]),
         .O(i1_carry_i_3_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
-    i1_carry_i_3__0
-       (.I0(i2[10]),
-        .I1(i2[11]),
-        .O(i1_carry_i_3__0_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_3__1
-       (.I0(i2[18]),
-        .I1(i2[19]),
-        .O(i1_carry_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_3__2
-       (.I0(i2[26]),
-        .I1(i2[27]),
-        .O(i1_carry_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_4
-       (.I0(i2[8]),
-        .I1(i2[9]),
-        .O(i1_carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_4__0
-       (.I0(i2[16]),
-        .I1(i2[17]),
-        .O(i1_carry_i_4__0_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    i1_carry_i_4__1
-       (.I0(i2[24]),
-        .I1(i2[25]),
-        .O(i1_carry_i_4__1_n_0));
-  LUT2 #(
     .INIT(4'h2)) 
-    i1_carry_i_4__2
+    i1_carry_i_4
        (.I0(i2[7]),
         .I1(i2[6]),
-        .O(i1_carry_i_4__2_n_0));
+        .O(i1_carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h8)) 
     i1_carry_i_5
@@ -578,88 +628,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
         .O(i1_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
-    i1_carry_i_5__0
-       (.I0(i2[30]),
-        .I1(i2[31]),
-        .O(i1_carry_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_5__1
-       (.I0(i2[22]),
-        .I1(i2[23]),
-        .O(i1_carry_i_5__1_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_5__2
-       (.I0(i2[14]),
-        .I1(i2[15]),
-        .O(i1_carry_i_5__2_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
     i1_carry_i_6
-       (.I0(i2[28]),
-        .I1(i2[29]),
-        .O(i1_carry_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_6__0
-       (.I0(i2[20]),
-        .I1(i2[21]),
-        .O(i1_carry_i_6__0_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    i1_carry_i_6__1
-       (.I0(i2[13]),
-        .I1(i2[12]),
-        .O(i1_carry_i_6__1_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_6__2
        (.I0(i2[2]),
         .I1(i2[3]),
-        .O(i1_carry_i_6__2_n_0));
+        .O(i1_carry_i_6_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'h2)) 
     i1_carry_i_7
-       (.I0(i2[26]),
-        .I1(i2[27]),
-        .O(i1_carry_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_7__0
-       (.I0(i2[18]),
-        .I1(i2[19]),
-        .O(i1_carry_i_7__0_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    i1_carry_i_7__1
-       (.I0(i2[11]),
-        .I1(i2[10]),
-        .O(i1_carry_i_7__1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    i1_carry_i_7__2
        (.I0(i_reg[0]),
         .I1(i2[1]),
-        .O(i1_carry_i_7__2_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_8
-       (.I0(i2[24]),
-        .I1(i2[25]),
-        .O(i1_carry_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_8__0
-       (.I0(i2[16]),
-        .I1(i2[17]),
-        .O(i1_carry_i_8__0_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    i1_carry_i_8__1
-       (.I0(i2[8]),
-        .I1(i2[9]),
-        .O(i1_carry_i_8__1_n_0));
+        .O(i1_carry_i_7_n_0));
   CARRY4 i2_carry
        (.CI(1'b0),
         .CO({i2_carry_n_0,i2_carry_n_1,i2_carry_n_2,i2_carry_n_3}),
@@ -1165,18 +1143,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
-   (anode,
+   (a,
     Q,
-    c,
-    a,
+    anode,
+    g,
     f,
+    b,
     CLK,
     reset);
-  output [7:0]anode;
-  output [2:0]Q;
-  output c;
   output a;
+  output [2:0]Q;
+  output [7:0]anode;
+  output g;
   output f;
+  output b;
   input CLK;
   input reset;
 
@@ -1185,24 +1165,24 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
   wire [2:0]Q;
   wire a;
   wire [7:0]anode;
-  wire c;
+  wire b;
   wire f;
+  wire g;
   wire reset;
 
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \FSM_sequential_PresentState[0]_i_1 
        (.I0(Q[0]),
         .O(NextState[1]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \FSM_sequential_PresentState[1]_i_1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(NextState[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \FSM_sequential_PresentState[2]_i_1 
@@ -1231,15 +1211,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .CLR(reset),
         .D(NextState[3]),
         .Q(Q[2]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
-    .INIT(8'h06)) 
+    .INIT(8'h01)) 
     a_INST_0
-       (.I0(Q[0]),
+       (.I0(Q[1]),
         .I1(Q[2]),
-        .I2(Q[1]),
+        .I2(Q[0]),
         .O(a));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \anode[0]_INST_0 
@@ -1247,7 +1227,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[2]),
         .I2(Q[0]),
         .O(anode[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[1]_INST_0 
@@ -1255,7 +1235,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[2]),
         .I2(Q[0]),
         .O(anode[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \anode[2]_INST_0 
@@ -1263,7 +1243,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[1]),
         .I2(Q[0]),
         .O(anode[2]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hF7)) 
     \anode[3]_INST_0 
@@ -1271,7 +1251,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[0]),
         .I2(Q[2]),
         .O(anode[3]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \anode[4]_INST_0 
@@ -1279,23 +1259,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[0]),
         .I2(Q[2]),
         .O(anode[4]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
-    .INIT(8'hBF)) 
+    .INIT(8'hF7)) 
     \anode[5]_INST_0 
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .O(anode[5]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hF7)) 
+    \anode[6]_INST_0 
        (.I0(Q[1]),
         .I1(Q[2]),
         .I2(Q[0]),
-        .O(anode[5]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hBF)) 
-    \anode[6]_INST_0 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
         .O(anode[6]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \anode[7]_INST_0 
@@ -1303,43 +1283,47 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController
         .I1(Q[0]),
         .I2(Q[1]),
         .O(anode[7]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h04)) 
-    c_INST_0
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    b_INST_0
        (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(c));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+        .I1(Q[2]),
+        .O(b));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
-    .INIT(8'h8E)) 
+    .INIT(8'h01)) 
     f_INST_0
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[1]),
         .O(f));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    g_INST_0
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .O(g));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SevenSegmentDisplayController
-   (anode,
-    c,
-    b,
-    d,
-    e,
+   (a,
+    anode,
     g,
-    a,
+    d,
+    c,
     f,
+    b,
     reset,
     clk);
-  output [7:0]anode;
-  output c;
-  output b;
-  output d;
-  output e;
-  output g;
   output a;
+  output [7:0]anode;
+  output g;
+  output d;
+  output c;
   output f;
+  output b;
   input reset;
   input clk;
 
@@ -1349,7 +1333,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SevenSegmentDisplayController
   wire c;
   wire clk;
   wire d;
-  wire e;
   wire f;
   wire g;
   wire pxl_clck_out;
@@ -1357,22 +1340,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SevenSegmentDisplayController
   wire [2:0]seg_sel;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_HexToSevenSeg four
-       (.Q(seg_sel),
-        .b(b),
-        .d(d),
-        .e(e),
-        .g(g));
+       (.Q({seg_sel[2],seg_sel[0]}),
+        .c(c));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelClock one
        (.CLK(pxl_clck_out),
         .clk(clk),
         .reset(reset));
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_AdMux three
+       (.Q(seg_sel),
+        .d(d));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PixelController two
        (.CLK(pxl_clck_out),
         .Q(seg_sel),
         .a(a),
         .anode(anode),
-        .c(c),
+        .b(b),
         .f(f),
+        .g(g),
         .reset(reset));
 endmodule
 `ifndef GLBL
