@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7a100tcsg324-1
@@ -40,6 +39,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/HexToSevenSeg.v
   C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/PixelClock.v
   C:/Users/OAkun/Division/Division.srcs/sources_1/imports/SevenSegmentDisplay/PixelController.v
+  C:/Users/OAkun/Division/Division.srcs/sources_1/new/SevenSegmentDisplayController.v
   C:/Users/OAkun/Division/Division.srcs/sources_1/new/DivisionTop.v
 }
 read_ip -quiet C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1.xci

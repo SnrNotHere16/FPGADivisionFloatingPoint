@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Aug 20 13:25:52 2021
+-- Date        : Sat Aug 21 16:06:36 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -1647,7 +1647,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Division_DivisionTop_0_1_DivisionTop is
+entity Division_DivisionTop_0_1_SevenSegmentDisplayController is
   port (
     anode : out STD_LOGIC_VECTOR ( 7 downto 0 );
     c : out STD_LOGIC;
@@ -1661,10 +1661,10 @@ entity Division_DivisionTop_0_1_DivisionTop is
     clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_DivisionTop_0_1_DivisionTop : entity is "DivisionTop";
-end Division_DivisionTop_0_1_DivisionTop;
+  attribute ORIG_REF_NAME of Division_DivisionTop_0_1_SevenSegmentDisplayController : entity is "SevenSegmentDisplayController";
+end Division_DivisionTop_0_1_SevenSegmentDisplayController;
 
-architecture STRUCTURE of Division_DivisionTop_0_1_DivisionTop is
+architecture STRUCTURE of Division_DivisionTop_0_1_SevenSegmentDisplayController is
   signal pxl_clck_out : STD_LOGIC;
   signal seg_sel : STD_LOGIC_VECTOR ( 2 downto 0 );
 begin
@@ -1690,6 +1690,43 @@ two: entity work.Division_DivisionTop_0_1_PixelController
       anode(7 downto 0) => anode(7 downto 0),
       c => c,
       f => f,
+      reset => reset
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity Division_DivisionTop_0_1_DivisionTop is
+  port (
+    anode : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    c : out STD_LOGIC;
+    b : out STD_LOGIC;
+    d : out STD_LOGIC;
+    e : out STD_LOGIC;
+    g : out STD_LOGIC;
+    a : out STD_LOGIC;
+    f : out STD_LOGIC;
+    reset : in STD_LOGIC;
+    clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Division_DivisionTop_0_1_DivisionTop : entity is "DivisionTop";
+end Division_DivisionTop_0_1_DivisionTop;
+
+architecture STRUCTURE of Division_DivisionTop_0_1_DivisionTop is
+begin
+zero: entity work.Division_DivisionTop_0_1_SevenSegmentDisplayController
+     port map (
+      a => a,
+      anode(7 downto 0) => anode(7 downto 0),
+      b => b,
+      c => c,
+      clk => clk,
+      d => d,
+      e => e,
+      f => f,
+      g => g,
       reset => reset
     );
 end STRUCTURE;

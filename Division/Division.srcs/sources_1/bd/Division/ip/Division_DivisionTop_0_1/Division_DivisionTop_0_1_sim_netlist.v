@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug 20 13:25:52 2021
+// Date        : Sat Aug 21 16:06:36 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -173,27 +173,18 @@ module Division_DivisionTop_0_1_DivisionTop
   wire e;
   wire f;
   wire g;
-  wire pxl_clck_out;
   wire reset;
-  wire [2:0]seg_sel;
 
-  Division_DivisionTop_0_1_HexToSevenSeg four
-       (.Q(seg_sel),
+  Division_DivisionTop_0_1_SevenSegmentDisplayController zero
+       (.a(a),
+        .anode(anode),
         .b(b),
+        .c(c),
+        .clk(clk),
         .d(d),
         .e(e),
-        .g(g));
-  Division_DivisionTop_0_1_PixelClock one
-       (.CLK(pxl_clck_out),
-        .clk(clk),
-        .reset(reset));
-  Division_DivisionTop_0_1_PixelController two
-       (.CLK(pxl_clck_out),
-        .Q(seg_sel),
-        .a(a),
-        .anode(anode),
-        .c(c),
         .f(f),
+        .g(g),
         .reset(reset));
 endmodule
 
@@ -1332,6 +1323,62 @@ module Division_DivisionTop_0_1_PixelController
         .I1(Q[0]),
         .I2(Q[2]),
         .O(f));
+endmodule
+
+(* ORIG_REF_NAME = "SevenSegmentDisplayController" *) 
+module Division_DivisionTop_0_1_SevenSegmentDisplayController
+   (anode,
+    c,
+    b,
+    d,
+    e,
+    g,
+    a,
+    f,
+    reset,
+    clk);
+  output [7:0]anode;
+  output c;
+  output b;
+  output d;
+  output e;
+  output g;
+  output a;
+  output f;
+  input reset;
+  input clk;
+
+  wire a;
+  wire [7:0]anode;
+  wire b;
+  wire c;
+  wire clk;
+  wire d;
+  wire e;
+  wire f;
+  wire g;
+  wire pxl_clck_out;
+  wire reset;
+  wire [2:0]seg_sel;
+
+  Division_DivisionTop_0_1_HexToSevenSeg four
+       (.Q(seg_sel),
+        .b(b),
+        .d(d),
+        .e(e),
+        .g(g));
+  Division_DivisionTop_0_1_PixelClock one
+       (.CLK(pxl_clck_out),
+        .clk(clk),
+        .reset(reset));
+  Division_DivisionTop_0_1_PixelController two
+       (.CLK(pxl_clck_out),
+        .Q(seg_sel),
+        .a(a),
+        .anode(anode),
+        .c(c),
+        .f(f),
+        .reset(reset));
 endmodule
 `ifndef GLBL
 `define GLBL
