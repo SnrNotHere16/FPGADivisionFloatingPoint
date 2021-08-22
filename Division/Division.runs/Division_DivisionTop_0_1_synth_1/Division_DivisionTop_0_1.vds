@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Aug 22 14:00:35 2021
-# Process ID: 15236
+# Start of session at: Sun Aug 22 14:25:27 2021
+# Process ID: 9180
 # Current directory: C:/Users/OAkun/Division/Division.runs/Division_DivisionTop_0_1_synth_1
 # Command line: vivado.exe -log Division_DivisionTop_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Division_DivisionTop_0_1.tcl
 # Log file: C:/Users/OAkun/Division/Division.runs/Division_DivisionTop_0_1_synth_1/Division_DivisionTop_0_1.vds
@@ -17,9 +17,9 @@ WARNING: [IP_Flow 19-3571] IP 'Division_DivisionTop_0_1' is restricted:
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9916 
+INFO: Helper process launched with PID 2872 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 607.965 ; gain = 182.043
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 607.359 ; gain = 181.859
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Division_DivisionTop_0_1' [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/synth/Division_DivisionTop_0_1.v:58]
 INFO: [Synth 8-6157] synthesizing module 'DivisionTop' [C:/Users/OAkun/Division/Division.srcs/sources_1/new/DivisionTop.v:22]
@@ -49,18 +49,18 @@ INFO: [Synth 8-6155] done synthesizing module 'SevenSegmentDisplayController' (5
 INFO: [Synth 8-6155] done synthesizing module 'DivisionTop' (6#1) [C:/Users/OAkun/Division/Division.srcs/sources_1/new/DivisionTop.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'Division_DivisionTop_0_1' (7#1) [c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/synth/Division_DivisionTop_0_1.v:58]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 671.832 ; gain = 245.910
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 671.840 ; gain = 246.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 671.832 ; gain = 245.910
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 671.840 ; gain = 246.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 671.832 ; gain = 245.910
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 671.840 ; gain = 246.340
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'PresentState_reg' in module 'PixelController'
 INFO: [Synth 8-5544] ROM "Annode" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -79,7 +79,7 @@ INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because addres
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PresentState_reg' using encoding 'sequential' in module 'PixelController'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 671.832 ; gain = 245.910
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 671.840 ; gain = 246.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -139,36 +139,36 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[31] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[30] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[29] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[28] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[27] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[26] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[25] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[24] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[23] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[22] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[21] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[20] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[19] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[18] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[17] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[16] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[15] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[14] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[13] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[12] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[11] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[10] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[9] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[8] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[7] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[6] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[5] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[4] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[3] driven by constant 1
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[2] driven by constant 1
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[31] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[30] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[29] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[28] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[27] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[26] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[25] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[24] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[23] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[22] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[21] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[20] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[19] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[18] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[17] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[16] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[15] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[14] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[13] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[12] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[11] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[10] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[9] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[8] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[7] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[6] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[5] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[4] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[3] driven by constant 0
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[2] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[1] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F1[0] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[31] driven by constant 0
@@ -201,10 +201,10 @@ INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[5] driven by co
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[4] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[3] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[2] driven by constant 0
-INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[1] driven by constant 1
+INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[1] driven by constant 0
 INFO: [Synth 8-3917] design Division_DivisionTop_0_1 has port F2[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 825.988 ; gain = 400.066
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 824.293 ; gain = 398.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -217,7 +217,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 830.086 ; gain = 404.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -229,7 +229,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 830.086 ; gain = 404.586
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -253,7 +253,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -266,7 +266,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -278,25 +278,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -333,35 +333,35 @@ Report Instance Areas:
 |5     |      two |PixelController               |    33|
 +------+----------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 831.406 ; gain = 405.484
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 830.133 ; gain = 404.633
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 944.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 96 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 945.527 ; gain = 523.953
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 945.527 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 944.188 ; gain = 523.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 944.188 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/OAkun/Division/Division.runs/Division_DivisionTop_0_1_synth_1/Division_DivisionTop_0_1.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1409.363 ; gain = 463.836
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1403.043 ; gain = 458.855
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1409.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1404.098 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/OAkun/Division/Division.runs/Division_DivisionTop_0_1_synth_1/Division_DivisionTop_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Division_DivisionTop_0_1_utilization_synth.rpt -pb Division_DivisionTop_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug 22 14:01:13 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 22 14:26:02 2021...
