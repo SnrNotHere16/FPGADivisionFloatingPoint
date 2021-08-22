@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat Aug 21 16:56:02 2021
+| Date         : Sat Aug 21 17:29:54 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Division_wrapper_control_sets_placed.rpt
 | Design       : Division_wrapper
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    14 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    50 |
+| Unused register locations in slices containing registers |    51 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -40,14 +40,14 @@ Table of Contents
 |       Fanout       | Count |
 +--------------------+-------+
 | Total control sets |    14 |
-| >= 0 to < 4        |     4 |
-| >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     2 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     8 |
+| >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            1689 |          344 |
-| No           | No                    | Yes                    |              36 |           10 |
-| No           | Yes                   | No                     |              98 |           19 |
-| Yes          | No                    | No                     |              95 |           22 |
+| No           | No                    | No                     |            1655 |          334 |
+| No           | No                    | Yes                    |              36 |           12 |
+| No           | Yes                   | No                     |              94 |           24 |
+| Yes          | No                    | No                     |              68 |           15 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -76,17 +76,17 @@ Table of Contents
 |  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DELAY/i_pipe/Q[0]                                           |                1 |              1 |
 |  clk_IBUF_BUFG                              | Division_i/floating_point_2/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                                                            |                1 |              1 |
 |  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_2/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[7].CARRYS_DEL.NEED_DEL.CARRYS_FD_0 |                1 |              2 |
-|  Division_i/DivisionTop_0/inst/zero/one/CLK |                                                                                            | reset_IBUF                                                                                                                 |                1 |              3 |
+|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_1/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[7].CARRYS_DEL.NEED_DEL.CARRYS_FD_0 |                1 |              3 |
+|  Division_i/DivisionTop_0/inst/zero/one/CLK |                                                                                            | reset_IBUF                                                                                                                 |                3 |              3 |
+|  clk_IBUF_BUFG                              | Division_i/floating_point_1/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                                                            |                2 |              5 |
 |  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/state_op[1]                                |                1 |              6 |
-|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_1/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[7].CARRYS_DEL.NEED_DEL.CARRYS_FD_0 |                1 |              7 |
-|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_2/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0  |                4 |             22 |
-|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_1/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0  |                3 |             22 |
-|  clk_IBUF_BUFG                              | Division_i/floating_point_1/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                                                            |                6 |             31 |
-|  clk_IBUF_BUFG                              | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_16_in |                                                                                                                            |                7 |             31 |
-|  clk_IBUF_BUFG                              | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                                                            |                8 |             32 |
+|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_1/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0  |                7 |             22 |
+|  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_2/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0  |                5 |             22 |
+|  clk_IBUF_BUFG                              | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_16_in |                                                                                                                            |                5 |             31 |
+|  clk_IBUF_BUFG                              | Division_i/floating_point_0/U0/i_synth/need_combiner.use_2to1.skid_buffer_combiner/p_30_in |                                                                                                                            |                7 |             31 |
 |  clk_IBUF_BUFG                              |                                                                                            | reset_IBUF                                                                                                                 |                9 |             33 |
 |  clk_IBUF_BUFG                              |                                                                                            | Division_i/floating_point_0/U0/i_synth/DIV_OP.SPD.OP/EXP/STATE_DEC_DELAY/i_pipe/state_op[5]                                |                8 |             38 |
-|  clk_IBUF_BUFG                              |                                                                                            |                                                                                                                            |              344 |           1727 |
+|  clk_IBUF_BUFG                              |                                                                                            |                                                                                                                            |              334 |           1691 |
 +---------------------------------------------+--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
 
 
