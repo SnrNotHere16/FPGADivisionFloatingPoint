@@ -25,26 +25,26 @@ module DivisionTop(clk, reset, F1,F2, F3,
 
 input clk, reset; 
 input [31:0] F3; 
-output reg [31:0] F1, F2;
+output wire [31:0] F1, F2;
 output a, b, c, d, e, f, g;
 output [7:0] anode; 
-output reg [15:0] LED; 
+output wire [15:0] LED; 
 
-always @(clk, reset) begin 
-    if (reset) begin 
-        F1 <= 32'b0;
-        F2 <= 32'b0; 
-    end
+//always @(clk, reset) begin 
+//    if (reset) begin 
+//        F1 <= 32'b0;
+//        F2 <= 32'b0; 
+//    end
     
-       F1 <= 2; 
-       F2 <= -8; 
-       LED <= F3; 
-end 
+//       F1 <= 2; 
+//       F2 <= -8; 
+//       LED <= F3; 
+//end 
 SevenSegmentDisplayController zero(clk, reset, F3, 
                                       a, b, c, d, e, f, g,
                                       anode);
 
-//    assign F1 = -4; 
-//    assign F2 = 2; 
-//    assign LED = F3; 
+    assign F1 = 0; 
+    assign F2 = 0; 
+    assign LED = F3; 
 endmodule
