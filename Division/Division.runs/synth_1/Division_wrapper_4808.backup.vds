@@ -2,11 +2,18 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Aug 22 13:21:30 2021
-# Process ID: 12628
+# Start of session at: Sun Aug 22 13:19:15 2021
+# Process ID: 4808
 # Current directory: C:/Users/OAkun/Division/Division.runs/synth_1
 # Command line: vivado.exe -log Division_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Division_wrapper.tcl
 # Log file: C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.vds
 # Journal file: C:/Users/OAkun/Division/Division.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Division_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [Vivado 12-818] No files matched 'C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division_ooc.xdc'
+ERROR: [Common 17-55] 'set_property' expects at least one object.
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 22 13:19:25 2021...
