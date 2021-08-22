@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sat Aug 21 17:28:16 2021
+// Date        : Sat Aug 21 17:42:22 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Division_DivisionTop_0_1_sim_netlist.v
@@ -96,7 +96,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   output [15:0]LED;
 
   wire \<const0> ;
-  wire \<const1> ;
   wire [31:0]F3;
   wire a;
   wire [7:0]anode;
@@ -126,16 +125,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign F1[17] = \<const0> ;
   assign F1[16] = \<const0> ;
   assign F1[15] = \<const0> ;
-  assign F1[14] = \<const1> ;
+  assign F1[14] = \<const0> ;
   assign F1[13] = \<const0> ;
   assign F1[12] = \<const0> ;
-  assign F1[11] = \<const1> ;
-  assign F1[10] = \<const1> ;
-  assign F1[9] = \<const1> ;
+  assign F1[11] = \<const0> ;
+  assign F1[10] = \<const0> ;
+  assign F1[9] = \<const0> ;
   assign F1[8] = \<const0> ;
   assign F1[7] = \<const0> ;
   assign F1[6] = \<const0> ;
-  assign F1[5] = \<const1> ;
+  assign F1[5] = \<const0> ;
   assign F1[4] = \<const0> ;
   assign F1[3] = \<const0> ;
   assign F1[2] = \<const0> ;
@@ -170,14 +169,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign F2[5] = \<const0> ;
   assign F2[4] = \<const0> ;
   assign F2[3] = \<const0> ;
-  assign F2[2] = \<const1> ;
+  assign F2[2] = \<const0> ;
   assign F2[1] = \<const0> ;
   assign F2[0] = \<const0> ;
   assign LED[15:0] = F3[15:0];
   GND GND
        (.G(\<const0> ));
-  VCC VCC
-       (.P(\<const1> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop inst
        (.F3(F3),
         .a(a),

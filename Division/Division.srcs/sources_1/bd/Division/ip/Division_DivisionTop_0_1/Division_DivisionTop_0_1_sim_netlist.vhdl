@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Aug 21 17:28:17 2021
+-- Date        : Sat Aug 21 17:42:22 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -1892,7 +1892,6 @@ end Division_DivisionTop_0_1;
 
 architecture STRUCTURE of Division_DivisionTop_0_1 is
   signal \<const0>\ : STD_LOGIC;
-  signal \<const1>\ : STD_LOGIC;
   signal \^f3\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
@@ -1918,16 +1917,16 @@ begin
   F1(17) <= \<const0>\;
   F1(16) <= \<const0>\;
   F1(15) <= \<const0>\;
-  F1(14) <= \<const1>\;
+  F1(14) <= \<const0>\;
   F1(13) <= \<const0>\;
   F1(12) <= \<const0>\;
-  F1(11) <= \<const1>\;
-  F1(10) <= \<const1>\;
-  F1(9) <= \<const1>\;
+  F1(11) <= \<const0>\;
+  F1(10) <= \<const0>\;
+  F1(9) <= \<const0>\;
   F1(8) <= \<const0>\;
   F1(7) <= \<const0>\;
   F1(6) <= \<const0>\;
-  F1(5) <= \<const1>\;
+  F1(5) <= \<const0>\;
   F1(4) <= \<const0>\;
   F1(3) <= \<const0>\;
   F1(2) <= \<const0>\;
@@ -1962,7 +1961,7 @@ begin
   F2(5) <= \<const0>\;
   F2(4) <= \<const0>\;
   F2(3) <= \<const0>\;
-  F2(2) <= \<const1>\;
+  F2(2) <= \<const0>\;
   F2(1) <= \<const0>\;
   F2(0) <= \<const0>\;
   LED(15 downto 0) <= \^f3\(15 downto 0);
@@ -1970,10 +1969,6 @@ begin
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
-    );
-VCC: unisim.vcomponents.VCC
-     port map (
-      P => \<const1>\
     );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (
