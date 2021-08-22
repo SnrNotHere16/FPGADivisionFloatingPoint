@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Aug 21 17:42:22 2021
+-- Date        : Sun Aug 22 12:36:59 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -1892,6 +1892,7 @@ end Division_DivisionTop_0_1;
 
 architecture STRUCTURE of Division_DivisionTop_0_1 is
   signal \<const0>\ : STD_LOGIC;
+  signal \<const1>\ : STD_LOGIC;
   signal \^f3\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
@@ -1929,8 +1930,8 @@ begin
   F1(5) <= \<const0>\;
   F1(4) <= \<const0>\;
   F1(3) <= \<const0>\;
-  F1(2) <= \<const0>\;
-  F1(1) <= \<const0>\;
+  F1(2) <= \<const1>\;
+  F1(1) <= \<const1>\;
   F1(0) <= \<const0>\;
   F2(31) <= \<const0>\;
   F2(30) <= \<const0>\;
@@ -1969,6 +1970,10 @@ begin
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
+    );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
     );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (

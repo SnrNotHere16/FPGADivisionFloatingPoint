@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sat Aug 21 17:42:22 2021
+// Date        : Sun Aug 22 12:36:58 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Division_DivisionTop_0_1_sim_netlist.v
@@ -96,6 +96,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   output [15:0]LED;
 
   wire \<const0> ;
+  wire \<const1> ;
   wire [31:0]F3;
   wire a;
   wire [7:0]anode;
@@ -137,8 +138,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign F1[5] = \<const0> ;
   assign F1[4] = \<const0> ;
   assign F1[3] = \<const0> ;
-  assign F1[2] = \<const0> ;
-  assign F1[1] = \<const0> ;
+  assign F1[2] = \<const1> ;
+  assign F1[1] = \<const1> ;
   assign F1[0] = \<const0> ;
   assign F2[31] = \<const0> ;
   assign F2[30] = \<const0> ;
@@ -175,6 +176,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign LED[15:0] = F3[15:0];
   GND GND
        (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DivisionTop inst
        (.F3(F3),
         .a(a),
