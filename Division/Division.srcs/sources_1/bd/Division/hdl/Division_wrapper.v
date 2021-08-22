@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sun Aug 22 12:54:05 2021
+//Date        : Sun Aug 22 13:05:28 2021
 //Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 //Command     : generate_target Division_wrapper.bd
 //Design      : Division_wrapper
