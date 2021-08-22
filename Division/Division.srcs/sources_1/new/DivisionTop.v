@@ -36,8 +36,8 @@ always @(clk, reset) begin
         F2 <= 32'b0; 
     end
     
-       F1 <= 0; 
-       F2 <= -6; 
+       F1 <= 8; 
+       F2 <= 2; 
        LED <= F3; 
 end 
 SevenSegmentDisplayController zero(clk, reset, F3, 
