@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="Division" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1629667519"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1629667519"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1629667519"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1629667519"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1629758789"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1629758789"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1629758789"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1629758789"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Division_floating_point_0_1\Division_floating_point_0_1.xci" Type="IP">
         <Instance HierarchyPath="floating_point_0"/>
@@ -17,22 +17,6 @@
       </File>
       <File Name="ip\Division_DivisionTop_0_1\Division_DivisionTop_0_1.xci" Type="IP">
         <Instance HierarchyPath="DivisionTop_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Division_floating_point_1_0\Division_floating_point_1_0.xci" Type="IP">
-        <Instance HierarchyPath="floating_point_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\Division_floating_point_2_0\Division_floating_point_2_0.xci" Type="IP">
-        <Instance HierarchyPath="floating_point_2"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

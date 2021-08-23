@@ -10,8 +10,6 @@
     },
     "design_tree": {
       "floating_point_0": "",
-      "floating_point_1": "",
-      "floating_point_2": "",
       "DivisionTop_0": ""
     },
     "ports": {
@@ -99,78 +97,6 @@
           }
         }
       },
-      "floating_point_1": {
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "xci_name": "Division_floating_point_1_0",
-        "parameters": {
-          "C_Accum_Input_Msb": {
-            "value": "32"
-          },
-          "C_Accum_Lsb": {
-            "value": "-31"
-          },
-          "C_Accum_Msb": {
-            "value": "32"
-          },
-          "C_Latency": {
-            "value": "7"
-          },
-          "C_Mult_Usage": {
-            "value": "No_Usage"
-          },
-          "C_Rate": {
-            "value": "1"
-          },
-          "C_Result_Exponent_Width": {
-            "value": "8"
-          },
-          "C_Result_Fraction_Width": {
-            "value": "24"
-          },
-          "Operation_Type": {
-            "value": "Fixed_to_float"
-          },
-          "Result_Precision_Type": {
-            "value": "Single"
-          }
-        }
-      },
-      "floating_point_2": {
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "xci_name": "Division_floating_point_2_0",
-        "parameters": {
-          "C_Accum_Input_Msb": {
-            "value": "32"
-          },
-          "C_Accum_Lsb": {
-            "value": "-31"
-          },
-          "C_Accum_Msb": {
-            "value": "32"
-          },
-          "C_Latency": {
-            "value": "7"
-          },
-          "C_Mult_Usage": {
-            "value": "No_Usage"
-          },
-          "C_Rate": {
-            "value": "1"
-          },
-          "C_Result_Exponent_Width": {
-            "value": "8"
-          },
-          "C_Result_Fraction_Width": {
-            "value": "24"
-          },
-          "Operation_Type": {
-            "value": "Fixed_to_float"
-          },
-          "Result_Precision_Type": {
-            "value": "Single"
-          }
-        }
-      },
       "DivisionTop_0": {
         "vlnv": "xilinx.com:module_ref:DivisionTop:1.0",
         "xci_name": "Division_DivisionTop_0_1",
@@ -248,8 +174,6 @@
         "ports": [
           "clk",
           "floating_point_0/aclk",
-          "floating_point_2/aclk",
-          "floating_point_1/aclk",
           "DivisionTop_0/clk"
         ]
       },
@@ -269,30 +193,6 @@
         "ports": [
           "DivisionTop_0/LED",
           "LED"
-        ]
-      },
-      "DivisionTop_0_F1": {
-        "ports": [
-          "DivisionTop_0/F1",
-          "floating_point_1/s_axis_a_tdata"
-        ]
-      },
-      "floating_point_1_m_axis_result_tdata": {
-        "ports": [
-          "floating_point_1/m_axis_result_tdata",
-          "floating_point_0/s_axis_a_tdata"
-        ]
-      },
-      "floating_point_2_m_axis_result_tdata": {
-        "ports": [
-          "floating_point_2/m_axis_result_tdata",
-          "floating_point_0/s_axis_b_tdata"
-        ]
-      },
-      "DivisionTop_0_F2": {
-        "ports": [
-          "DivisionTop_0/F2",
-          "floating_point_2/s_axis_a_tdata"
         ]
       },
       "DivisionTop_0_a": {
@@ -341,6 +241,18 @@
         "ports": [
           "DivisionTop_0/anode",
           "anode"
+        ]
+      },
+      "DivisionTop_0_F1": {
+        "ports": [
+          "DivisionTop_0/F1",
+          "floating_point_0/s_axis_a_tdata"
+        ]
+      },
+      "DivisionTop_0_F2": {
+        "ports": [
+          "DivisionTop_0/F2",
+          "floating_point_0/s_axis_b_tdata"
         ]
       }
     }

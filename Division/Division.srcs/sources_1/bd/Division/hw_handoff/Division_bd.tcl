@@ -206,39 +206,9 @@ proc create_root_design { parentCell } {
    CONFIG.Result_Precision_Type {Single} \
  ] $floating_point_0
 
-  # Create instance: floating_point_1, and set properties
-  set floating_point_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_1 ]
-  set_property -dict [ list \
-   CONFIG.C_Accum_Input_Msb {32} \
-   CONFIG.C_Accum_Lsb {-31} \
-   CONFIG.C_Accum_Msb {32} \
-   CONFIG.C_Latency {7} \
-   CONFIG.C_Mult_Usage {No_Usage} \
-   CONFIG.C_Rate {1} \
-   CONFIG.C_Result_Exponent_Width {8} \
-   CONFIG.C_Result_Fraction_Width {24} \
-   CONFIG.Operation_Type {Fixed_to_float} \
-   CONFIG.Result_Precision_Type {Single} \
- ] $floating_point_1
-
-  # Create instance: floating_point_2, and set properties
-  set floating_point_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_2 ]
-  set_property -dict [ list \
-   CONFIG.C_Accum_Input_Msb {32} \
-   CONFIG.C_Accum_Lsb {-31} \
-   CONFIG.C_Accum_Msb {32} \
-   CONFIG.C_Latency {7} \
-   CONFIG.C_Mult_Usage {No_Usage} \
-   CONFIG.C_Rate {1} \
-   CONFIG.C_Result_Exponent_Width {8} \
-   CONFIG.C_Result_Fraction_Width {24} \
-   CONFIG.Operation_Type {Fixed_to_float} \
-   CONFIG.Result_Precision_Type {Single} \
- ] $floating_point_2
-
   # Create port connections
-  connect_bd_net -net DivisionTop_0_F1 [get_bd_pins DivisionTop_0/F1] [get_bd_pins floating_point_1/s_axis_a_tdata]
-  connect_bd_net -net DivisionTop_0_F2 [get_bd_pins DivisionTop_0/F2] [get_bd_pins floating_point_2/s_axis_a_tdata]
+  connect_bd_net -net DivisionTop_0_F1 [get_bd_pins DivisionTop_0/F1] [get_bd_pins floating_point_0/s_axis_a_tdata]
+  connect_bd_net -net DivisionTop_0_F2 [get_bd_pins DivisionTop_0/F2] [get_bd_pins floating_point_0/s_axis_b_tdata]
   connect_bd_net -net DivisionTop_0_LED [get_bd_ports LED] [get_bd_pins DivisionTop_0/LED]
   connect_bd_net -net DivisionTop_0_a [get_bd_ports a] [get_bd_pins DivisionTop_0/a]
   connect_bd_net -net DivisionTop_0_anode [get_bd_ports anode] [get_bd_pins DivisionTop_0/anode]
@@ -248,10 +218,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DivisionTop_0_e [get_bd_ports e] [get_bd_pins DivisionTop_0/e]
   connect_bd_net -net DivisionTop_0_f [get_bd_ports f] [get_bd_pins DivisionTop_0/f]
   connect_bd_net -net DivisionTop_0_g [get_bd_ports g] [get_bd_pins DivisionTop_0/g]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins DivisionTop_0/clk] [get_bd_pins floating_point_0/aclk] [get_bd_pins floating_point_1/aclk] [get_bd_pins floating_point_2/aclk]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins DivisionTop_0/clk] [get_bd_pins floating_point_0/aclk]
   connect_bd_net -net floating_point_0_m_axis_result_tdata [get_bd_pins DivisionTop_0/F3] [get_bd_pins floating_point_0/m_axis_result_tdata]
-  connect_bd_net -net floating_point_1_m_axis_result_tdata [get_bd_pins floating_point_0/s_axis_a_tdata] [get_bd_pins floating_point_1/m_axis_result_tdata]
-  connect_bd_net -net floating_point_2_m_axis_result_tdata [get_bd_pins floating_point_0/s_axis_b_tdata] [get_bd_pins floating_point_2/m_axis_result_tdata]
   connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins DivisionTop_0/reset]
 
   # Create address segments

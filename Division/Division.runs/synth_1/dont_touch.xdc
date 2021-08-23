@@ -12,10 +12,4 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Division_floati
 # IP: bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Division_DivisionTop_0_1 || ORIG_REF_NAME==Division_DivisionTop_0_1} -quiet] -quiet
 
-# IP: bd/Division/ip/Division_floating_point_1_0/Division_floating_point_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Division_floating_point_1_0 || ORIG_REF_NAME==Division_floating_point_1_0} -quiet] -quiet
-
-# IP: bd/Division/ip/Division_floating_point_2_0/Division_floating_point_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Division_floating_point_2_0 || ORIG_REF_NAME==Division_floating_point_2_0} -quiet] -quiet
-
 # XDC: bd/Division/Division_ooc.xdc
