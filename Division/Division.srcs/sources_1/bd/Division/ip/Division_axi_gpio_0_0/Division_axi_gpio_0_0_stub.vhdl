@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Fri Aug  6 00:47:59 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_0_0/Division_axi_gpio_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Division_axi_gpio_0_0 -prefix
+--               Division_axi_gpio_0_0_ Division_axi_gpio_0_0_stub.vhdl
 -- Design      : Division_axi_gpio_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

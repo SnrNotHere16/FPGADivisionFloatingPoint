@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug  6 00:56:36 2021
+// Date        : Fri Aug  6 00:56:35 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_xbar_0/Division_xbar_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Division_xbar_0 -prefix
+//               Division_xbar_0_ Division_xbar_0_sim_netlist.v
 // Design      : Division_xbar_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -305,7 +305,6 @@ module Division_xbar_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_20_addr_arbiter_sasd" *) 
 module Division_xbar_0_axi_crossbar_v2_1_20_addr_arbiter_sasd
    (aa_grant_any,
     m_valid_i,
@@ -1612,13 +1611,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "4" *) (* C_NUM_SLAVE_SLOTS = "1" *) (* C_R_REGISTER = "1" *) 
 (* C_S_AXI_ARB_PRIORITY = "0" *) (* C_S_AXI_BASE_ID = "0" *) (* C_S_AXI_READ_ACCEPTANCE = "1" *) 
 (* C_S_AXI_SINGLE_THREAD = "1" *) (* C_S_AXI_THREAD_ID_WIDTH = "0" *) (* C_S_AXI_WRITE_ACCEPTANCE = "1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_20_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) 
-(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_M_AXI_SUPPORTS_READ = "4'b1111" *) (* P_M_AXI_SUPPORTS_WRITE = "4'b1111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
-(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_S_AXI_SUPPORTS_READ = "1'b1" *) (* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
+(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "4'b1111" *) 
+(* P_M_AXI_SUPPORTS_WRITE = "4'b1111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
+(* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "1'b1" *) 
+(* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
 module Division_xbar_0_axi_crossbar_v2_1_20_axi_crossbar
    (aclk,
     aresetn,
@@ -2150,7 +2149,6 @@ module Division_xbar_0_axi_crossbar_v2_1_20_axi_crossbar
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_20_crossbar_sasd" *) 
 module Division_xbar_0_axi_crossbar_v2_1_20_crossbar_sasd
    (Q,
     \m_payload_i_reg[34] ,
@@ -2572,7 +2570,6 @@ module Division_xbar_0_axi_crossbar_v2_1_20_crossbar_sasd
         .\m_ready_d_reg[2]_1 (addr_arbiter_inst_n_48));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_20_decerr_slave" *) 
 module Division_xbar_0_axi_crossbar_v2_1_20_decerr_slave
    (mi_bvalid,
     mi_wready,
@@ -2775,7 +2772,6 @@ module Division_xbar_0_axi_crossbar_v2_1_20_decerr_slave
         .O(m_axi_wready_3_sn_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_20_splitter" *) 
 module Division_xbar_0_axi_crossbar_v2_1_20_splitter
    (\m_axi_awready[3] ,
     \m_axi_bvalid[2] ,
@@ -2982,7 +2978,6 @@ module Division_xbar_0_axi_crossbar_v2_1_20_splitter__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_19_axic_register_slice" *) 
 module Division_xbar_0_axi_register_slice_v2_1_19_axic_register_slice
    (sr_rvalid,
     aa_rready,

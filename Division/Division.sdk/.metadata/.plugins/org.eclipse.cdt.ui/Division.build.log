@@ -1,6 +1,13 @@
-17:50:57 **** Incremental Build of configuration Debug for project Division ****
+16:58:05 **** Incremental Build of configuration Debug for project Division ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../Division_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:2:10: fatal error: xgpio.h: No such file or directory
+ #include "xgpio.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
 
-17:50:58 Build Finished (took 188ms)
+16:58:05 Build Finished (took 264ms)
 

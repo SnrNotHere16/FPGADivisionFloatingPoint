@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Fri Aug  6 00:54:31 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_util_vector_logic_0_0/Division_util_vector_logic_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Division_util_vector_logic_0_0 -prefix
+//               Division_util_vector_logic_0_0_ Division_util_vector_logic_0_0_sim_netlist.v
 // Design      : Division_util_vector_logic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,7 +28,6 @@ module Division_util_vector_logic_0_0
         .Res(Res));
 endmodule
 
-(* ORIG_REF_NAME = "util_vector_logic_v2_0_1_util_vector_logic" *) 
 module Division_util_vector_logic_0_0_util_vector_logic_v2_0_1_util_vector_logic
    (Res,
     Op1);

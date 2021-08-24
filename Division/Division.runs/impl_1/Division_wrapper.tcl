@@ -77,6 +77,7 @@ set rc [catch {
   set_property parent.project_path C:/Users/OAkun/Division/Division.xpr [current_project]
   set_property ip_output_repo C:/Users/OAkun/Division/Division.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/OAkun/Division/Division.runs/synth_1/Division_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
@@ -165,7 +166,9 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force Division_wrapper.mmi }
+  catch { write_bmm -force Division_wrapper_bd.bmm }
   write_bitstream -force Division_wrapper.bit 
   catch { write_sysdef -hwdef Division_wrapper.hwdef -bitfile Division_wrapper.bit -meminfo Division_wrapper.mmi -file Division_wrapper.sysdef }
   catch {write_debug_probes -quiet -force Division_wrapper}

@@ -19,13 +19,13 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module DivisionTop(clk, reset, F1,F2, F3, 
+module DivisionTop(clk, reset, F3, 
                     a, b, c, d, e, f, g, anode, 
                     LED);
 
 input clk, reset; 
 input [31:0] F3; 
-output wire [31:0] F1, F2;
+//output wire [31:0] F1, F2;
 output a, b, c, d, e, f, g;
 output [7:0] anode; 
 output wire [15:0] LED; 
@@ -44,7 +44,7 @@ SevenSegmentDisplayController zero(clk, reset, F3,
                                       a, b, c, d, e, f, g,
                                       anode);
 
-    assign F1 = 0; 
-    assign F2 = 0; 
+//    assign F1 = 7; 
+//    assign F2 = 4; 
     assign LED = F3; 
 endmodule

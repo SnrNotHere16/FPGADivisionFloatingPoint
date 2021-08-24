@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Aug  6 00:48:01 2021
+// Date        : Fri Aug  6 00:47:59 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_2_0/Division_axi_gpio_2_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Division_axi_gpio_2_0 -prefix
+//               Division_axi_gpio_2_0_ Division_axi_gpio_2_0_stub.v
 // Design      : Division_axi_gpio_2_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

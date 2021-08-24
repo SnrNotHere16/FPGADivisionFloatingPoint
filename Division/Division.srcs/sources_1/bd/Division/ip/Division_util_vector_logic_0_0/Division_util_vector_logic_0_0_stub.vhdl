@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Fri Aug  6 00:54:31 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_util_vector_logic_0_0/Division_util_vector_logic_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Division_util_vector_logic_0_0 -prefix
+--               Division_util_vector_logic_0_0_ Division_util_vector_logic_0_0_stub.vhdl
 -- Design      : Division_util_vector_logic_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

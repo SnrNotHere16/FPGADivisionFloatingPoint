@@ -42,6 +42,7 @@ main(){
 
 	xil_printf("c = %f\n",c);
 	xil_printf("b = %d\n",XGpio_DiscreteRead(&gpio2,1));
+	xil_printf("b = %d\n",XGpio_DiscreteRead(&gpio2,1));
 
 
 }

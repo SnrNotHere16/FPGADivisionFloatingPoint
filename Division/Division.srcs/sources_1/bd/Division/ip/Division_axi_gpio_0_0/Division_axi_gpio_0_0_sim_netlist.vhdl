@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Fri Aug  6 00:47:59 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_axi_gpio_0_0/Division_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Division_axi_gpio_0_0 -prefix
+--               Division_axi_gpio_0_0_ Division_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : Division_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,8 +34,6 @@ entity Division_axi_gpio_0_0_GPIO_Core is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end Division_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of Division_axi_gpio_0_0_GPIO_Core is
@@ -1522,8 +1520,6 @@ entity Division_axi_gpio_0_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_pselect_f : entity is "pselect_f";
 end Division_axi_gpio_0_0_pselect_f;
 
 architecture STRUCTURE of Division_axi_gpio_0_0_pselect_f is
@@ -1590,8 +1586,6 @@ entity Division_axi_gpio_0_0_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_wready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end Division_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of Division_axi_gpio_0_0_address_decoder is
@@ -1809,8 +1803,6 @@ entity Division_axi_gpio_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end Division_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of Division_axi_gpio_0_0_slave_attachment is
@@ -2725,8 +2717,6 @@ entity Division_axi_gpio_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Division_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Division_axi_gpio_0_0_axi_lite_ipif is
@@ -2825,8 +2815,6 @@ entity Division_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of Division_axi_gpio_0_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of Division_axi_gpio_0_0_axi_gpio : entity is -1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Division_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Division_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;

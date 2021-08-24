@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sun Aug 22 14:26:45 2021
+| Date         : Mon Aug 23 16:41:49 2021
 | Host         : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Division_wrapper_utilization_synth.rpt -pb Division_wrapper_utilization_synth.pb
 | Design       : Division_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   33 |     0 |       210 | 15.71 |
+| Bonded IOB                  |   34 |     0 |       210 | 16.19 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -146,7 +146,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   31 |                  IO |
+| OBUF     |   32 |                  IO |
 | IBUF     |    2 |                  IO |
 +----------+------+---------------------+
 
@@ -154,14 +154,27 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+-----------------------------+------+
-|           Ref Name          | Used |
-+-----------------------------+------+
-| Division_floating_point_2_0 |    1 |
-| Division_floating_point_1_0 |    1 |
-| Division_floating_point_0_1 |    1 |
-| Division_DivisionTop_0_1    |    1 |
-+-----------------------------+------+
++--------------------------------+------+
+|            Ref Name            | Used |
++--------------------------------+------+
+| Division_xbar_0                |    1 |
+| Division_util_vector_logic_0_0 |    1 |
+| Division_rst_clk_wiz_0_100M_0  |    1 |
+| Division_microblaze_0_0        |    1 |
+| Division_mdm_1_1               |    1 |
+| Division_lmb_bram_1            |    1 |
+| Division_ilmb_v10_1            |    1 |
+| Division_ilmb_bram_if_cntlr_1  |    1 |
+| Division_floating_point_0_2    |    1 |
+| Division_dlmb_v10_1            |    1 |
+| Division_dlmb_bram_if_cntlr_1  |    1 |
+| Division_clk_wiz_0_0           |    1 |
+| Division_axi_uartlite_0_0      |    1 |
+| Division_axi_gpio_2_0          |    1 |
+| Division_axi_gpio_1_0          |    1 |
+| Division_axi_gpio_0_0          |    1 |
+| Division_DivisionTop_0_1       |    1 |
++--------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -57,8 +57,6 @@
 module Division_DivisionTop_0_1 (
   clk,
   reset,
-  F1,
-  F2,
   F3,
   a,
   b,
@@ -77,8 +75,6 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
 input wire reset;
-output wire [31 : 0] F1;
-output wire [31 : 0] F2;
 input wire [31 : 0] F3;
 output wire a;
 output wire b;
@@ -93,8 +89,6 @@ output wire [15 : 0] LED;
   DivisionTop inst (
     .clk(clk),
     .reset(reset),
-    .F1(F1),
-    .F2(F2),
     .F3(F3),
     .a(a),
     .b(b),
