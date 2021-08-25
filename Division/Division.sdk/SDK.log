@@ -1273,3 +1273,183 @@ con
 ----------------End of Script----------------
 
 20:00:18 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:16:35 INFO  : Disconnected from the channel tcfchan#4.
+20:16:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:16:36 INFO  : 'fpga -state' command is executed.
+20:16:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:36 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:16:36 INFO  : 'jtag frequency' command is executed.
+20:16:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:16:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:37 INFO  : Processor reset is completed for 'microblaze_0'.
+20:16:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:37 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:16:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:16:37 INFO  : Memory regions updated for context MicroBlaze #0
+20:16:37 INFO  : Memory regions updated for context MicroBlaze #0
+20:16:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:37 INFO  : 'con' command is executed.
+20:16:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:16:37 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:17:07 INFO  : Disconnected from the channel tcfchan#5.
+20:17:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:17:09 INFO  : 'fpga -state' command is executed.
+20:17:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:09 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:17:09 INFO  : 'jtag frequency' command is executed.
+20:17:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:17:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:09 INFO  : Processor reset is completed for 'microblaze_0'.
+20:17:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:09 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:17:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:17:09 INFO  : Memory regions updated for context MicroBlaze #0
+20:17:09 INFO  : Memory regions updated for context MicroBlaze #0
+20:17:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:09 INFO  : 'con' command is executed.
+20:17:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:17:09 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:22:26 INFO  : Disconnected from the channel tcfchan#6.
+20:22:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:22:27 INFO  : 'fpga -state' command is executed.
+20:22:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:27 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:22:27 INFO  : 'jtag frequency' command is executed.
+20:22:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:22:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:27 INFO  : Processor reset is completed for 'microblaze_0'.
+20:22:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:27 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:22:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:22:27 INFO  : Memory regions updated for context MicroBlaze #0
+20:22:27 INFO  : Memory regions updated for context MicroBlaze #0
+20:22:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:27 INFO  : 'con' command is executed.
+20:22:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:22:27 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:22:51 INFO  : Disconnected from the channel tcfchan#7.
+20:22:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:22:52 INFO  : 'fpga -state' command is executed.
+20:22:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:22:52 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:22:52 INFO  : 'jtag frequency' command is executed.
+20:22:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:22:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:52 INFO  : Processor reset is completed for 'microblaze_0'.
+20:22:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:53 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:22:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:22:53 INFO  : Memory regions updated for context MicroBlaze #0
+20:22:53 INFO  : Memory regions updated for context MicroBlaze #0
+20:22:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:22:53 INFO  : 'con' command is executed.
+20:22:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:22:53 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:23:23 INFO  : Disconnected from the channel tcfchan#8.
+20:23:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:23:24 INFO  : 'fpga -state' command is executed.
+20:23:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:24 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:23:24 INFO  : 'jtag frequency' command is executed.
+20:23:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:24 INFO  : Processor reset is completed for 'microblaze_0'.
+20:23:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:24 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:23:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:23:24 INFO  : Memory regions updated for context MicroBlaze #0
+20:23:24 INFO  : Memory regions updated for context MicroBlaze #0
+20:23:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:25 INFO  : 'con' command is executed.
+20:23:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:23:25 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'
+20:23:46 INFO  : Disconnected from the channel tcfchan#9.
+20:23:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA" && level==0} -index 0' command is executed.
+20:23:47 INFO  : 'fpga -state' command is executed.
+20:23:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:48 INFO  : Jtag cable 'Digilent Nexys4DDR 210292A8AD8EA' is selected.
+20:23:48 INFO  : 'jtag frequency' command is executed.
+20:23:48 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:48 INFO  : Processor reset is completed for 'microblaze_0'.
+20:23:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:48 INFO  : The application 'C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf' is downloaded to processor 'microblaze_0'.
+20:23:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+dow C:/Users/OAkun/Division/Division.sdk/Division1/Debug/Division1.elf
+----------------End of Script----------------
+
+20:23:48 INFO  : Memory regions updated for context MicroBlaze #0
+20:23:48 INFO  : Memory regions updated for context MicroBlaze #0
+20:23:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:48 INFO  : 'con' command is executed.
+20:23:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292A8AD8EA"} -index 0
+con
+----------------End of Script----------------
+
+20:23:48 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_division1.elf_on_local.tcl'

@@ -145,3 +145,11 @@ launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAku
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] Division_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] Division_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+delete_bd_objs [get_bd_cells axi_bram_ctrl_0]

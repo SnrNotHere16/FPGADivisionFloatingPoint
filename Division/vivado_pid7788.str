@@ -568,3 +568,71 @@ dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 1,429 MB. GUI used memory: 94 MB. Current time: 8/24/21, 7:56:06 PM PDT
+// Elapsed time: 1121 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 235, 398, 943, 531, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ah (an, Popup.HeavyWeightWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "bram"); // OverlayTextField (aF, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI BRAM Controller", 0, "AXI BRAM Controller", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0 
+// Tcl Message: endgroup 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cl): Re-customize IP: addNotify
+// Elapsed time: 20 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // B (f, r)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_IP_LOCATION, "IP Location"); // B (f, r)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // B (f, r)
+dismissDialog("Re-customize IP"); // r (cl)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 273, 376, 943, 531, false, false, false, true, false); // gl (k, cl) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // ae (an, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_UNHIGHLIGHT_SELECTION, "Unhighlight"); // ah (an, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ah (an, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells axi_bram_ctrl_0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// O (cl):  Re-customize IP : addNotify
+// Elapsed time: 375 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (O)
+dismissDialog("Re-customize IP"); // O (cl)
+selectButton("OptionPane.button", "Yes"); // JButton (A, G)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// O (cl):  Re-customize IP : addNotify
+// r (cl): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // O (cl)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Precision of Inputs", 1); // cT (E, r)
+// [GUI Memory]: 161 MB (+283kb) [01:10:35]
+// Elapsed time: 15 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Optimizations", 2); // cT (E, r)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Interface Options", 3); // cT (E, r)
+// Elapsed time: 10 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Operation Selection", 0); // cT (E, r)
+// Elapsed time: 10 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Interface Options", 3); // cT (E, r)
+// Elapsed time: 21 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Operation Selection", 0); // cT (E, r)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Precision of Inputs", 1); // cT (E, r)
+selectRadioButton((HResource) null, "Custom"); // cO
+selectRadioButton((HResource) null, "Single"); // cO
+selectRadioButton((HResource) null, "Half"); // cO
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cl)

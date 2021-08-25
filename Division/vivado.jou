@@ -51,3 +51,7 @@ file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.s
 
 validate_bd_design -force
 launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+endgroup
+delete_bd_objs [get_bd_cells axi_bram_ctrl_0]

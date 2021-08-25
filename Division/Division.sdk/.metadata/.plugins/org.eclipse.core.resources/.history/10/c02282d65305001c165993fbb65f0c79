@@ -18,7 +18,7 @@
 XGpio gpio0, gpio1, gpio2;
 
 main(){
-	int a = -6;
+	int a = 6;
 	int b = 20000001;
 	xil_printf("Begin`: \n");
 	//initialize AXI GPIO
