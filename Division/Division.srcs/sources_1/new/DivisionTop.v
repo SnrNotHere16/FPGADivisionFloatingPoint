@@ -46,5 +46,5 @@ SevenSegmentDisplayController zero(clk, reset, F3,
 
 //    assign F1 = 7; 
 //    assign F2 = 4; 
-    assign LED = F3; 
+    assign LED = 7; 
 endmodule

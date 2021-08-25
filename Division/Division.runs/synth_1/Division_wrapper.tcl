@@ -17,8 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -69,6 +67,8 @@ set_property used_in_implementation false [get_files -all c:/Users/OAkun/Divisio
 set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_rst_clk_wiz_0_100M_0/Division_rst_clk_wiz_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_rst_clk_wiz_0_100M_0/Division_rst_clk_wiz_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_xbar_0/Division_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_1_0/Division_floating_point_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_floating_point_2_0/Division_floating_point_2_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_microblaze_0_0/data/mb_bootloop_le.elf]
 

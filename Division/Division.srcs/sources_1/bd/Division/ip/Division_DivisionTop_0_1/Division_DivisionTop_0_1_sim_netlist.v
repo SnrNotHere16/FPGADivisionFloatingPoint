@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Aug 23 16:39:43 2021
+// Date        : Tue Aug 24 19:27:08 2021
 // Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.v
@@ -41,6 +41,8 @@ module Division_DivisionTop_0_1
   output [7:0]anode;
   output [15:0]LED;
 
+  wire \<const0> ;
+  wire \<const1> ;
   wire [31:0]F3;
   wire a;
   wire [7:0]anode;
@@ -53,7 +55,26 @@ module Division_DivisionTop_0_1
   wire g;
   wire reset;
 
-  assign LED[15:0] = F3[15:0];
+  assign LED[15] = \<const0> ;
+  assign LED[14] = \<const0> ;
+  assign LED[13] = \<const0> ;
+  assign LED[12] = \<const0> ;
+  assign LED[11] = \<const0> ;
+  assign LED[10] = \<const0> ;
+  assign LED[9] = \<const0> ;
+  assign LED[8] = \<const0> ;
+  assign LED[7] = \<const0> ;
+  assign LED[6] = \<const0> ;
+  assign LED[5] = \<const0> ;
+  assign LED[4] = \<const0> ;
+  assign LED[3] = \<const0> ;
+  assign LED[2] = \<const1> ;
+  assign LED[1] = \<const1> ;
+  assign LED[0] = \<const1> ;
+  GND GND
+       (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
   Division_DivisionTop_0_1_DivisionTop inst
        (.F3(F3),
         .a(a),

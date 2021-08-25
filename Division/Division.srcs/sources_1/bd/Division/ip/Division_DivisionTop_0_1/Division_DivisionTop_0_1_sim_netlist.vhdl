@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Aug 23 16:39:43 2021
+-- Date        : Tue Aug 24 19:27:08 2021
 -- Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/ip/Division_DivisionTop_0_1/Division_DivisionTop_0_1_sim_netlist.vhdl
@@ -1889,7 +1889,8 @@ entity Division_DivisionTop_0_1 is
 end Division_DivisionTop_0_1;
 
 architecture STRUCTURE of Division_DivisionTop_0_1 is
-  signal \^f3\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \<const0>\ : STD_LOGIC;
+  signal \<const1>\ : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -1897,11 +1898,33 @@ architecture STRUCTURE of Division_DivisionTop_0_1 is
   attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 reset RST";
   attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-  LED(15 downto 0) <= \^f3\(15 downto 0);
-  \^f3\(31 downto 0) <= F3(31 downto 0);
+  LED(15) <= \<const0>\;
+  LED(14) <= \<const0>\;
+  LED(13) <= \<const0>\;
+  LED(12) <= \<const0>\;
+  LED(11) <= \<const0>\;
+  LED(10) <= \<const0>\;
+  LED(9) <= \<const0>\;
+  LED(8) <= \<const0>\;
+  LED(7) <= \<const0>\;
+  LED(6) <= \<const0>\;
+  LED(5) <= \<const0>\;
+  LED(4) <= \<const0>\;
+  LED(3) <= \<const0>\;
+  LED(2) <= \<const1>\;
+  LED(1) <= \<const1>\;
+  LED(0) <= \<const1>\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
+VCC: unisim.vcomponents.VCC
+     port map (
+      P => \<const1>\
+    );
 inst: entity work.Division_DivisionTop_0_1_DivisionTop
      port map (
-      F3(31 downto 0) => \^f3\(31 downto 0),
+      F3(31 downto 0) => F3(31 downto 0),
       a => a,
       anode(7 downto 0) => anode(7 downto 0),
       b => b,

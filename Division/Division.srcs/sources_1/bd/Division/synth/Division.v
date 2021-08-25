@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Aug 23 16:37:29 2021
+//Date        : Tue Aug 24 19:26:01 2021
 //Host        : DESKTOP-NDOLUA7 running 64-bit major release  (build 9200)
 //Command     : generate_target Division.bd
 //Design      : Division
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Division,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Division,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=17,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=28,da_board_cnt=6,da_mb_cnt=8,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Division.hwdef" *) 
+(* CORE_GENERATION_INFO = "Division,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Division,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=28,da_board_cnt=6,da_mb_cnt=8,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Division.hwdef" *) 
 module Division
    (LED,
     a,
@@ -54,6 +54,8 @@ module Division
   wire clk_1;
   wire clk_wiz_0_locked;
   wire [31:0]floating_point_0_m_axis_result_tdata;
+  wire [31:0]floating_point_1_m_axis_result_tdata;
+  wire [31:0]floating_point_2_m_axis_result_tdata;
   wire mdm_1_debug_sys_rst;
   wire microblaze_0_Clk;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
@@ -297,10 +299,22 @@ module Division
        (.aclk(clk_1),
         .m_axis_result_tdata(floating_point_0_m_axis_result_tdata),
         .m_axis_result_tready(1'b1),
-        .s_axis_a_tdata(axi_gpio_0_gpio_io_o),
+        .s_axis_a_tdata(floating_point_1_m_axis_result_tdata),
         .s_axis_a_tvalid(1'b0),
-        .s_axis_b_tdata(axi_gpio_1_gpio_io_o),
+        .s_axis_b_tdata(floating_point_2_m_axis_result_tdata),
         .s_axis_b_tvalid(1'b0));
+  Division_floating_point_1_0 floating_point_1
+       (.aclk(clk_1),
+        .m_axis_result_tdata(floating_point_1_m_axis_result_tdata),
+        .m_axis_result_tready(1'b1),
+        .s_axis_a_tdata(axi_gpio_0_gpio_io_o),
+        .s_axis_a_tvalid(1'b0));
+  Division_floating_point_2_0 floating_point_2
+       (.aclk(clk_1),
+        .m_axis_result_tdata(floating_point_2_m_axis_result_tdata),
+        .m_axis_result_tready(1'b1),
+        .s_axis_a_tdata(axi_gpio_1_gpio_io_o),
+        .s_axis_a_tvalid(1'b0));
   Division_mdm_1_1 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),
         .Dbg_Clk_0(microblaze_0_debug_CLK),

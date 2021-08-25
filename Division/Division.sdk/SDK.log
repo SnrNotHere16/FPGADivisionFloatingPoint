@@ -1122,3 +1122,20 @@ con
 ----------------End of Script----------------
 
 17:13:28 INFO  : Launch script is exported to file 'C:\Users\OAkun\Division\Division.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_divisiontest2.elf_on_local.tcl'
+17:22:23 INFO  : Disconnected from the channel tcfchan#3.
+19:32:36 INFO  : Registering command handlers for SDK TCF services
+19:32:37 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\OAkun\Division\Division.sdk\temp_xsdb_launch_script.tcl
+19:32:40 INFO  : XSCT server has started successfully.
+19:32:41 INFO  : Successfully done setting XSCT server connection channel  
+19:32:41 INFO  : Successfully done setting SDK workspace  
+19:32:41 INFO  : Processing command line option -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf.
+19:32:41 INFO  : Checking for hwspec changes in the project Division_wrapper_hw_platform_0.
+19:32:44 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1629858702050,  Project:1629762273250
+19:32:44 INFO  : The hardware specification for project 'Division_wrapper_hw_platform_0' is different from C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf.
+19:32:45 INFO  : Copied contents of C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf into \Division_wrapper_hw_platform_0\system.hdf.
+19:32:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:32:48 INFO  : 
+19:32:50 INFO  : 
+19:32:51 INFO  : Updating hardware inferred compiler options for DivisionTest2.
+19:32:52 INFO  : Updating hardware inferred compiler options for Division.
+19:32:52 INFO  : Clearing existing target manager status.

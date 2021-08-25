@@ -3224,3 +3224,331 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-08-23 17:13:28.063
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-23 17:22:23.858
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-164
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-23 17:22:23.861
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-164
+!SESSION 2021-08-24 19:32:23.754 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/OAkun/Division/Division.sdk
+
+!ENTRY org.eclipse.ui 2 0 2021-08-24 19:32:27.211
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-08-24 19:32:27.211
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-08-24 19:32:28.400
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-08-24 19:32:28.400
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:40.623
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:40.623
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:41.459
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-7
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:41.459
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:41.460
+!MESSAGE XSCT Command: [setws C:/Users/OAkun/Division/Division.sdk], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:41.480
+!MESSAGE XSCT command with result: [setws C:/Users/OAkun/Division/Division.sdk], Result: [null, ]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:41.496
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:44.989
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.021
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.023
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.024
+!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.038
+!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf ; hsi current_hw_design]], Result: [null, Division.hwh Division_bd.tcl Division_wrapper.bit Division_wrapper.mmi]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.066
+!MESSAGE XSCT Command: [::hsi::utils::closehw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.071
+!MESSAGE XSCT command with result: [::hsi::utils::closehw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.071
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.279
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.287
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.480
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.484
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.492
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf], Result: [null, {"DivisionTop_0": {"hier_name": "DivisionTop_0",
+"type": "DivisionTop",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_2": {"hier_name": "axi_gpio_2",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"floating_point_0": {"hier_name": "floating_point_0",
+"type": "floating_point",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"floating_point_1": {"hier_name": "floating_point_1",
+"type": "floating_point",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"floating_point_2": {"hier_name": "floating_point_2",
+"type": "floating_point",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_0_100M": {"hier_name": "rst_clk_wiz_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.496
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:45.505
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf], Result: [null, {"DivisionTop_0": {"hier_name": "DivisionTop_0",
+"type": "DivisionTop",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_2": {"hier_name": "axi_gpio_2",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"floating_point_0": {"hier_name": "floating_point_0",
+"type": "floating_point",
+"version": "7.1",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_0_100M": {"hier_name": "rst_clk_wiz_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"util_vector_logic_0": {"hier_name": "util_vector_logic_0",
+"type": "util_vector_logic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:46.286
+!MESSAGE XSCT Command: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf -sw C:/Users/OAkun/Division/Division.sdk/DivisionTest2_bsp/system.mss -dir C:/Users/OAkun/Division/Division.sdk/DivisionTest2_bsp], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:48.323
+!MESSAGE XSCT command with result: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf -sw C:/Users/OAkun/Division/Division.sdk/DivisionTest2_bsp/system.mss -dir C:/Users/OAkun/Division/Division.sdk/DivisionTest2_bsp], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:49.086
+!MESSAGE XSCT Command: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf -sw C:/Users/OAkun/Division/Division.sdk/Division_bsp/system.mss -dir C:/Users/OAkun/Division/Division.sdk/Division_bsp], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:50.550
+!MESSAGE XSCT command with result: [::hsi::utils::sync_sw_with_hw_changes -newhw C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf -oldhw C:/Users/OAkun/AppData/Local/Temp/system5335233606534732862.hdf -sw C:/Users/OAkun/Division/Division.sdk/Division_bsp/system.mss -dir C:/Users/OAkun/Division/Division.sdk/Division_bsp], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.578
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.582
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_REORDER_INSTR], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.583
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.585
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_ENDIANNESS], Result: [null, 1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.595
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.598
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_BARREL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.599
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.602
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_PCMP_INSTR], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.603
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.607
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_DIV], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.609
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.640
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_FPU], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.642
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.645
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_USE_HW_MUL], Result: [null, 0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.646
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-08-24 19:32:51.649
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/system.hdf microblaze_0 C_AREA_OPTIMIZED], Result: [null, 0]. Thread: ModalContext
