@@ -126,3 +126,22 @@ launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAku
 INFO: [Vivado 12-393] Launching SDK...
 INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+
+launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+make_wrapper -files [get_files C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division.bd] -top
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Aug 24 19:44:11 2021] Launched impl_1...
+Run output will be captured here: C:/Users/OAkun/Division/Division.runs/impl_1/runme.log
+file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+
+validate_bd_design -force
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

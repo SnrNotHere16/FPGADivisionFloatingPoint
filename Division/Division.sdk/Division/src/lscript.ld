@@ -6,57 +6,113 @@
 /*                                                                 */
 /* Copyright (c) 2010-2016 Xilinx, Inc.  All rights reserved.      */
 /*                                                                 */
-/* Description : MicroBlaze Linker Script                           */
+/* Description : Cortex-A9 Linker Script                           */
 /*                                                                 */
 /*******************************************************************/
 
-_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x400;
-_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x800;
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x2000;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x2000;
+
+_ABORT_STACK_SIZE = DEFINED(_ABORT_STACK_SIZE) ? _ABORT_STACK_SIZE : 1024;
+_SUPERVISOR_STACK_SIZE = DEFINED(_SUPERVISOR_STACK_SIZE) ? _SUPERVISOR_STACK_SIZE : 2048;
+_IRQ_STACK_SIZE = DEFINED(_IRQ_STACK_SIZE) ? _IRQ_STACK_SIZE : 1024;
+_FIQ_STACK_SIZE = DEFINED(_FIQ_STACK_SIZE) ? _FIQ_STACK_SIZE : 1024;
+_UNDEF_STACK_SIZE = DEFINED(_UNDEF_STACK_SIZE) ? _UNDEF_STACK_SIZE : 1024;
 
 /* Define Memories in the system */
 
 MEMORY
 {
-   microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem : ORIGIN = 0x50, LENGTH = 0x7FB0
+   ps7_ddr_0 : ORIGIN = 0x100000, LENGTH = 0x3FF00000
+   ps7_qspi_linear_0 : ORIGIN = 0xFC000000, LENGTH = 0x1000000
+   ps7_ram_0 : ORIGIN = 0x0, LENGTH = 0x30000
+   ps7_ram_1 : ORIGIN = 0xFFFF0000, LENGTH = 0xFE00
 }
 
 /* Specify the default entry point to the program */
 
-ENTRY(_start)
+ENTRY(_vector_table)
 
 /* Define the sections, and where they are mapped in memory */
 
 SECTIONS
 {
-.vectors.reset 0x0 : {
-   KEEP (*(.vectors.reset))
-} 
-
-.vectors.sw_exception 0x8 : {
-   KEEP (*(.vectors.sw_exception))
-} 
-
-.vectors.interrupt 0x10 : {
-   KEEP (*(.vectors.interrupt))
-} 
-
-.vectors.hw_exception 0x20 : {
-   KEEP (*(.vectors.hw_exception))
-} 
-
 .text : {
+   KEEP (*(.vectors))
+   *(.boot)
    *(.text)
    *(.text.*)
    *(.gnu.linkonce.t.*)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+   *(.plt)
+   *(.gnu_warning)
+   *(.gcc_execpt_table)
+   *(.glue_7)
+   *(.glue_7t)
+   *(.vfp11_veneer)
+   *(.ARM.extab)
+   *(.gnu.linkonce.armextab.*)
+} > ps7_ddr_0
 
 .init : {
    KEEP (*(.init))
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .fini : {
    KEEP (*(.fini))
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
+
+.rodata : {
+   __rodata_start = .;
+   *(.rodata)
+   *(.rodata.*)
+   *(.gnu.linkonce.r.*)
+   __rodata_end = .;
+} > ps7_ddr_0
+
+.rodata1 : {
+   __rodata1_start = .;
+   *(.rodata1)
+   *(.rodata1.*)
+   __rodata1_end = .;
+} > ps7_ddr_0
+
+.sdata2 : {
+   __sdata2_start = .;
+   *(.sdata2)
+   *(.sdata2.*)
+   *(.gnu.linkonce.s2.*)
+   __sdata2_end = .;
+} > ps7_ddr_0
+
+.sbss2 : {
+   __sbss2_start = .;
+   *(.sbss2)
+   *(.sbss2.*)
+   *(.gnu.linkonce.sb2.*)
+   __sbss2_end = .;
+} > ps7_ddr_0
+
+.data : {
+   __data_start = .;
+   *(.data)
+   *(.data.*)
+   *(.gnu.linkonce.d.*)
+   *(.jcr)
+   *(.got)
+   *(.got.plt)
+   __data_end = .;
+} > ps7_ddr_0
+
+.data1 : {
+   __data1_start = .;
+   *(.data1)
+   *(.data1.*)
+   __data1_end = .;
+} > ps7_ddr_0
+
+.got : {
+   *(.got)
+} > ps7_ddr_0
 
 .ctors : {
    __CTOR_LIST__ = .;
@@ -67,7 +123,7 @@ SECTIONS
    KEEP (*(.ctors))
    __CTOR_END__ = .;
    ___CTORS_END___ = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .dtors : {
    __DTOR_LIST__ = .;
@@ -76,87 +132,85 @@ SECTIONS
    KEEP (*(EXCLUDE_FILE(*crtend.o) .dtors))
    KEEP (*(SORT(.dtors.*)))
    KEEP (*(.dtors))
-   PROVIDE(__DTOR_END__ = .);
-   PROVIDE(___DTORS_END___ = .);
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+   __DTOR_END__ = .;
+   ___DTORS_END___ = .;
+} > ps7_ddr_0
 
-.rodata : {
-   __rodata_start = .;
-   *(.rodata)
-   *(.rodata.*)
-   *(.gnu.linkonce.r.*)
-   __rodata_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.sdata2 : {
-   . = ALIGN(8);
-   __sdata2_start = .;
-   *(.sdata2)
-   *(.sdata2.*)
-   *(.gnu.linkonce.s2.*)
-   . = ALIGN(8);
-   __sdata2_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.sbss2 : {
-   __sbss2_start = .;
-   *(.sbss2)
-   *(.sbss2.*)
-   *(.gnu.linkonce.sb2.*)
-   __sbss2_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.data : {
-   . = ALIGN(4);
-   __data_start = .;
-   *(.data)
-   *(.data.*)
-   *(.gnu.linkonce.d.*)
-   __data_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.got : {
-   *(.got)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.got1 : {
-   *(.got1)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
-
-.got2 : {
-   *(.got2)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+.fixup : {
+   __fixup_start = .;
+   *(.fixup)
+   __fixup_end = .;
+} > ps7_ddr_0
 
 .eh_frame : {
    *(.eh_frame)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
-.jcr : {
-   *(.jcr)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+.eh_framehdr : {
+   __eh_framehdr_start = .;
+   *(.eh_framehdr)
+   __eh_framehdr_end = .;
+} > ps7_ddr_0
 
 .gcc_except_table : {
    *(.gcc_except_table)
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
+
+.mmu_tbl (ALIGN(16384)) : {
+   __mmu_tbl_start = .;
+   *(.mmu_tbl)
+   __mmu_tbl_end = .;
+} > ps7_ddr_0
+
+.ARM.exidx : {
+   __exidx_start = .;
+   *(.ARM.exidx*)
+   *(.gnu.linkonce.armexidix.*.*)
+   __exidx_end = .;
+} > ps7_ddr_0
+
+.preinit_array : {
+   __preinit_array_start = .;
+   KEEP (*(SORT(.preinit_array.*)))
+   KEEP (*(.preinit_array))
+   __preinit_array_end = .;
+} > ps7_ddr_0
+
+.init_array : {
+   __init_array_start = .;
+   KEEP (*(SORT(.init_array.*)))
+   KEEP (*(.init_array))
+   __init_array_end = .;
+} > ps7_ddr_0
+
+.fini_array : {
+   __fini_array_start = .;
+   KEEP (*(SORT(.fini_array.*)))
+   KEEP (*(.fini_array))
+   __fini_array_end = .;
+} > ps7_ddr_0
+
+.ARM.attributes : {
+   __ARM.attributes_start = .;
+   *(.ARM.attributes)
+   __ARM.attributes_end = .;
+} > ps7_ddr_0
 
 .sdata : {
-   . = ALIGN(8);
    __sdata_start = .;
    *(.sdata)
    *(.sdata.*)
    *(.gnu.linkonce.s.*)
    __sdata_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .sbss (NOLOAD) : {
-   . = ALIGN(4);
    __sbss_start = .;
    *(.sbss)
    *(.sbss.*)
    *(.gnu.linkonce.sb.*)
-   . = ALIGN(8);
    __sbss_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .tdata : {
    __tdata_start = .;
@@ -164,7 +218,7 @@ SECTIONS
    *(.tdata.*)
    *(.gnu.linkonce.td.*)
    __tdata_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .tbss : {
    __tbss_start = .;
@@ -172,18 +226,16 @@ SECTIONS
    *(.tbss.*)
    *(.gnu.linkonce.tb.*)
    __tbss_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 .bss (NOLOAD) : {
-   . = ALIGN(4);
    __bss_start = .;
    *(.bss)
    *(.bss.*)
    *(.gnu.linkonce.b.*)
    *(COMMON)
-   . = ALIGN(4);
    __bss_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > ps7_ddr_0
 
 _SDA_BASE_ = __sdata_start + ((__sbss_end - __sdata_start) / 2 );
 
@@ -192,20 +244,44 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
 /* Generate Stack and Heap definitions */
 
 .heap (NOLOAD) : {
-   . = ALIGN(8);
+   . = ALIGN(16);
    _heap = .;
+   HeapBase = .;
    _heap_start = .;
    . += _HEAP_SIZE;
    _heap_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+   HeapLimit = .;
+} > ps7_ddr_0
 
 .stack (NOLOAD) : {
+   . = ALIGN(16);
    _stack_end = .;
    . += _STACK_SIZE;
-   . = ALIGN(8);
+   . = ALIGN(16);
    _stack = .;
    __stack = _stack;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+   . = ALIGN(16);
+   _irq_stack_end = .;
+   . += _IRQ_STACK_SIZE;
+   . = ALIGN(16);
+   __irq_stack = .;
+   _supervisor_stack_end = .;
+   . += _SUPERVISOR_STACK_SIZE;
+   . = ALIGN(16);
+   __supervisor_stack = .;
+   _abort_stack_end = .;
+   . += _ABORT_STACK_SIZE;
+   . = ALIGN(16);
+   __abort_stack = .;
+   _fiq_stack_end = .;
+   . += _FIQ_STACK_SIZE;
+   . = ALIGN(16);
+   __fiq_stack = .;
+   _undef_stack_end = .;
+   . += _UNDEF_STACK_SIZE;
+   . = ALIGN(16);
+   __undef_stack = .;
+} > ps7_ddr_0
 
 _end = .;
 }

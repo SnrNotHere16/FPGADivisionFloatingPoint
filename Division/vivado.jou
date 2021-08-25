@@ -40,3 +40,14 @@ wait_on_run impl_1
 file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
 
 launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+
+launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+make_wrapper -files [get_files C:/Users/OAkun/Division/Division.srcs/sources_1/bd/Division/Division.bd] -top
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/OAkun/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
+
+validate_bd_design -force
+launch_sdk -workspace C:/Users/OAkun/Division/Division.sdk -hwspec C:/Users/OAkun/Division/Division.sdk/Division_wrapper.hdf
