@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Aug 25 20:04:29 2021
+# Process ID: 17804
+# Current directory: C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.runs/FloatingPointDivision_axi_gpio_1_0_synth_1
+# Command line: vivado.exe -log FloatingPointDivision_axi_gpio_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FloatingPointDivision_axi_gpio_1_0.tcl
+# Log file: C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.runs/FloatingPointDivision_axi_gpio_1_0_synth_1/FloatingPointDivision_axi_gpio_1_0.vds
+# Journal file: C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.runs/FloatingPointDivision_axi_gpio_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source FloatingPointDivision_axi_gpio_1_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP FloatingPointDivision_axi_gpio_1_0, cache-ID = 0715971111cb4c6b.
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 25 20:04:51 2021...
