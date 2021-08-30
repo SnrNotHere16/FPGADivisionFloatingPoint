@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1629858373">
+  <File Type="PA-TCL" Name="Division_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Division_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Division_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Division_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="Division_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Division_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Division_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Division_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Division_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/SevenSegmentDisplay/AdMux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/SevenSegmentDisplay/AdMux.v"/>
+        <Attr Name="ImportTime" Val="1540383330"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/SevenSegmentDisplay/HexToSevenSeg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/SevenSegmentDisplay/HexToSevenSeg.v"/>
+        <Attr Name="ImportTime" Val="1544400788"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/SevenSegmentDisplay/PixelClock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/SevenSegmentDisplay/PixelClock.v"/>
+        <Attr Name="ImportTime" Val="1544400788"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/SevenSegmentDisplay/PixelController.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/SevenSegmentDisplay/PixelController.v"/>
+        <Attr Name="ImportTime" Val="1539616550"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SevenSegmentDisplayController.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DivisionTop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Division/Division.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Division/hdl/Division_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Division_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/sources_1/Nexys4DDRMaster.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/Nexys4DDRMaster.xdc"/>
+        <Attr Name="ImportTime" Val="1622408673"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Division_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_rst_clk_wiz_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Division_DivisionTop_0_1"/>
+</GenRun>
