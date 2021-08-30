@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="false" key="FloatingPointDivision_wrapper_hw_platform_0-partial_bit"/>
-	<item value="" key="FloatingPointDivision_wrapper_hw_platform_0-bmmFile"/>
-	<item value="FloatingPointDivision_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
-	<item value="Auto Detect" key="FloatingPointDivision_wrapper_hw_platform_0-device"/>
-	<item value="Local" key="FloatingPointDivision_wrapper_hw_platform_0-target"/>
-	<item value="FloatingPointDivision_wrapper.bit" key="FloatingPointDivision_wrapper_hw_platform_0-bitFile"/>
-</section>
