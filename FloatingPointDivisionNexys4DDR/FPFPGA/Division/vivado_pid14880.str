@@ -1,0 +1,128 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 14880
+License: Customer
+
+Current time: 	Wed Sep 01 14:04:44 PDT 2021
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 150
+Available screens: 1
+Available disk space: 49 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=18
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	OAkun
+User home directory: C:/Users/OAkun
+User working directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.1
+RDI_DATADIR: C:/Xilinx/Vivado/2019.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division/vivado.log
+Vivado journal file location: 	C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division/vivado.jou
+Engine tmp dir: 	C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division/.Xil/Vivado-14880-DESKTOP-NDOLUA7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.1
+XILINX_SDK: C:/Xilinx/SDK/2019.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 607 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\OAkun\Documents\GitHub\FPGADivision\FloatingPointDivisionNexys4DDR\FPFPGA\Division\Division.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division/Division.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 685 MB. GUI used memory: 54 MB. Current time: 9/1/21, 2:04:46 PM PDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 77 MB (+78502kb) [00:00:15]
+// [Engine Memory]: 795 MB (+682371kb) [00:00:15]
+// [GUI Memory]: 98 MB (+18012kb) [00:00:15]
+// [Engine Memory]: 837 MB (+2505kb) [00:00:16]
+// [GUI Memory]: 104 MB (+481kb) [00:00:17]
+// WARNING: HEventQueue.dispatchEvent() is taking  3849 ms.
+// Tcl Message: open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division/Division.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division' INFO: [Project 1-313] Project file moved from 'C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/OAkun/Documents/GitHub/FPGADivision/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead. INFO: [filemgmt 56-1] IPUserFilesDir: Directory not found as 'C:/Users/OAkun/Documents/GitHub/FPGADivision/Division/Division.ip_user_files'; using path 'C:/Users/OAkun/Division/Division.ip_user_files' instead. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'. 
+// [GUI Memory]: 119 MB (+10849kb) [00:00:18]
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 883.754 ; gain = 257.363 
+// Project name: Division; location: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPFPGA/Division; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // by (cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 884 MB (+4575kb) [00:00:28]
+// HMemoryUtils.trashcanNow. Engine heap size: 887 MB. GUI used memory: 58 MB. Current time: 9/1/21, 2:05:06 PM PDT
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 114 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Division_wrapper (Division_wrapper.v)]", 1); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Division_wrapper (Division_wrapper.v), Division_i : Division (Division.bd), Division (Division.v)]", 3); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Division_wrapper (Division_wrapper.v), Division_i : Division (Division.bd), Division (Division.v), DivisionTop_0 : Division_DivisionTop_0_1 (Module Reference Wrapper)]", 4); // B (F, cl)
