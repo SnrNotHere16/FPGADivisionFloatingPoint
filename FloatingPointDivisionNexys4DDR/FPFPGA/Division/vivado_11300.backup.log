@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Aug 31 23:10:51 2021
+# Process ID: 11300
+# Current directory: C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20436 C:\Users\OAkun\Desktop\FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612\Division\Division.xpr
+# Log file: C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division/vivado.log
+# Journal file: C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division/Division.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 886.219 ; gain = 265.805
+open_bd_design {C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division/Division.srcs/sources_1/bd/Division/Division.bd}
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_1
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_2
+Adding component instance block -- xilinx.com:module_ref:DivisionTop:1.0 - DivisionTop_0
+Successfully read diagram <Division> from BD file <C:/Users/OAkun/Desktop/FPGADivisionFloatingPoint-b08b4753789be5527befda9a8a6824b56bb4a612/Division/Division.srcs/sources_1/bd/Division/Division.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1001.785 ; gain = 58.832
+update_compile_order -fileset sources_1
+write_bd_layout -format pdf -orientation portrait C:/Users/OAkun/Division/Division.srcs/SevenSegmentDisplay/Division.pdf
+C:/Users/OAkun/Division/Division.srcs/SevenSegmentDisplay/Division.pdf
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  1 00:56:46 2021...
