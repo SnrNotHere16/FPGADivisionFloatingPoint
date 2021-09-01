@@ -4,7 +4,7 @@ Simple project using the floating point division IP Core's division functionalit
 ![alt text](https://github.com/SnrNotHere16/FPGADivisionFloatingPoint/blob/main/Images/FloatingPointScreenShot.PNG)
 ![alt text](https://github.com/SnrNotHere16/FPGADivisionFloatingPoint/blob/main/Images/Single-Precision-IEEE-754-Floating-Point-Standard.jpg)
 # NEXYS 4 DDR (Artix-7)
-Block Diagram for Programming Logic System
+Block Diagram for Programming Logic System. Project: https://github.com/SnrNotHere16/FPGADivisionFloatingPoint/tree/main/FloatingPointDivisionNexys4DDR/FPFPGA/Division
 ![alt text](https://github.com/SnrNotHere16/FPGADivisionFloatingPoint/blob/main/Images/BlockDiagramXil/NEXYS4BlockDiagram.PNG)
 0/0 = 7FC0_0000 = NaN
 ![alt text](https://github.com/SnrNotHere16/FPGADivisionFloatingPoint/blob/main/Images/NEXYSSegmentImages/NEXYSSeg1.jpg)
