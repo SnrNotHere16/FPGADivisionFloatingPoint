@@ -45,8 +45,8 @@ int main()
 	 float g = 9;
 	 float li = 5;
 	 float k = 1.8;
-//	 k = g/li;
-	 printf("\rDet(B): %f\n", det);
+	 k = g/li;
+	 printf("\rDet(B): %d\n", k);
 
 }
 
