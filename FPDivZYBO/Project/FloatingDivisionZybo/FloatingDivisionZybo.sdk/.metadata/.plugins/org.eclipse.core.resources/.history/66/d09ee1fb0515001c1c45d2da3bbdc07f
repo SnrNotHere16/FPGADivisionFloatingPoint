@@ -39,9 +39,10 @@ int main()
 
 	xil_printf("\rInitialize done:");
 	//Read from AXI
-	int det = XGpio_DiscreteRead(&gpio2,1);
+	// int det = XGpio_DiscreteRead(&gpio2,1);
 	//xil_printf("\rin num: %d", inNum);
-	 printf("\rDet(A): %d\n", det);
+	printf("num: %d", d<<2);
+	 printf("\rDet(A): %f\n", f);
 
 }
 
