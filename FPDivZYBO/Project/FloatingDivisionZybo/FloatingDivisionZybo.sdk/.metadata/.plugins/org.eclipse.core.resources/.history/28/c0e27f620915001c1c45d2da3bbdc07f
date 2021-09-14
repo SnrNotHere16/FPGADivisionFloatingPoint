@@ -42,10 +42,7 @@ int main()
 	int det = XGpio_DiscreteRead(&gpio2,1);
 	//xil_printf("\rin num: %d", inNum);
 	 printf("\rDet(A): %d\n", det);
-	 float g = 9;
-	 float li = 5;
-	 float k = 1.8;
-	 k = g/li;
+	 float k = 9/5;
 	 printf("\rDet(B): %f\n", k);
 
 }
