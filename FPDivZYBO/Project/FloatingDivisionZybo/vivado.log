@@ -2,25 +2,41 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Aug 30 12:45:05 2021
-# Process ID: 17012
-# Current directory: C:/Users/OAkun/FloatingDivisionZybo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9036 C:\Users\OAkun\FloatingDivisionZybo\FloatingDivisionZybo.xpr
-# Log file: C:/Users/OAkun/FloatingDivisionZybo/vivado.log
-# Journal file: C:/Users/OAkun/FloatingDivisionZybo\vivado.jou
+# Start of session at: Mon Sep 13 19:24:17 2021
+# Process ID: 14928
+# Current directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7740 C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.xpr
+open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo'
+INFO: [Project 1-313] Project file moved from 'C:/Users/OAkun/FloatingDivisionZybo' since last save.
 Scanning sources...
 Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 888.477 ; gain = 253.840
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 889.125 ; gain = 253.051
 update_compile_order -fileset sources_1
-launch_sdk -workspace C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf
+open_bd_design {C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.srcs/sources_1/bd/FloatingPointDivision/FloatingPointDivision.bd}
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_1
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_2
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <FloatingPointDivision> from BD file <C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.srcs/sources_1/bd/FloatingPointDivision/FloatingPointDivision.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1071.809 ; gain = 0.000
+launch_sdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 30 12:48:17 2021...
