@@ -1516,3 +1516,273 @@ con
 ----------------End of Script----------------
 
 20:33:31 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+20:39:33 INFO  : Disconnected from the channel tcfchan#9.
+20:39:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+20:39:34 INFO  : 'fpga -state' command is executed.
+20:39:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+20:39:34 INFO  : 'jtag frequency' command is executed.
+20:39:34 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:39:34 INFO  : Context for 'APU' is selected.
+20:39:34 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+20:39:34 INFO  : 'configparams force-mem-access 1' command is executed.
+20:39:34 INFO  : Context for 'APU' is selected.
+20:39:34 INFO  : 'stop' command is executed.
+20:39:34 INFO  : 'ps7_init' command is executed.
+20:39:34 INFO  : 'ps7_post_config' command is executed.
+20:39:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:39:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:35 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:39:35 INFO  : 'configparams force-mem-access 0' command is executed.
+20:39:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:39:35 INFO  : Memory regions updated for context APU
+20:39:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:35 INFO  : 'con' command is executed.
+20:39:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+20:39:35 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+20:43:39 INFO  : Disconnected from the channel tcfchan#10.
+20:43:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+20:43:40 INFO  : 'fpga -state' command is executed.
+20:43:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:43:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+20:43:41 INFO  : 'jtag frequency' command is executed.
+20:43:41 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:43:41 INFO  : Context for 'APU' is selected.
+20:43:41 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+20:43:41 INFO  : 'configparams force-mem-access 1' command is executed.
+20:43:41 INFO  : Context for 'APU' is selected.
+20:43:41 INFO  : 'stop' command is executed.
+20:43:41 INFO  : 'ps7_init' command is executed.
+20:43:41 INFO  : 'ps7_post_config' command is executed.
+20:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:43:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:42 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:43:42 INFO  : 'configparams force-mem-access 0' command is executed.
+20:43:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:43:42 INFO  : Memory regions updated for context APU
+20:43:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:43:42 INFO  : 'con' command is executed.
+20:43:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+20:43:42 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+20:53:29 INFO  : Disconnected from the channel tcfchan#11.
+20:53:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+20:53:30 INFO  : 'fpga -state' command is executed.
+20:53:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:53:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+20:53:30 INFO  : 'jtag frequency' command is executed.
+20:53:30 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:53:30 INFO  : Context for 'APU' is selected.
+20:53:30 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+20:53:30 INFO  : 'configparams force-mem-access 1' command is executed.
+20:53:30 INFO  : Context for 'APU' is selected.
+20:53:30 INFO  : 'stop' command is executed.
+20:53:31 INFO  : 'ps7_init' command is executed.
+20:53:31 INFO  : 'ps7_post_config' command is executed.
+20:53:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:53:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:53:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:53:31 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:53:31 INFO  : 'configparams force-mem-access 0' command is executed.
+20:53:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:53:31 INFO  : Memory regions updated for context APU
+20:53:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:53:31 INFO  : 'con' command is executed.
+20:53:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+20:53:31 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+21:00:21 INFO  : Disconnected from the channel tcfchan#12.
+21:00:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+21:00:22 INFO  : 'fpga -state' command is executed.
+21:00:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:00:22 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+21:00:22 INFO  : 'jtag frequency' command is executed.
+21:00:22 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:00:22 INFO  : Context for 'APU' is selected.
+21:00:22 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+21:00:22 INFO  : 'configparams force-mem-access 1' command is executed.
+21:00:22 INFO  : Context for 'APU' is selected.
+21:00:22 INFO  : 'stop' command is executed.
+21:00:23 INFO  : 'ps7_init' command is executed.
+21:00:23 INFO  : 'ps7_post_config' command is executed.
+21:00:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:00:23 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:00:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:00:23 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:00:23 INFO  : 'configparams force-mem-access 0' command is executed.
+21:00:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:00:23 INFO  : Memory regions updated for context APU
+21:00:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:00:23 INFO  : 'con' command is executed.
+21:00:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+21:00:23 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+21:14:39 INFO  : Disconnected from the channel tcfchan#13.
+21:14:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+21:14:40 INFO  : 'fpga -state' command is executed.
+21:14:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:14:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+21:14:41 INFO  : 'jtag frequency' command is executed.
+21:14:41 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:14:41 INFO  : Context for 'APU' is selected.
+21:14:41 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+21:14:41 INFO  : 'configparams force-mem-access 1' command is executed.
+21:14:41 INFO  : Context for 'APU' is selected.
+21:14:41 INFO  : 'stop' command is executed.
+21:14:41 INFO  : 'ps7_init' command is executed.
+21:14:41 INFO  : 'ps7_post_config' command is executed.
+21:14:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:14:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:41 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:14:41 INFO  : 'configparams force-mem-access 0' command is executed.
+21:14:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:14:42 INFO  : Memory regions updated for context APU
+21:14:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:14:42 INFO  : 'con' command is executed.
+21:14:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+21:14:42 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
+21:20:02 INFO  : Disconnected from the channel tcfchan#14.
+21:20:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1' command is executed.
+21:20:03 INFO  : 'fpga -state' command is executed.
+21:20:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:20:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351AD6547A' is selected.
+21:20:03 INFO  : 'jtag frequency' command is executed.
+21:20:03 INFO  : Sourcing of 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl' is done.
+21:20:03 INFO  : Context for 'APU' is selected.
+21:20:03 INFO  : Hardware design information is loaded from 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf'.
+21:20:03 INFO  : 'configparams force-mem-access 1' command is executed.
+21:20:03 INFO  : Context for 'APU' is selected.
+21:20:03 INFO  : 'stop' command is executed.
+21:20:03 INFO  : 'ps7_init' command is executed.
+21:20:03 INFO  : 'ps7_post_config' command is executed.
+21:20:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:20:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:04 INFO  : The application 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:20:04 INFO  : 'configparams force-mem-access 0' command is executed.
+21:20:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:20:04 INFO  : Memory regions updated for context APU
+21:20:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:04 INFO  : 'con' command is executed.
+21:20:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0
+con
+----------------End of Script----------------
+
+21:20:04 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'

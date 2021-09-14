@@ -39,14 +39,14 @@ int main()
 
 	xil_printf("\rInitialize done:");
 	//Read from AXI
-//	A/B = C ,C - floating
-	 int det = XGpio_DiscreteRead(&gpio2,1); // int and float, equal, but the bit arrangement
+	int det = XGpio_DiscreteRead(&gpio2,1);
+	//xil_printf("\rin num: %d", inNum);
 	 printf("\rDet(A): %d\n", det);
-	/* float x = 2;
-	 int i = *(int*)&x;
-	 printf("\rDet(A): %d\n", i);*/
-	 float x = *(float*)&det;
-	 printf("\rDet(A): %f\n", x);
+	 float g = 9;
+	 float li = 5;
+	 float k = 1.8;
+//	 k = g/li;
+	 printf("\rDet(B): %f\n", det);
 
 }
 

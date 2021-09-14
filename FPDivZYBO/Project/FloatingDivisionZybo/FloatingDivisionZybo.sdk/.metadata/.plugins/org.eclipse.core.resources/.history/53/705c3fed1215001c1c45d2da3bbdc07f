@@ -39,8 +39,7 @@ int main()
 
 	xil_printf("\rInitialize done:");
 	//Read from AXI
-//	A/B = C ,C - floating
-	 int det = XGpio_DiscreteRead(&gpio2,1); // int and float, equal, but the bit arrangement
+	 int det = XGpio_DiscreteRead(&gpio2,1);
 	 printf("\rDet(A): %d\n", det);
 	/* float x = 2;
 	 int i = *(int*)&x;
