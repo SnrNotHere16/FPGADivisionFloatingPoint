@@ -1,13 +1,9 @@
-   text	   data	    bss	    dec	    hex	filename
-  59612	   2632	  23328	  85572	  14e44	FloatingPointDivisionZybo.elf
-'Finished building: FloatingPointDivisionZybo.elf.size'
-' '
-21:33:50 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
+21:41:20 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
-21:33:57 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
+21:41:30 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
