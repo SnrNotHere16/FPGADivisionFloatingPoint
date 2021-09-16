@@ -1922,3 +1922,10 @@ con
 
 21:41:34 INFO  : Launch script is exported to file 'C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_floatingpointdivisionzybo.elf_on_local.tcl'
 09:13:11 INFO  : Disconnected from the channel tcfchan#18.
+17:33:10 INFO  : Registering command handlers for SDK TCF services
+17:33:11 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.sdk\temp_xsdb_launch_script.tcl
+17:33:14 INFO  : XSCT server has started successfully.
+17:33:14 INFO  : Successfully done setting XSCT server connection channel  
+17:33:15 INFO  : Successfully done setting SDK workspace  
+17:33:15 INFO  : Processing command line option -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf.
+17:33:15 INFO  : Checking for hwspec changes in the project FloatingPointDivision_wrapper_hw_platform_1.
