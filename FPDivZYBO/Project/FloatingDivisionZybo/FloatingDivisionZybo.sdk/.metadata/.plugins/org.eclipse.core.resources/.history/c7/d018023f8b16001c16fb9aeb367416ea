@@ -40,10 +40,10 @@ int main()
 	// Write
 	XGpio_DiscreteWrite(&gpio0, 1, 5); //dividend - A
 	XGpio_DiscreteWrite(&gpio1, 1, 6000); // divisor - B
-	xil_printf("\rInitialize done:");
 
 	float C_expected = (float)XGpio_DiscreteRead(&gpio0,1)/(float)XGpio_DiscreteRead(&gpio1,1);
-	printf("\r (float) C_expected = %f\n", C_expected); //Print out the decimal of A/B = C
+	 printf("\r (float) C_expected = %f\n", C_expected); //Print out the decimal of A/B = C
+	xil_printf("\rInitialize done:");
 	//Read from AXI
 	//A/B = C ,C - floating
 	 int C = XGpio_DiscreteRead(&gpio2,1); //Read from AXI GPIO 2

@@ -26,6 +26,8 @@
 
 int main()
 {
+	float f = 3.0;
+	int d = 4;
 	XGpio gpio0, gpio1, gpio2;
 	//initialize AXI GPIO
 	XGpio_Initialize(&gpio0, Gpio0ID);
@@ -38,18 +40,19 @@ int main()
 	XGpio_SetDataDirection(&gpio1, 1, 0x00000000); // set Element 1 to output
 	XGpio_SetDataDirection(&gpio2, 1, 0xFFFFFFFF); // set Determinant to input
 	// Write
-	XGpio_DiscreteWrite(&gpio0, 1, 5); //dividend - A
-	XGpio_DiscreteWrite(&gpio1, 1, 6000); // divisor - B
-	xil_printf("\rInitialize done:");
+	XGpio_DiscreteWrite(&gpio0, 1, 5);
+	XGpio_DiscreteWrite(&gpio1, 1, 6000);
 
-	float C_expected = (float)XGpio_DiscreteRead(&gpio0,1)/(float)XGpio_DiscreteRead(&gpio1,1);
-	printf("\r (float) C_expected = %f\n", C_expected); //Print out the decimal of A/B = C
+	xil_printf("\rInitialize done:");
 	//Read from AXI
-	//A/B = C ,C - floating
-	 int C = XGpio_DiscreteRead(&gpio2,1); //Read from AXI GPIO 2
-	 printf("\r (u32) C =  %d\n", C); // Print the value of C
-	 float x = *(float*)&C; //Transfer the bits of C to a float.
-	 printf("\r (float) C = %f\n", x); //Print out the decimal of A/B = C
+//	A/B = C ,C - floating
+	 int det = XGpio_DiscreteRead(&gpio2,1); // int and float, equal, but the bit arrangement
+	 printf("\rDet(A): %d\n", det);
+	/* float x = 2;
+	 int i = *(int*)&x;
+	 printf("\rDet(A): %d\n", i);*/
+	 float x = *(float*)&det;
+	 printf("\rDet(A): %f\n", x);
 
 }
 
