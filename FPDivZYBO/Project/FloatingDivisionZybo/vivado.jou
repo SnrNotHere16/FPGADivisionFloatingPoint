@@ -10,3 +10,5 @@
 # Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo\vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.xpr
+update_compile_order -fileset sources_1
