@@ -34,7 +34,7 @@ int main()
 	XGpio_SetDataDirection(&gpio1, 1, 0x00000000); // set Element 1 to output
 	XGpio_SetDataDirection(&gpio2, 1, 0xFFFFFFFF); // set Determinant to input
 	// Write
-	XGpio_DiscreteWrite(&gpio0, 1, 5);
+	XGpio_DiscreteWrite(&gpio0, 1, 2000);
 	XGpio_DiscreteWrite(&gpio1, 1, 6000);
 
 	xil_printf("\rInitialize done:");

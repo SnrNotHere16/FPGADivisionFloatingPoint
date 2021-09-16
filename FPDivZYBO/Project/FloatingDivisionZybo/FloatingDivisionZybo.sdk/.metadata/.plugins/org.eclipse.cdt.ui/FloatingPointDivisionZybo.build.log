@@ -1,8 +1,8 @@
-21:41:30 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
+17:43:51 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-21:41:31 Build Finished (took 261ms)
+17:43:52 Build Finished (took 340ms)
 
