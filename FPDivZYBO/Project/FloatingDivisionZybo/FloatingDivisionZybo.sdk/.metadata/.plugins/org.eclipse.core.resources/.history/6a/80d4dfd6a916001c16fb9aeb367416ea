@@ -2,10 +2,7 @@
  *  File: main.c
  *  The following file provides the functions to read/write to
  *  the AXI GPIO modules and read a floating point value.
- *  A/B = C. C is printed out in floating point, integer, and hex
- *  In this code, values A and B are divided in the PS and PL. After
- *  both quotients are compared to see if the values are equivalent.
- *  If equivalent then the PL's floating point modules work.
+ *  A/B = C. C is printed out in floating point and integer.
  */
 //AXI GPIO driver
 #include "xgpio.h"
@@ -26,19 +23,17 @@
 #define Gpio1ID XPAR_AXI_GPIO_1_DEVICE_ID
 #define Gpio2ID XPAR_AXI_GPIO_2_DEVICE_ID
 
-//Print the floating point value from the C code(PS).
 void printValues(float value){
 	int value_int = *(int*)&value;
 	//Print the value the float value in float, hex, and as an integer
 	printf("\r C_code value = %f, %x, %d\n", value, value_int, value_int);
 }
-//Print the floating point value from the FPGA(PL).
+
 void printValuesFPGA(float value){
 	int value_int = *(int*)&value;
 	//Print the value the float value in float, hex, and as an integer
 	printf("\r fpga(AXI_GPIO_2) = %f, %x, %d\n", value, value_int, value_int);
 }
-//Check to see if the floating point (PS) and floating point (PL) are equivalent.
 void CEqualsFPGA(float C_expected, float fpga){
 	 printf("\r C_expected-fpga = %f\n", C_expected-fpga);
 	 if (C_expected == fpga)
