@@ -11664,3 +11664,318 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-46
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 21:47:48.318
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-46
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.232
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.286
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.286
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.298
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.299
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:19:56.301
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.434
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.439
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.439
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.444
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.444
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:14.446
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.464
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.480
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.481
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.485
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.485
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:19.487
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:23.838
+!MESSAGE XSCT Command: [disconnect tcfchan#24], Thread: Thread-1730
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:23.868
+!MESSAGE XSCT command with result: [disconnect tcfchan#24], Result: [null, ]. Thread: Thread-1730
+
+!ENTRY com.xilinx.sdk.utils 1 0 2021-09-15 23:20:24.881
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.886
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.892
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#25]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.893
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.908
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.908
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.914
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.915
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.935
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.936
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.975
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==0} -index 1], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.976
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.992
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.993
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.994
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#25]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:24.995
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.001
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.001
+!MESSAGE XSCT Command: [version -server], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.011
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.1]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.011
+!MESSAGE XSCT Command: [version], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.012
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.1
+SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.012
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.018
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.019
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.037
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.037
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.044
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.044
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.064
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.065
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.072
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.072
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.089
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.090
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.096
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.096
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.116
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.117
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.124
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.125
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.143
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.143
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.149
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351AD6547A]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.150
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.167
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.167
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351AD6547A" && level == 0}], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.185
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351AD6547A" && level == 0}], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.185
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.197
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.198
+!MESSAGE XSCT Command: [source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.205
+!MESSAGE XSCT command with result: [source C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/ps7_init.tcl], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.206
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.228
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.229
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.238
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, FloatingPointDivision_wrapper_1]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.239
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.240
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.240
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.263
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.263
+!MESSAGE XSCT Command: [stop], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.308
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.309
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.711
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.711
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.743
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.744
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.779
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.779
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.843
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.844
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.867
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:25.867
+!MESSAGE XSCT Command: [dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.059
+!MESSAGE XSCT command with result: [dow C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivisionZybo/Debug/FloatingPointDivisionZybo.elf], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.060
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.062
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.151
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.236
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo Z7 210351AD6547A"} -index 0], Result: [null, ]. Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.237
+!MESSAGE XSCT Command: [con], Thread: Worker-57
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-09-15 23:20:26.248
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-57
