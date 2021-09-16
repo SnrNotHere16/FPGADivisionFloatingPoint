@@ -153,3 +153,12 @@ dismissDialog("Launch SDK"); // aa (cl)
 // Tcl Message: launch_sdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // [GUI Memory]: 123 MB (+1340kb) [00:02:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 66 MB. Current time: 9/15/21, 6:02:17 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 6:32:18 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 7:02:18 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 7:32:18 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 8:02:18 PM PDT
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1204 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 8:32:19 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 9:02:19 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 990 MB. GUI used memory: 61 MB. Current time: 9/15/21, 9:32:20 PM PDT

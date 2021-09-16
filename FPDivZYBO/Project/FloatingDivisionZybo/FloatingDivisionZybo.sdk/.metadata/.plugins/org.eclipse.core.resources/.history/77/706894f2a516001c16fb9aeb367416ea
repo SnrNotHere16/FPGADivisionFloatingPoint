@@ -32,14 +32,7 @@ void printValues(float value){
 void printValuesFPGA(float value){
 	int value_int = *(int*)&value;
 	//Print the value the float value in float, hex, and as an integer
-	printf("\r fpga(AXI_GPIO_2) = %f, %x, %d\n", value, value_int, value_int);
-}
-void CEqualsFPGA(float C_expected, float fpga){
-	 printf("\r C_expected-fpga = %f\n", C_expected-fpga);
-	 if (C_expected == fpga)
-		 printf("\r C_expected == C");
-	 else
-		 printf("\r C_expected != C");
+	printf("\r AXI_GPIO value = %f, %x, %d\n", value, value_int, value_int);
 }
 
 int main()
@@ -60,12 +53,19 @@ int main()
 	XGpio_DiscreteWrite(&gpio1, 1, 6000); // divisor - B
 	xil_printf("\rInitialize done:");
 
-	//
 	float C_expected = (float)XGpio_DiscreteRead(&gpio0,1)/(float)XGpio_DiscreteRead(&gpio1,1);
 	printValues(C_expected);
-	int fpga_int = XGpio_DiscreteRead(&gpio2,1); //Read from AXI GPIO 2
-	float fpga = *(float*)&fpga_int; //store the bits from fpga_int into a float
-	printValuesFPGA(fpga);
-	CEqualsFPGA(C_expected, fpga);
+	//Read from AXI
+	//A/B = C ,C - floating
+	 int C = XGpio_DiscreteRead(&gpio2,1); //Read from AXI GPIO 2
+	 float fpga = *(float*) C;
+	 printValuesFPGA(fpga);
+	 printf("\r (float) C = %f\n", fpga); //Print out the decimal of A/B = C
+	 printf("\r C - C_expected = %f\n", C_expected-fpga);
+	 if (C_expected == fpga)
+		 printf("\r C_expected == C");
+	 else
+		 printf("\r C_expected != C");
+
 }
 

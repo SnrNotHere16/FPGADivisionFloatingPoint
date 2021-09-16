@@ -1,21 +1,3 @@
-18:12:32 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-18:12:37 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-18:13:05 **** Auto Build of configuration Debug for project FloatingPointDivisionZybo ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../FloatingPointDivisionZybo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
 ' '
 'Building target: FloatingPointDivisionZybo.elf'
 'Invoking: ARM v7 gcc linker'
@@ -25,6 +7,16 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size FloatingPointDivisionZybo.elf  |tee "FloatingPointDivisionZybo.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  59708	   2632	  23328	  85668	  14ea4	FloatingPointDivisionZybo.elf
+  60028	   2632	  23328	  85988	  14fe4	FloatingPointDivisionZybo.elf
 'Finished building: FloatingPointDivisionZybo.elf.size'
 ' '
+21:47:39 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+21:47:44 **** Incremental Build of configuration Debug for project FloatingPointDivisionZybo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
