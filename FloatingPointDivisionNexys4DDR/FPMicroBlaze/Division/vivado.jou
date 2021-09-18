@@ -2,13 +2,38 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Aug 30 12:16:38 2021
-# Process ID: 18912
-# Current directory: C:/Users/OAkun/Division
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9352 C:\Users\OAkun\Division\Division.xpr
-# Log file: C:/Users/OAkun/Division/vivado.log
-# Journal file: C:/Users/OAkun/Division\vivado.jou
+# Start of session at: Fri Sep 17 19:15:16 2021
+# Process ID: 7356
+# Current directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12108 C:\Users\OAkun\Documents\GitHub\FPGADivision\FloatingPointDivisionNexys4DDR\FPMicroBlaze\Division\Division.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/OAkun/Division/Division.xpr
+open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.xpr
 update_compile_order -fileset sources_1
+open_bd_design {C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/Division.bd}
+make_wrapper -files [get_files C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/Division.bd] -top
+add_files -norecurse C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top DivisionTopTest [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Division_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper.hdf
+
+launch_sdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper.hdf

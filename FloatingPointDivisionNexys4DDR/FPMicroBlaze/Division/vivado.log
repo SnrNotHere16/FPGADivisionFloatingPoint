@@ -2,21 +2,105 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Aug 30 12:16:38 2021
-# Process ID: 18912
-# Current directory: C:/Users/OAkun/Division
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9352 C:\Users\OAkun\Division\Division.xpr
-# Log file: C:/Users/OAkun/Division/vivado.log
-# Journal file: C:/Users/OAkun/Division\vivado.jou
+# Start of session at: Fri Sep 17 19:15:16 2021
+# Process ID: 7356
+# Current directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12108 C:\Users\OAkun\Documents\GitHub\FPGADivision\FloatingPointDivisionNexys4DDR\FPMicroBlaze\Division\Division.xpr
+# Log file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/vivado.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/OAkun/Division/Division.xpr
+open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division'
+INFO: [Project 1-313] Project file moved from 'C:/Users/OAkun/Division' since last save.
 Scanning sources...
 Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'; using path 'C:/Users/OAkun/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' instead.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 927.781 ; gain = 286.848
+open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 865.602 ; gain = 228.363
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 30 12:17:42 2021...
+open_bd_design {C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/Division.bd}
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_0
+Adding component instance block -- xilinx.com:ip:microblaze:11.0 - microblaze_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_1
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_2
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - microblaze_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_1
+Adding component instance block -- xilinx.com:ip:floating_point:7.1 - floating_point_2
+Adding component instance block -- xilinx.com:module_ref:DivisionTop:1.0 - DivisionTop_0
+Successfully read diagram <Division> from BD file <C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/Division.bd>
+open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1135.352 ; gain = 125.535
+make_wrapper -files [get_files C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/Division.bd] -top
+Wrote  : <C:\Users\OAkun\Documents\GitHub\FPGADivision\FloatingPointDivisionNexys4DDR\FPMicroBlaze\Division\Division.srcs\sources_1\bd\Division\Division.bd> 
+Wrote  : <C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/ui/bd_e70f26cd.ui> 
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/synth/Division.v
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/sim/Division.v
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1215.820 ; gain = 54.746
+add_files -norecurse C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
+update_compile_order -fileset sources_1
+set_property top DivisionTopTest [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Sep 17 19:20:44 2021] Launched synth_1...
+Run output will be captured here: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/synth_1/runme.log
+[Fri Sep 17 19:20:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/impl_1/runme.log
+reset_run synth_1
+set_property top Division_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'Division.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/ui/bd_e70f26cd.ui> 
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/synth/Division.v
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/sim/Division.v
+VHDL Output written to : C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hdl/Division_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block DivisionTop_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block floating_point_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block floating_point_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block floating_point_2 .
+Exporting to file C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hw_handoff/Division.hwh
+Generated Block Design Tcl file C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/hw_handoff/Division_bd.tcl
+Generated Hardware Definition File C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.srcs/sources_1/bd/Division/synth/Division.hwdef
+[Fri Sep 17 19:25:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/synth_1/runme.log
+[Fri Sep 17 19:25:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1284.395 ; gain = 47.746
+file copy -force C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.runs/impl_1/Division_wrapper.sysdef C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper.hdf
+
+launch_sdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

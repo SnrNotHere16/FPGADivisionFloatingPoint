@@ -2,18 +2,18 @@
 # updatemem v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # 
-# Start of session at: Tue Aug 24 19:56:37 2021
-# Process ID: 18184
-# Current directory: C:/Users/OAkun/Division
-# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2019.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.mmi -data C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc Division_i/microblaze_0 -bit C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.bit -out C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/download.bit -force
-# Log file: C:/Users/OAkun/Division/updatemem.log
-# Journal file: C:/Users/OAkun/Division\updatemem.jou
+# Start of session at: Fri Sep 17 20:33:03 2021
+# Process ID: 11876
+# Current directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2019.1/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.mmi -data C:/Xilinx/SDK/2019.1/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc Division_i/microblaze_0 -bit C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.bit -out C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/updatemem.log
+# Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division\updatemem.jou
 #-----------------------------------------------------------
 source C:/Xilinx/SDK/2019.1/scripts/updatemem/main.tcl -notrace
- Loading bitfile C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.bit
+ Loading bitfile C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper_hw_platform_0/Division_wrapper.bit
 Loading data files...
 Updating memory content...
 Creating bitstream...
-Writing bitstream C:/Users/OAkun/Division/Division.sdk/Division_wrapper_hw_platform_0/download.bit...
-  update_mem: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 534.785 ; gain = 443.223
-INFO: [Common 17-206] Exiting updatemem at Tue Aug 24 19:56:51 2021...
+Writing bitstream C:/Users/OAkun/Documents/GitHub/FPGADivision/FloatingPointDivisionNexys4DDR/FPMicroBlaze/Division/Division.sdk/Division_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 533.812 ; gain = 446.316
+INFO: [Common 17-206] Exiting updatemem at Fri Sep 17 20:33:15 2021...
