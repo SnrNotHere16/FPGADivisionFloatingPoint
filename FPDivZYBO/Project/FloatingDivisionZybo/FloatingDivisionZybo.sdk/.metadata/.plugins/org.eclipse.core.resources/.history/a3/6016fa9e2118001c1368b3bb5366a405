@@ -30,21 +30,21 @@
 void printValues(float value){
 	int value_int = *(int*)&value;
 	//Print the value the float value in float, hex, and as an integer
-	printf("\r C_code value = %f(FP), %x(hex), %d(decimal)\n", value, value_int, value_int);
+	printf("\r C_code value = %f, %x, %d\n", value, value_int, value_int);
 }
 //Print the floating point value from the FPGA(PL).
 void printValuesFPGA(float value){
 	int value_int = *(int*)&value;
 	//Print the value the float value in float, hex, and as an integer
-	printf("\r fpga(AXI_GPIO_2) = %f(FP), %x(hex), %d(decimal)\n", value, value_int, value_int);
+	printf("\r fpga(AXI_GPIO_2) = %f, %x, %d\n", value, value_int, value_int);
 }
 //Check to see if the floating point (PS) and floating point (PL) are equivalent.
 void CEqualsFPGA(float C_expected, float fpga){
 	 printf("\r C_expected-fpga = %f\n", C_expected-fpga);
 	 if (C_expected == fpga)
-		 printf("\r C_expected == fpga");
+		 printf("\r C_expected == C");
 	 else
-		 printf("\r C_expected != fpga");
+		 printf("\r C_expected != C");
 }
 
 int main()

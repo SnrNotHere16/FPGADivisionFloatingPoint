@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Sep 17 18:36:11 2021
-# Process ID: 9476
+# Start of session at: Wed Sep 15 17:31:36 2021
+# Process ID: 4872
 # Current directory: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13052 C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4064 C:\Users\OAkun\Documents\GitHub\FPGADivision\FPDivZYBO\Project\FloatingDivisionZybo\FloatingDivisionZybo.xpr
 # Log file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/vivado.log
 # Journal file: C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo\vivado.jou
 #-----------------------------------------------------------
@@ -13,3 +13,5 @@ start_gui
 open_project C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.xpr
 update_compile_order -fileset sources_1
 launch_sdk -workspace C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk -hwspec C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.sdk/FloatingPointDivision_wrapper.hdf
+open_bd_design {C:/Users/OAkun/Documents/GitHub/FPGADivision/FPDivZYBO/Project/FloatingDivisionZybo/FloatingDivisionZybo.srcs/sources_1/bd/FloatingPointDivision/FloatingPointDivision.bd}
+write_bd_layout -format pdf -orientation portrait C:/Users/OAkun/Desktop/Code/FloatingPointDivision.pdf

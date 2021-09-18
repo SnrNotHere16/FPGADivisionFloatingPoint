@@ -42,9 +42,9 @@ void printValuesFPGA(float value){
 void CEqualsFPGA(float C_expected, float fpga){
 	 printf("\r C_expected-fpga = %f\n", C_expected-fpga);
 	 if (C_expected == fpga)
-		 printf("\r C_expected == fpga");
+		 printf("\r C_expected == FPGA");
 	 else
-		 printf("\r C_expected != fpga");
+		 printf("\r C_expected != FPGA");
 }
 
 int main()
